@@ -1,0 +1,20 @@
+plugin:
+    name: 'Project & Investiment'
+    description: 'Handles development project and Investments'
+    author: gwf
+    icon: oc-icon-road
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'gwf.projectandinvestment::lang.plugin.name'
+        url: gwf/projectandinvestment/projectandinvestmentcontroller
+        icon: icon-road
+        sideMenu:
+            side-menu-item2:
+                label: 'gwf.projectandinvestment::lang.plugin.name'
+                url: gwf/projectandinvestment/projectandinvestmentcontroller
+                icon: icon-road
+            side-menu-item:
+                label: 'Project Category'
+                url: gwf/projectandinvestment/categoriescontroller
+                icon: icon-list-ul

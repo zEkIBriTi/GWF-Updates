@@ -1,0 +1,10 @@
+name: DashboardsLinksController
+form: $/gwf/dashboardlinks/models/dashboardlink/fields.yaml
+modelClass: gwf\Dashboardlinks\Models\Dashboardlink
+defaultRedirect: gwf/dashboardlinks/dashboardslinkscontroller
+create:
+    redirect: 'gwf/dashboardlinks/dashboardslinkscontroller/update/:id'
+    redirectClose: gwf/dashboardlinks/dashboardslinkscontroller
+update:
+    redirect: gwf/dashboardlinks/dashboardslinkscontroller
+    redirectClose: gwf/dashboardlinks/dashboardslinkscontroller

@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.relatedlink::lang.plugin.name'
+    description: 'gwf.relatedlink::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-link
+    homepage: ''
+navigation:
+    main-relatedlink:
+        label: 'Related Link'
+        url: gwf/relatedlink/relatedlinks
+        icon: icon-link

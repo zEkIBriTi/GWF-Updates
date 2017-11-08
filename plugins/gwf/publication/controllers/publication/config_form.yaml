@@ -1,0 +1,10 @@
+name: Publication
+form: $/gwf/publication/models/publication/fields.yaml
+modelClass: gwf\Publication\Models\Publication
+defaultRedirect: gwf/publication/publication
+create:
+    redirect: 'gwf/publication/publication/update/:id'
+    redirectClose: gwf/publication/publication
+update:
+    redirect: gwf/publication/publication
+    redirectClose: gwf/publication/publication

@@ -1,0 +1,4 @@
+title: NewsController
+modelClass: Gwf\News\Models\News
+toolbar:
+    buttons: reorder_toolbar

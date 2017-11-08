@@ -1,0 +1,14 @@
+{% set gallery = __SELF__.gallery %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if gallery %}
+    	<h1 class="page-title">{{ gallery.title }}</h1>
+        <div class="popup-gallery">
+        {% for image in gallery.gallery_images %}
+                <a href="{{ image.thumb(200,200,'crop') }}" class="gallery-item" title="{{ image.description }}"><img src="{{ image.thumb(200,200,'crop') }}" width="260" height="180"></a>
+        {% endfor %}
+        </div>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+

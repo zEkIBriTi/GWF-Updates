@@ -1,0 +1,109 @@
+/**
+     * ----------------------------------------------------------------
+     * Slider News SCSS
+     * ----------------------------------------------------------------
+*/
+
+.middle-content-wrapper {
+    @include span(9 of 12);
+}
+
+.cycle-slideshow {
+    z-index: 1;
+    margin-top: 0px;
+    //    padding: 25px 0;
+    height: 490px;
+    position: relative;
+    img {
+        z-index: 1 !important;
+        height: 490px;
+        width: 100%;
+        // webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+        // -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+        // box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-radius: 0px;
+        background-color: #fff;
+        padding: 0px;
+        display: none;
+    }
+}
+
+.cycle-overlay {
+    position: absolute;
+    bottom: 0px;
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    left: 0px;
+    z-index: 99999999999999 !important;
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    div {
+        &:first-child {
+            font-size: 24px;
+            // font-family:  $headings-font-family;
+        }
+    }
+}
+
+.cycle-pager {
+    position: absolute;
+    top: 10px;
+    z-index: 150;
+    color: #3498db;
+    right: 10px;
+    font-size: 50px;
+    line-height: 10px;
+    span {
+        cursor: pointer;
+    }
+    .cycle-pager-active {
+        color: $gray-base;
+    }
+}
+
+.cycle-prev {
+    position: absolute;
+    top: 42%;
+    z-index: 99999999999999 !important;
+    left: 10px;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    &:hover {
+        color: $brand-primary;
+    }
+}
+
+.cycle-next {
+    position: absolute;
+    top: 42%;
+    right: 0px;
+    display: none;
+    right: 10px;
+    z-index: 99999999999999 !important;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    &:hover {
+        color: $brand-primary;
+    }
+}
+
+.icon-slider {
+    font-size: 30px;
+}
+
+.loading {
+    background-image: url('../images/loader.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 9999;
+}

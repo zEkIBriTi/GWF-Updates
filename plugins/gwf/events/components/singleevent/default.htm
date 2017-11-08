@@ -1,0 +1,15 @@
+{% set event = __SELF__.event %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if event %}
+	<h1 class="page-title">{{ event.title }}</h1>
+	<div class="event-date">
+	    <p>
+	        {{ event.published_date|date("l jS, F Y") }}
+
+	        <br><strong> @{{ event.location }}</strong></p>
+	</div>
+{{ event.content|raw }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_dashboardlinks_'
+    - builder_table_create_gwf_dashboardlinks_.php

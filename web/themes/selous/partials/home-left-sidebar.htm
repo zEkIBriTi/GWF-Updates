@@ -1,0 +1,138 @@
+[viewBag]
+
+[profilelist]
+detailsPage = "profile"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+welcomeNote = "-"
+
+[Publications]
+noRecordsMessage = "No records found"
+detailsKeyColumn = "document_link"
+detailsUrlParameter = "document_link"
+viewAll = "publication-list"
+pageNumber = "{{ :page }}"
+
+[Projectandinvestmentlist]
+noRecordsMessage = "No records found"
+detailsPage = "project-details"
+viewAll = "projects"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 5
+pageNumber = "{{ :page }}"
+
+[EconomicActivities]
+noRecordsMessage = "No records found"
+detailsPage = "single-economic-activity"
+viewAll = "economic-activities"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+==
+<div class="home-left-sidebar-wrapper right-sidebar-page-stablelizer">
+    <div class="left-sidebar-container">
+       {% set profilelist = profilelist.profilelist %}
+       {% set detailsPage = profilelist.detailsPage %}
+       {% set detailsKeyColumn = profilelist.detailsKeyColumn %}
+       {% set detailsUrlParameter = profilelist.detailsUrlParameter %}
+
+       <div class="bio-wrapper">
+            {% for profile in profilelist %}
+                <h2>{{ profile.title }}</h2>
+                <img  class="lazy" data-original="{{ profile.image_url.thumb(230,260,'crop') }}" alt="">
+                <p>{{ profile.salutation }} {{ profile.name }}</p>
+                <p>
+                 {% spaceless %}
+                    {% if detailsPage %}
+                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(profile, detailsKeyColumn) }) }}">
+                    {% endif %}
+                {{ 'Biography'|_ }}
+                </a>
+                {% endspaceless %}
+                </p>
+            {% endfor %}
+        </div>
+        <!-- /.bio-wrapper -->
+
+        <h2>{{ 'Documents'|_ }}</h2>
+            {% set publications = Publications.publications %}
+            {% set displayColumn = Publications.displayColumn %}
+            {% set noRecordsMessage = Publications.noRecordsMessage %}
+            {% set detailsPage = Publications.detailsPage %}
+            {% set viewAll = Publications.viewAll %}
+            {% set detailsKeyColumn = Publications.detailsKeyColumn %}
+            {% set detailsUrlParameter = Publications.detailsUrlParameter %}
+            <ul class="ads-listing document-listing">
+                {% for record in publications %}
+                    <li>
+                        {# Use spaceless tag to remove spaces inside the A tag. #}
+                        {% spaceless %}
+                            <a target="_blank" href="{{ record.document_link.path }}">
+                                <i class="icon-document"></i>
+                                <p>{{ record.title }}</p>
+                            </a>            
+                        {% endspaceless %}
+                    </li>
+                {% else %}
+                    <li class="no-data">{{ noRecordsMessage }}</li>
+                {% endfor %}
+                <a class="view-all" style="margin-left: 10px" href="{{ viewAll|page() }}">{{ 'View All'|_ }}</a>
+            </ul>
+
+            <h2>{{ 'Economic Activities'|_ }}</h2>
+                {% set  economicactivities = EconomicActivities. economicactivities %} 
+                {% set noRecordsMessage = EconomicActivities.noRecordsMessage %}
+                {% set detailsPage = EconomicActivities.detailsPage %}
+                {% set viewAll = EconomicActivities.viewAll %}
+                {% set detailsKeyColumn = EconomicActivities.detailsKeyColumn %}
+                {% set detailsUrlParameter = EconomicActivities.detailsUrlParameter %}
+
+                <ul class="ads-listing uzalishaji">
+                	{% for economicactivity in  economicactivities %}
+                    <li>
+                    	{# Use spaceless tag to remove spaces inside the A tag. #}
+                        {% spaceless %}
+                        {% if detailsPage %}
+                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(economicactivity, detailsKeyColumn) }) }}">
+                        {% endif %}
+                	    <i class="icon-arrow-triangle-right"></i>
+                	    <p>{{ economicactivity.activityname }}</p>
+                	        </a>
+                		{% endspaceless %}
+                    </li>
+                    {% else %}
+                        {{ noRecordsMessage }}    
+                        {% endfor %}
+                    <a class="view-all" style="margin-left: 10px" href="{{ viewAll|page() }}">{{ 'View All'|_ }}</a>
+                </ul>
+            
+             <h2>{{ 'Project & Investment'|_ }}</h2>
+             {% set projectandinvestments = Projectandinvestmentlist.projectandinvestments %}
+             {% set noRecordsMessage = Projectandinvestmentlist.noRecordsMessage %}
+             {% set detailsPage = Projectandinvestmentlist.detailsPage %}
+             {% set viewAll = Projectandinvestmentlist.viewAll %}
+             {% set detailsKeyColumn = Projectandinvestmentlist.detailsKeyColumn %}
+             {% set detailsUrlParameter = Projectandinvestmentlist.detailsUrlParameter %}
+
+            <ul class="ads-listing uwekezaji">
+                {% for projectandinvestment in projectandinvestments %}
+                <li>
+                {# Use spaceless tag to remove spaces inside the A tag. #}
+                {% spaceless %}
+                {% if detailsPage %}
+                <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(projectandinvestment, detailsKeyColumn) }) }}">
+                {% endif %}
+                <i class="icon-arrow-triangle-right"></i>
+                {{ projectandinvestment.title }}
+                </a>
+                {% endspaceless %}
+                </li>
+                {% endfor %}
+                <a class="view-all" style="margin-left: 10px" href="{{ viewAll|page() }}">{{ 'View All'|_ }}</a>
+            </ul>
+    </div>
+    <!-- /.right-sidebar-container -->
+</div>
+<!-- /.left-sidebar-wrapper -->

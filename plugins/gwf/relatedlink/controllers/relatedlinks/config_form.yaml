@@ -1,0 +1,10 @@
+name: Relatedlinks
+form: $/gwf/relatedlink/models/relatedlink/fields.yaml
+modelClass: gwf\Relatedlink\Models\Relatedlink
+defaultRedirect: gwf/relatedlink/relatedlinks
+create:
+    redirect: 'gwf/relatedlink/relatedlinks/update/:id'
+    redirectClose: gwf/relatedlink/relatedlinks
+update:
+    redirect: gwf/relatedlink/relatedlinks
+    redirectClose: gwf/relatedlink/relatedlinks

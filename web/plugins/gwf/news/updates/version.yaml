@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.7:
+    - 'Created table gwf_news_news'
+    - builder_table_create_gwf_news_news.php
+1.0.8:
+    - 'Updated table gwf_news_news'
+    - builder_table_update_gwf_news_news.php

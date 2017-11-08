@@ -1,0 +1,10 @@
+name: GalleriesController
+form: $/gwf/gallery/models/gallery/fields.yaml
+modelClass: Gwf\Gallery\Models\Gallery
+defaultRedirect: gwf/gallery/galleriescontroller
+create:
+    redirect: 'gwf/gallery/galleriescontroller/update/:id'
+    redirectClose: gwf/gallery/galleriescontroller
+update:
+    redirect: gwf/gallery/galleriescontroller
+    redirectClose: gwf/gallery/galleriescontroller

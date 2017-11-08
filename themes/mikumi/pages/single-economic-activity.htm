@@ -1,0 +1,22 @@
+title = "Single Economic Activity"
+url = "/economic-activity/:slug"
+layout = "right-sidebar"
+description = "A page to display single economic activity in details"
+is_hidden = 0
+
+[SingleEconomicActivity]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-9">
+                <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+                <div class="right-sidebar-content div-match-height">
+   
+   
+                    {% component 'SingleEconomicActivity' %}
+      
+                </div>
+                <!-- /.right-sidebar-content -->
+                <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+            </div>

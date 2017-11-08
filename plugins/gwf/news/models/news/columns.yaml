@@ -1,0 +1,21 @@
+columns:
+    id:
+        label: 'No'
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: 'NEWS TITLE'
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: 'NEWS CONTENT'
+        type: text
+        searchable: true
+        sortable: true
+    activation_status:
+        label: 'PUBLISHED '
+        type: switch
+        searchable: true
+        sortable: true

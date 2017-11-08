@@ -1,0 +1,11 @@
+title: Advertisements
+modelClass: Gwf\Advertisements\Models\Advertisement
+list: $/gwf/advertisements/models/advertisement/columns.yaml
+recordUrl: 'gwf/advertisements/advertisements/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

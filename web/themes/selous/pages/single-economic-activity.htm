@@ -1,0 +1,29 @@
+title = "Single Economic Activity"
+url = "/single-economic-activity/:slug"
+layout = "right-sidebar-with-news"
+is_hidden = 0
+
+[SingleEconomicActivity]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+
+[viewBag]
+localeUrl[sw] = "/single-economic-activity"
+==
+<div class="middle-content-wrapper  right-sidebar-aligner">
+{% set economicactivity = SingleEconomicActivity.economicactivity %}
+{% set notFoundMessage = SingleEconomicActivity.notFoundMessage %}
+
+{% if economicactivity %}
+        <h1 class="home-content-title">{{ economicactivity.activityname }}</h1>
+       <hr class="home-content-hr">
+       <div class="right-sidebar-main-content">
+        {{ economicactivity.description|raw }}
+        </div>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+
+</div>

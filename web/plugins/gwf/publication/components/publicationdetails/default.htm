@@ -1,0 +1,30 @@
+{% set publication = __SELF__.publication %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+{% set publicationcat_title = __SELF__.publicationcat_title %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+
+{% if publication %}
+	<h1 class="page-title"> {{ publicationcat_title }} </h1>
+	<ul class="publications-listing press-release">
+    {% for pub in publication %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                <a target="_blank" href="{{ pub.document_link.path }}">
+                    <i class="icon-document"></i>
+                    <p>{{ pub.title }}</p>
+                </a>            
+            {% endspaceless %}
+            <span>{{ pub.created_at|date("F d, Y") }}</span>
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+	</ul>
+
+    {{ publication.render|raw }}
+{% endif %}

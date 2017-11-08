@@ -1,0 +1,9 @@
+fields:
+    title:
+        label: 'Your Title'
+        span: auto
+        type: text
+    value:
+        label: Value
+        span: auto
+        type: text

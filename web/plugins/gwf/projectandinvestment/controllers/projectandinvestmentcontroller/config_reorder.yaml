@@ -1,0 +1,4 @@
+title: ProjectAndInvestmentController
+modelClass: gwf\projectandinvestment\Models\Projectandinvestment
+toolbar:
+    buttons: reorder_toolbar

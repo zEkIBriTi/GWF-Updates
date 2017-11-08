@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_tender_tender'
+    - builder_table_create_gwf_tender_tender.php
+1.0.3:
+    - 'Updated table gwf_tender_tender'
+    - builder_table_update_gwf_tender_tender.php
+1.0.4:
+    - 'Updated table gwf_tender_tender'
+    - builder_table_update_gwf_tender_tender_2.php

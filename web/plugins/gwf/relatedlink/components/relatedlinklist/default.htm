@@ -1,0 +1,7 @@
+{% set relatedlinks = __SELF__.relatedlinks %}
+
+<ul class="ads-listing">
+    {% for relatedlink in relatedlinks %}
+    <li><a href="{{ relatedlink.url }}">{{ relatedlink.title }}</a></li>
+    {% endfor %}
+</ul>

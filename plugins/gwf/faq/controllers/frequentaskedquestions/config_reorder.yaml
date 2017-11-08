@@ -1,0 +1,4 @@
+title: FrequentAskedQuestions
+modelClass: Gwf\Faq\Models\Faq
+toolbar:
+    buttons: reorder_toolbar

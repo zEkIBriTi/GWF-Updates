@@ -1,0 +1,4 @@
+title: HowDoIController
+modelClass: gwf\Howdoi\Models\HowDoI
+toolbar:
+    buttons: reorder_toolbar

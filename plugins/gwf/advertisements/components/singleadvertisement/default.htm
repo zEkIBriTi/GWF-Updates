@@ -1,0 +1,23 @@
+{% set advertisement = __SELF__.advertisement %}
+
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if advertisement %}
+
+	<h1 class="page-title">{{  advertisement.title }}</h1>
+
+	<div class="article-head"> 
+		<img src="{{ advertisement.url.thumb(800,420,'crop') }}" alt=""> 
+		<span class="date">Posted on: {{  advertisement.published_date|date("F jS, Y") }}</span>
+	</div>
+
+{{ advertisement.content|raw }}
+
+{% else %}
+
+    {{ notFoundMessage }}
+
+{% endif %}
+
+
+

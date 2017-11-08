@@ -1,0 +1,11 @@
+name: Contactus
+modelClass: Gwf\Contactus\Models\Contactus
+form: $/gwf/contactus/models/contactus/fields.yaml
+defaultRedirect: gwf/contactus/contactuses
+create:
+    redirect: 'gwf/contactus/contactuses/update/:id'
+    redirectClose: gwf/contactus/contactuses
+update:
+    redirect: gwf/contactus/contactuses
+    redirectClose: gwf/contactus/contactuses
+preview: {  }

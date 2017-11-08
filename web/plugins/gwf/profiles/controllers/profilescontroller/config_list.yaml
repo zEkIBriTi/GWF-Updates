@@ -1,0 +1,12 @@
+title: ProfilesController
+modelClass: Gwf\Profiles\Models\Profiles
+list: $/gwf/profiles/models/profiles/columns.yaml
+recordUrl: 'gwf/profiles/profilescontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+showSorting: 1
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

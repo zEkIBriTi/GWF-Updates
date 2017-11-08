@@ -1,0 +1,114 @@
+title = "Home"
+url = "/"
+layout = "default"
+description = "A default home page"
+is_hidden = 0
+
+[slideshow]
+slideshow = 1
+numberOfSlide = 5
+
+[welcome]
+notFoundMessage = "Record not found"
+welcomeNote = "welcomenote"
+
+[AllNews]
+noRecordsMessage = "No records found"
+detailsPage = "single-news"
+viewAll = "news"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 5
+pageNumber = "{{ :page }}"
+==
+<!--  MAIN CONTENT-->
+<div class="container white">
+    {%  partial 'home-left-sidebar' %}
+    <!--START HOME MAIN CONTENT-->
+    
+    
+<!--START MIDDLE AND SIDEBAR-->
+ <div class="home-middle-sidebar-wrapper">
+       <!--START SLIDER SECTION-->
+          <!--SLIDER-->
+    <div class="cycle-slideshow " data-cycle-loader="wait" data-cycle-fx="fade" data-cycle-timeout="6000" data-cycle-loader="true" data-cycle-caption-plugin="caption2" data-cycle-pause-on-hover="true" data-cycle-pager="#pager" data-cycle-carousel-fluid="true">
+        <!-- <div class="cycle-pager"></div> -->
+        <div class="cycle-overlay"></div>
+        <div class="cycle-prev"><i class="icon-slider icon-arrow-circle-left"></i></div>
+        <div class="cycle-next"><i class="icon-slider icon-arrow-circle-right"></i></div> 
+        {% if slideshow.slideshow.slides %}
+         {% for i,slide in slideshow.slideshow.slides %}
+            <img src="{{ slide.image.getThumb(1130, 480, 'crop') }}" data-cycle-desc="{% if slide.description %} {{ slide.description|raw }} {% endif %}">
+         {% endfor %}
+        {% endif %}
+    </div>
+ 
+<!--/cycle-slideshow-->
+<!--END SLIDER-->
+<!--/END SLIDER SECTION-->
+
+         <!--START LATEST NEWS-->
+    <div class="home-main-content-wrapper right-sidebar-page-stablelizer">
+        <!--START WELCOME NOTE-->
+        <div class="welcome-note">
+            <h1 class="home-content-title">{{ 'Welcome Note'|_ }}</h1>
+            <hr class="home-content-hr">
+            {% set welcomenote = welcome.welcomenote %}
+            {% set welcomeotelink = welcome.welcomeotelink %}
+            {% set notFoundMessage = welcome.notFoundMessage %}
+            {% if welcomenote %}
+              <p>	{{ welcomenote.content|striptags|slice(0, 500) }} 
+              <a href="{{ welcomeotelink|page() }}">{{ 'read more'|_ }}</a>
+              </p>
+            {% else %}
+                {{ notFoundMessage }}
+            {% endif %}
+        </div>
+        <!-- /.welcome-note -->
+        <!--END WELCOME NOTE-->
+        <div class="home-news-wrapper">
+            {% set news = AllNews.news %} 
+            {% set noRecordsMessage = AllNews.noRecordsMessage %}
+            {% set detailsPage = AllNews.detailsPage %}
+            {% set viewAll = AllNews.viewAll %}
+            {% set detailsKeyColumn = AllNews.detailsKeyColumn %}
+            {% set detailsUrlParameter = AllNews.detailsUrlParameter %}
+            
+            <h1 class="home-content-title">{{ 'Latest News'|_ }}</h1> 
+            <a href="{{ viewAll|page() }}" class="view-all">{{ 'More'|_ }}</a>
+            <hr class="home-content-hr">
+            
+            <ul class="home-news-lists">
+                {% for singlenews in  news %}
+                <li style="position:relative">
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(singlenews, detailsKeyColumn) }) }}"> 
+                        <img class="lazy" data-original="{{ singlenews.url.thumb(200,140,'crop') }}" alt="">
+                        <h4>{{ singlenews.title }}</h4> </a> 
+                        <span> {{  singlenews.published_date|date("F j, Y") }}</span>
+                    <p>
+                        {{ singlenews.content|striptags|raw [3:190] ~ '...' }}
+                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(singlenews, detailsKeyColumn) }) }}">
+                        {{ 'read more'|_ }}</a>
+                    </p>
+                </li>
+                {% else %}
+                    {{ noRecordsMessage }}    
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- /.home-news-wrapper-->
+    </div>
+    <!-- /.home-main-content-wrapper -->
+    <!--END HOME MAIN CONTENT-->
+    <!--/MIDDLE CONTENT-->
+    {%  partial 'right-sidebar' %} 
+
+     </div><!--/end middle and sidebar section-->
+ <!--/END MIDDLE AND SIDEBAR-->
+
+
+{% put footer %}
+     <script src="{{ 'assets/js/cycle2.min.js' | theme }}"></script>
+     <script src="{{ 'assets/js/cycle2.caption2.min.js' | theme }}"></script>
+     <script src="{{ 'assets/js/cycle2.loader.min.js' | theme }}"></script>
+{% endput %}

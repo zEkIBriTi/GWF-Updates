@@ -1,0 +1,13 @@
+{% set statistics = __SELF__.statistics %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set viewAll = __SELF__.viewAll %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+<ul class="quick-stats">
+    {% for statistic in statistics %}
+     <li><i class="icon-arrow-carrot-2right"></i> {{ statistic.title }} = {{ statistic.value }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ viewAll|page() }}" class="more-stats">{{ 'More Statistics'|_ }}</a>

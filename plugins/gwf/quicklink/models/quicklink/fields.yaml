@@ -1,0 +1,19 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter link title'
+        required: 1
+        type: text
+    url:
+        label: Url
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'http://www.tanzania.go.tz'
+        required: 1
+        type: text
+    activationstatus:
+        label: Publish
+        span: left
+        type: switch

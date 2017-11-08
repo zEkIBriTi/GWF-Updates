@@ -1,0 +1,18 @@
+/**
+     * ----------------------------------------------------------------
+     * Single Page Styling
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+*/
+
+.single-page-wrapper {
+    margin-top: 20px;
+    //    News Middle thumb
+    .home-news-wrapper,
+    .home-events-wrapper,
+    .home-howdo-i-wrapper {
+        position: relative;
+        padding-top: 0px;
+    }
+}

@@ -1,0 +1,360 @@
+title = "Home"
+url = "/"
+layout = "default"
+description = "A default home page"
+is_hidden = 0
+
+[slideshow]
+numberOfSlide = 5
+
+[statistics]
+noRecordsMessage = "No records found"
+detailsPage = "-"
+viewAll = "statistics"
+detailsKeyColumn = 10
+detailsUrlParameter = "id"
+recordsPerPage = 8
+pageNumber = "{{ :page }}"
+
+[Announcement]
+noRecordsMessage = "No records found"
+detailsPage = "announcement"
+viewAll = "announcements"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 5
+pageNumber = "{{ page: }}"
+
+[Events]
+noRecordsMessage = "No records found"
+detailsPage = "single-event"
+viewAll = "events"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ 4 }}"
+
+[EconomicActivities]
+noRecordsMessage = "No records found"
+detailsPage = "single-economic-activity"
+viewAll = "economic-activities"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+
+[AllNews]
+noRecordsMessage = "No records found"
+detailsPage = "single-news"
+viewAll = "news"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+
+[howdoilinks]
+noRecordsMessage = "No records found"
+detailsPage = "how-do-i-single"
+viewAll = "how-do-i"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+
+[Projectandinvestmentlist]
+noRecordsMessage = "No records found"
+detailsPage = "project-details"
+viewAll = "project-and-investiment"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+
+[Publications]
+noRecordsMessage = "No records found"
+detailsKeyColumn = "document_link"
+detailsUrlParameter = "document_link"
+viewAll = "publications_list"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+
+[profilelist]
+detailsPage = "profile"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+welcomeNote = "welcomenote"
+
+[Dashboard]
+==
+<!--START SLIDER  & PROFILES-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="wrapper">
+                    {% component 'profilelist' %}
+
+                    {% if profilelist.profilelist|length == 2 %}
+                    <div class="col-md-8 col-sm-12 hidden-sm hidden-xs">
+                    {% elseif  profilelist.profilelist|length == 1  %}
+                    <div class="col-md-9 col-sm-12 hidden-sm hidden-xs">
+                    {% else %}
+                    <div class="col-md-12 col-sm-12 hidden-sm hidden-xs">
+                    {% endif %}
+                        
+                        <!--SLIDER-->
+                        {% if slideshow.slideshow.slides %}
+                            <div class="cycle-slideshow hidden-xs" data-cycle-loader="wait"  data-cycle-fx="fade" data-cycle-timeout="6000" data-cycle-loader="true" data-cycle-pause-on-hover="true" data-cycle-caption-plugin="caption2" data-cycle-carousel-fluid="true">
+                                {% for i, slide in slideshow.slideshow.slides %}
+                                    
+                                    <img src="{{ slide.image.getThumb(1130, 480) }}" style="height: 480px" data-cycle-title="{% if slide.title %} {{ slide.title }} {% endif %}" data-cycle-desc="{% if slide.description %} {{ slide.description|raw }} {% endif %}">
+                                    
+                                {% endfor %}
+                                
+                                <div class="cycle-overlay"></div>
+                                <div class="cycle-prev">
+                                    <i class=" icon-arrow-circle-left"></i>
+                                </div>
+                                <!-- /.cycle-prev -->
+                                <div class="cycle-next">
+                                    <i class=" icon-arrow-circle-right"></i>
+                                </div>
+                                <!-- /.cycle-next -->
+                            </div>
+                        {% endif %}
+                        <!--/cycle-slideshow-->
+                    </div>
+                    <!--/end of  no leader-->
+            </div>
+            <!-- /.wrapper -->
+        </div>
+        <!-- /.col-md-12 -->
+    </div>
+    <!--/row-->
+</div>
+    <!--/Container-->
+                            <!--/END SLIDER & BOOKING-->
+                            <!--start first content wrapper-->
+                            <div class="first-content-wrapper ">
+                                <div class="container ">
+                                    <div class="row ">
+                                        <div class="col-md-12">
+                                            <div class="wrapper middle-content-wrapper">
+                                                <div class="col-md-4">
+                                                    <div class="home-news-wrapper">
+                                                        <h1 class="home-page-title">{{ 'Latest News'|_ }}</h1>
+                                                        
+                                                        
+                                                        {% set  news = AllNews. news %} 
+{% set noRecordsMessage = AllNews.noRecordsMessage %}
+{% set detailsPage = AllNews.detailsPage %}
+{% set viewAll = AllNews.viewAll %}
+{% set detailsKeyColumn = AllNews.detailsKeyColumn %}
+{% set detailsUrlParameter = AllNews.detailsUrlParameter %}
+
+
+<a href="{{ viewAll|page() }}" class="view-more">{{ 'More'|_ }}   <i class="icon-arrow-triangle-right"></i></a>
+<ul class="home-news-listing">
+{% for singlenews in  news %}
+
+    <li>
+    {# Use spaceless tag to remove spaces inside the A tag. #}
+        {% spaceless %}
+            
+          {% if(loop.first) %}
+        
+             <div class="col-md-12 nopadding">
+          
+             {% if detailsPage %}
+            <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(singlenews, detailsKeyColumn) }) }}">
+                <img src="{{ singlenews.url.thumb(357,210,'crop') }}" alt="">
+                <h4>{{ singlenews.title }}</h4>
+            </a>
+                {% endif %}
+            <span class="date">Posted on: {{  singlenews.published_date|date("F jS, Y") }}</span>
+            {{ singlenews.content|striptags|raw [0:190] ~ '...' }}
+        </div>
+        <!-- /.col-md-12 -->
+        {% else %}
+             <div class="col-md-4 nopadding">
+              {% if detailsPage %}
+            <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(singlenews, detailsKeyColumn) }) }}">
+                <img src="{{ singlenews.url.thumb(119,70,'crop') }}" alt="">
+            </a>
+                {% endif %}
+        </div>
+        <!-- /.col-md-6 -->
+        <div class="col-md-8 nopadding-left">
+         {% if detailsPage %}
+            <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(singlenews, detailsKeyColumn) }) }}">
+                <h4>{{ singlenews.title }}</h4>
+            </a>
+                {% endif %}
+            <span class="date">Posted on: {{  singlenews.published_date|date("F jS, Y") }}</span>
+        </div>
+        <!-- /.col-md-8 -->
+        {% endif %}
+
+          
+     
+                {% endspaceless %}
+    </li>
+      {% else %}
+        {{ noRecordsMessage }}    
+        {% endfor %}
+  
+</ul>
+
+
+
+
+
+                                                    
+                                                     
+                                                    </div>
+                                                    <!-- /.home-news-wrapper -->
+                                                </div>
+                                                <!-- /.col-md-5 -->
+                                                <div class="col-md-4">
+                                                    <div class="events-wrapper">
+                                                        <h1 class="home-page-title">{{ 'Events'|_ }}</h1>
+                                                        {% set events = Events.events %} 
+                                                        {% set noRecordsMessage = Events.noRecordsMessage %}
+                                                        {% set detailsPage = Events.detailsPage %}
+                                                        {% set viewAll = Events.viewAll %}
+                                                        {% set detailsKeyColumn = Events.detailsKeyColumn %}
+                                                        {% set detailsUrlParameter = Events.detailsUrlParameter %}
+                                                        
+                                                        <a href="{{ viewAll|page() }}" class="view-more">{{ 'More'|_ }}   <i class="icon-arrow-triangle-right"></i></a>
+                                                        <ul class="home-events-listing">
+                                                        	{% for event in events %}
+                                                            <li>
+                                                                <div class="event-date col-md-2 col-sm-2 col-xs-2 nopadding">
+                                                                  <span class="event-month">{{ event.start_date|date("M") }}</span> <span class="event-day">{{ event.start_date|date("d") }}</span>
+                                                                </div>                               
+                                                            	{# Use spaceless tag to remove spaces inside the A tag. #}
+                                                                {% spaceless %}
+                                                                	{% if detailsPage %}
+                                                                    <div class="event-text col-md-10 col-sm-10 col-xs-10 nopadding""> 
+                                                                    <h3><a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(event, detailsKeyColumn) }) }}">
+                                                                    {% endif %}
+                                                        	        {{ event.title }}
+                                                        	        </a>
+                                                                    </h3>
+                                                        
+                                                        	        <p>{{ event.start_date|date("F d, Y") }} - {{ event.end_date|date("F d, Y") }}</p>
+                                                                    <p>{{ event.start_time|date("h:i:a") }} - {{ event.end_time|date("h:i:a") }}</p>
+                                                                    </div>
+                                                        
+                                                        		{% endspaceless %}
+                                                            </li>
+                                                            {% else %}
+                                                                <li class="no-data">{{ noRecordsMessage }}</li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                        
+                        </div>
+                        <!-- /.events-wrapper -->
+
+                        <div class="home-announcement-wrapper">
+                            <h1 class="home-page-title">{{ 'Announcements'|_ }}</h1>
+                            {% component 'Announcement' %}
+                        </div>
+                    </div>
+                    <!-- /.col-md-4 -->
+                    <div class="col-md-4 nopadding-right">
+                        <div class="map-wrapper">
+                              {% if this.theme.site_map_url %}
+
+                              <a href="{{ this.theme.site_map_url }}" target="_blank">
+
+                                  <img src="{{ this.theme.site_map.getThumb(370, 300, 'crop')}}" alt="">
+
+                              </a>
+
+                              {% else %}
+          
+                          
+                            <a href="#">
+                                 <img src="{{ 'assets/images/map.jpg' | theme }}" alt="{{ this.theme.site_title }}" />
+                            </a>
+                            {% endif %}
+                            
+                            <h2>{{ 'Dashboard'|_ }}</h2>
+                            
+                            {% set dashboardLinks = Dashboard.dashboardLinks %}
+                            
+                            <ul class="quick-stats">
+                                {% for dashboardlink in dashboardLinks %}
+                                <li><i class="icon-arrow-carrot-2right"></i><a href="{{ dashboardlink.url }}">{{ dashboardlink.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            
+                            <h2>{{ 'Quick Statistics'|_ }}</h2>
+                            {% component 'statistics' %}
+                        </div>
+                        <!-- /.map-wrapper -->
+                    </div>
+                    <!-- /.col-md-3 -->
+                </div>
+                <!-- /.wrapper -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!--ends first content wrapper-->
+<!--start second content wrapper-->
+<div class="second-content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 nopadding-right">
+                        <div class="small-container div-small-containers small-wrapper developmentprojects">
+                            <h4 class="home-page-title">{{ 'Project & Investment'|_ }}</h4>
+                            {% component 'Projectandinvestmentlist' %}
+                        </div>
+                        <!-- /.flight-small-container div-small-containers small-wrapper -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 nopadding-right">
+                        <div class="small-container div-small-containers small-wrapper documents">
+                            <h4 class="home-page-title">{{ 'Documents'|_ }}</h4>
+                            {% component 'Publications' %}
+                        </div>
+                        <!-- /.flight-small-container div-small-containers small-wrapper -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 nopadding-right">
+                        <div class="small-container div-small-containers small-wrapper howdoi">
+                            <h4 class="home-page-title">{{ 'How Do I'|_ }}</h4>
+                           {% component 'howdoilinks' %}
+                        </div>
+                        <!-- /.flight-small-container div-small-containers small-wrapper -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 ">
+                        <div class="small-container div-small-containers small-wrapper">
+                            <h4 class="home-page-title">{{ 'Economic Activities'|_ }}</h4>
+                            
+                         
+                        {% component 'EconomicActivities' %}
+                            
+                           
+                        </div>
+                        <!-- /.flight-small-container div-small-containers small-wrapper -->
+                    </div>
+                </div>
+                <!--.row-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--end second content wrapper-->
+
+
+{% put footer %}
+     <script src="{{ 'assets/js/cycle2.min.js' | theme }}"></script>
+     <script src="{{ 'assets/js/jquery.cycle2.caption2.min.js' | theme }}"></script>
+     <script src="{{ 'assets/js/cycle2.loader.min.js' | theme }}"></script>
+{% endput %}

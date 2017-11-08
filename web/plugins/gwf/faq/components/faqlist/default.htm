@@ -1,0 +1,21 @@
+{% set faqs = __SELF__.faqs %}
+
+<h1 class="page-title">{{ 'FAQ'|_ }} </h1>
+<div class="accordion">
+     <dl> 
+    	{% for faq in faqs %}
+    	    {% if(loop.first) %}
+            	<dt class="active"><a href="#"><span class="arrow"></span>{{ faq.questions }}</a></dt>
+                <dd class="active">
+                    <p>{{ faq.answers }}</p>
+                </dd>
+            {% else %}
+                <dt><a href="#"><span class="arrow"></span>{{ faq.questions }}</a></dt>
+                <dd>
+                    <p>{{ faq.answers }}</p>
+                </dd> 
+            {% endif %}
+        {% endfor %}
+    </dl>
+
+</div>

@@ -1,0 +1,15 @@
+columns:
+    person:
+        label: 'Person Name'
+        type: text
+        searchable: true
+        sortable: true
+    title:
+        label: 'Welcome title'
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: 'Welcome message'
+        type: text
+        searchable: true

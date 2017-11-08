@@ -1,0 +1,4 @@
+title: QuickLinks
+modelClass: Gwf\Quicklink\Models\QuickLink
+toolbar:
+    buttons: reorder_toolbar

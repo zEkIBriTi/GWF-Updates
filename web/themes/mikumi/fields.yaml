@@ -1,0 +1,147 @@
+tabs:
+    fields:
+        site_title:
+            tab: General
+            label: Site name
+            type: text
+            default: Government Web Framework
+            comment: Used as site name
+        site_tagline_country:
+            tab: General
+            label: Country Name
+            type: text
+            default: The United Republic of Tanzania
+            comment: Used as site tagline country name
+        site_tagline_ministry:
+            tab: General
+            label: Ministry 
+            type: text
+            default: President's Office Regional Administration and Local Government
+            comment: Used as site tagline ministry name
+        site_locale:
+            tab: General
+            label: Locale
+            type: text
+            default: en
+            comment: Used for HTML lang parameter
+        site_map:
+            tab: General
+            label: Statistics Map
+            type: fileupload
+            comment: Please upload image map with width of 370px and height of 300px
+            mode: image
+            imageHeight: 110
+        site_map_url:
+            tab: General
+            label: Google Map Url
+            type: text
+            comment: Please insert the Google Map url
+
+        site_coat:
+            tab: Header
+            label: Government Coat of Arm
+            type: fileupload
+            comment: Please upload logo with height of 110px
+            mode: image
+            imageHeight: 110
+        site_logo:
+            tab: Header
+            label: LGA Logo
+            type: fileupload
+            comment: Please upload logo with height of 110px
+            mode: image
+            imageHeight: 110
+        site_favicon:
+            tab: Header
+            label: LGA favicon
+            type: fileupload
+            comment: Please upload a favicon of 16px by 16px
+            mode: file
+            imageHeight: 16
+            imageWidth: 16
+
+
+        site_footer_facebook:
+            tab: Footer
+            label: Facebook link
+            type: text
+            span: left
+            default: #
+            comment: Leave empty to hide icon   
+        site_footer_twitter:
+            tab: Footer
+            label: Twitter link
+            type: text
+            span: right
+            default: #
+            comment: Leave empty to hide icon
+        site_footer_google:
+            tab: Footer
+            label: Google Plus link
+            type: text
+            span: left
+            default: #
+            comment: Leave empty to hide icon   
+        site_footer_youtube:
+            tab: Footer
+            label: Youtube link
+            type: text
+            span: right
+            default: #
+            comment: Leave empty to hide icon
+        site_footer_instagram:
+            tab: Footer
+            label: Instagram link
+            type: text
+            span: left
+            default: #
+            comment: Leave empty to hide icon
+        site_footer_blogger:
+            tab: Footer
+            label: Blogger link
+            type: text
+            span: right
+            default: #
+            comment: Leave empty to hide icon
+        site_footer_copyright: 
+            tab: Footer 
+            label: Footer Copyright 
+            type: text 
+            default: Copyright ©2016 GWF . All rights reserved.
+            comment: The site copyright 
+
+        site_style_font_size: 
+            tab: Styling 
+            label: Body Font Size 
+            type: text
+            comment: Please set the website font size in pixels or ems (example 0.8em  or 13px)   
+        site_style_body_color: 
+            tab: Styling 
+            label: Body Background Color
+            type: colorpicker
+            comment: Please set the website body background color       
+        site_style_top_bar_color: 
+            tab: Styling 
+            label: Top bar background color 
+            type: colorpicker
+            comment: Please set the top bar background color 
+        site_style_menu_background_color: 
+            tab: Styling 
+            label: Menu Background Color
+            type: colorpicker
+            comment: Please set the website menu background color        
+        site_style_title_color: 
+            tab: Styling 
+            label: Title  Color
+            type: colorpicker
+            comment: Please set the website title  color
+
+        site_style_banner:
+            tab: Styling
+            label: Banner
+            type: fileupload
+            comment: Please upload banner of  1180px by 132px
+            mode: image
+            imageWidth: 1180
+            imageHeight: 132
+       

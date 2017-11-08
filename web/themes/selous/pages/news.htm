@@ -1,0 +1,80 @@
+title = "News"
+url = "/news/:page?"
+layout = "right-sidebar"
+description = "A page to display news"
+is_hidden = 0
+
+[AllNews]
+noRecordsMessage = "No records found"
+detailsPage = "single-news"
+viewAll = "news"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 8
+pageNumber = "{{ :page }}"
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+        <h1 class="home-content-title">{% if this.page.title %}{{ this.page.title}}{% endif %}</h1>
+        <hr class="home-content-hr">
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+            <!--      ul.announcements-listing>li*6>.calender-date>span.calender-month{Jan}+.calender-day{01}^.meta-content>h4>lorem15^+a[href="single-news.html"]{read more}|c -->
+            {% set  news = AllNews. news %} 
+            {% set noRecordsMessage = AllNews.noRecordsMessage %}
+            {% set detailsPage = AllNews.detailsPage %}
+            {% set viewAll = AllNews.viewAll %}
+            {% set detailsKeyColumn = AllNews.detailsKeyColumn %}
+            {% set detailsUrlParameter = AllNews.detailsUrlParameter %}
+
+            <ul class="announcements-listing news-listing">
+            {% for singlenews in  news %}
+                <li>
+                    <div class="calender-date">
+                        <span class="calender-month">{{  singlenews.published_date|date("M") }}</span>
+                        <span class="calender-day">{{  singlenews.published_date|date("d") }}</span>
+                        <!-- /.calender-day -->
+                    </div>
+                    <!-- /.calender-date -->
+                    <div class="meta-content">
+                        <img src="{{ singlenews.url.thumb(793,450,'crop') }}" alt="">
+                        <h4>{{ singlenews.title }}</h4>
+                        <p> {{ singlenews.content|striptags|slice(0, 200) }}</p>
+                        {% if detailsPage %}
+                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(singlenews, detailsKeyColumn) }) }}">{{ 'read more'|_ }}
+                        </a>
+                        {% endif %}
+                    </div>
+                    <!-- /.meta-content -->
+                </li>
+                {% else %}
+                    {{ noRecordsMessage }}    
+                {% endfor %}
+            </ul>
+            
+            <nav class="text-center">
+            {% if news.lastPage > 1 %}
+            <ul class="pagination">
+                {% if news.currentPage > 1 %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (news.currentPage-1) }) }}">&larr; Prev</a></li>
+                {% endif %}
+        
+                {% for page in 1..news.lastPage %}
+                    <li class="{{ news.currentPage == page ? 'active' : null }}">
+                        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+        
+                {% if news.lastPage > news.currentPage %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (news.currentPage+1) }) }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </nav>
+
+        </div>
+        <!-- /.right-sidebar-main-content -->
+        <!--/END MAIN CONTENT-->
+    </div> 
+    <!-- /.middle-content-wrapper -->
+    <!--/MIDDLE CONTENT-->

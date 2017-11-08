@@ -1,0 +1,46 @@
+fields:
+    salutation:
+        label: Salutation
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Sir, Mr, Dr, Hon'
+        required: 1
+        type: text
+    name:
+        label: Name
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Donald samwel Juma'
+        required: 1
+        type: text
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Regional Chancellor'
+        required: 1
+        type: text
+    image_url:
+        label: 'Profile Photo'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 0
+        type: fileupload
+    bio:
+        label: Biography
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        type: richeditor
+    activation_status:
+        label: Publish
+        span: left
+        type: switch

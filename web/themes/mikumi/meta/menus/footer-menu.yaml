@@ -1,0 +1,67 @@
+name: 'Footer Menu'
+items:
+    -
+        title: 'Privacy Policy'
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Disclamer
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: FAQ
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: frequently-asked-questions
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Sitemap
+        nesting: ''
+        type: url
+        url: sitemap.xml
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: Service
+        nesting: ''
+        type: url
+        url: /
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

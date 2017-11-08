@@ -1,0 +1,10 @@
+name: Statistic
+form: $/gwf/statistics/models/statistic/fields.yaml
+modelClass: gwf\Statistics\Models\Statistic
+defaultRedirect: gwf/statistics/statistic
+create:
+    redirect: 'gwf/statistics/statistic/update/:id'
+    redirectClose: gwf/statistics/statistic
+update:
+    redirect: gwf/statistics/statistic
+    redirectClose: gwf/statistics/statistic

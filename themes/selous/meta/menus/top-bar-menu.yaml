@@ -1,0 +1,29 @@
+name: 'Top Bar Menu'
+items:
+    -
+        title: Webmail
+        type: url
+        url: 'http://mail.ega.go.tz'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: FAQ
+        type: cms-page
+        code: ''
+        reference: frequently-asked-questions
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Contact Us'
+        type: cms-page
+        code: ''
+        reference: contact-us
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

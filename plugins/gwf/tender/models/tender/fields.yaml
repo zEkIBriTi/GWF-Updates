@@ -1,0 +1,26 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    expire_date:
+        label: 'Expire Date'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        type: datepicker
+    tender_file:
+        label: 'File upload'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    activation_status:
+        label: Published
+        span: auto
+        type: switch

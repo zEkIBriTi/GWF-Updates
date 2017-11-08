@@ -1,0 +1,7 @@
+{% set quicklinks = __SELF__.quicklinks %}
+
+<ul class="ads-listing">
+    {% for quicklink in quicklinks %}
+    <li><a href="{{ quicklink.url }}">{{ quicklink.title }}</a></li>
+    {% endfor %}
+</ul>

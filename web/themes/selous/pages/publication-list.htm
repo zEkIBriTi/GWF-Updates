@@ -1,0 +1,76 @@
+title = "Publication List"
+url = "/publication-list/:page?"
+layout = "right-sidebar-with-news"
+is_hidden = 0
+
+[publicationList]
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsKeyColumn = "document_link"
+detailsUrlParameter = "document_link"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+==
+<!-- MIDDLE CONTENT -->
+<div class="middle-content-wrapper  right-sidebar-aligner">
+    <h1 class="home-content-title">{{ 'Publications'|_ }}</h1>
+    <hr class="home-content-hr">
+    <!--START MAIN CONTENT-->
+    <div class="right-sidebar-main-content">
+        <!--      ul.announcements-listing>li*6>.calender-date>span.calender-month{Jan}+.calender-day{01}^.meta-content>h4>lorem15^+a[href="#"]{read more}|c -->
+		{% set publications = publicationList.publications %}
+        {% set displayColumn = publicationList.displayColumn %}
+        {% set noRecordsMessage = publicationList.noRecordsMessage %}
+        {% set detailsPage = publicationList.detailsPage %}
+        {% set detailsKeyColumn = publicationList.detailsKeyColumn %}
+        {% set detailsUrlParameter = publicationList.detailsUrlParameter %}
+        
+        <ul class="announcements-listing">
+            {% for record in publications %}
+                <li>
+                    <div class="calender-date">
+                        <span class="calender-month">{{ record.created_at|date("M") }}</span>
+                        <span class="calender-day">{{ record.created_at|date("d") }}</span>
+                        <!-- /.calender-day -->
+                    </div>
+                    <!-- /.calender-date -->
+                    <div class="meta-content">
+                        <h4>{{ attribute(record, displayColumn) }}</h4>
+                        {% spaceless %}
+                        <a target="_blank" href="{{ record.document_link.path }}">{{ 'download'|_ }}</a>
+                        {% endspaceless %}
+                    </div>
+                    <!-- /.meta-content -->
+                </li>
+            {% else %}
+                <li class="no-data">{{ noRecordsMessage }}</li>
+            {% endfor %}
+        </ul>
+
+        <nav class="text-center">
+            {% if publications.lastPage > 1 %}
+            <ul class="pagination">
+                {% if publications.currentPage > 1 %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (publications.currentPage-1) }) }}">&larr; Prev</a></li>
+                {% endif %}
+        
+                {% for page in 1..publications.lastPage %}
+                    <li class="{{ publications.currentPage == page ? 'active' : null }}">
+                        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+        
+                {% if publications.lastPage > publications.currentPage %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (publications.currentPage+1) }) }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </nav>
+
+	</div>
+    <!-- /.right-sidebar-main-content -->
+    <!--/END MAIN CONTENT-->
+</div>
+<!-- /.middle-content-wrapper -->
+<!--/MIDDLE CONTENT-->

@@ -1,0 +1,10 @@
+name: ProfilesController
+form: $/gwf/profiles/models/profiles/fields.yaml
+modelClass: Gwf\Profiles\Models\Profiles
+defaultRedirect: gwf/profiles/profilescontroller
+create:
+    redirect: 'gwf/profiles/profilescontroller/update/:id'
+    redirectClose: gwf/profiles/profilescontroller
+update:
+    redirect: gwf/profiles/profilescontroller
+    redirectClose: gwf/profiles/profilescontroller

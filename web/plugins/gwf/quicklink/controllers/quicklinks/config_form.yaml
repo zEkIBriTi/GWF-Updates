@@ -1,0 +1,10 @@
+name: QuickLinks
+form: $/gwf/quicklink/models/quicklink/fields.yaml
+modelClass: Gwf\Quicklink\Models\QuickLink
+defaultRedirect: gwf/quicklink/quicklinks
+create:
+    redirect: 'gwf/quicklink/quicklinks/update/:id'
+    redirectClose: gwf/quicklink/quicklinks
+update:
+    redirect: gwf/quicklink/quicklinks
+    redirectClose: gwf/quicklink/quicklinks

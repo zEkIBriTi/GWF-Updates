@@ -1,0 +1,9 @@
+fields:
+    title:
+        label: 'Category Name'
+        span: auto
+        type: text
+    activation_status:
+        label: Publish
+        span: left
+        type: switch

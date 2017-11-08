@@ -1,0 +1,60 @@
+fields:
+    physical_address:
+        label: 'Physical Address'
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter physical address'
+        required: 1
+        type: text
+    post_address:
+        label: 'Postal Address'
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter postal address'
+        required: 1
+        type: text
+    phone:
+        label: Telephone
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter phone number'
+        required: 1
+        type: text
+    mobile:
+        label: Mobile
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter mobile number'
+        required: 0
+        type: text
+    fax:
+        label: Fax
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter fax'
+        required: 0
+        type: text
+    email:
+        label: Email
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter email'
+        required: 0
+        type: text
+    location_map:
+        label: 'Location map'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    url:
+        label: 'Google map link'
+        oc.commentPosition: ''
+        span: auto
+        type: text

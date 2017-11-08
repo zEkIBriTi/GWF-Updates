@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.news::lang.plugin.name'
+    description: 'gwf.news::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-newspaper-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: News
+        url: gwf/news/newscontroller
+        icon: icon-newspaper-o

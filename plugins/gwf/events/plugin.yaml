@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.events::lang.plugin.name'
+    description: 'gwf.events::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-calendar
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Events
+        url: gwf/events/eventscontroller
+        icon: icon-calendar

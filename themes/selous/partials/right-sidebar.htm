@@ -1,0 +1,138 @@
+[viewBag]
+
+[Announcement]
+noRecordsMessage = "No records found"
+detailsPage = "single-announcement"
+viewAll = "announcements"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+
+[Events]
+noRecordsMessage = "No records found"
+detailsPage = "singel-event"
+viewAll = "events"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+
+[statistics]
+noRecordsMessage = "No records found"
+detailsPage = "-"
+viewAll = "statistics"
+detailsUrlParameter = "id"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+
+[Dashboard]
+==
+<div class="right-sidebar-wrapper right-sidebar-page-stablelizer">
+    <div class="news-events-publications-tab-wrapper">
+        <div class="tabs tabs_default">
+            <ul class="horizontal">
+                <li class="active"><a href="#tab-1">{{ 'Announcements'|_ }}</a></li>
+                <li class=""><a href="#tab-2">{{ 'Events'|_ }}</a></li>
+            </ul>
+            <div id="tab-1" style="display: block;" class="tabs-content">
+                {% set announcements = Announcement.announcements %} 
+                {% set noRecordsMessage = Announcement.noRecordsMessage %}
+                {% set detailsPage = Announcement.detailsPage %}
+                {% set viewAll = Announcement.viewAll %}
+                {% set detailsKeyColumn = Announcement.detailsKeyColumn %}
+                {% set detailsUrlParameter = Announcement.detailsUrlParameter %}
+                
+                 <ul class="tab-news-listing">
+                	{% for announcement in announcements %}
+                    <li>
+                    	{# Use spaceless tag to remove spaces inside the A tag. #}
+                        {% spaceless %}
+                        	{% if detailsPage %}
+                                <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(announcement, detailsKeyColumn) }) }}">
+                            {% endif %}
+                	        {{ announcement.title }}
+                	        </a>
+                	        <span>{{ announcement.published_date|date("F d, Y") }}</span>
+                
+                		{% endspaceless %}
+                    </li>
+                    {% else %}
+                        <li class="no-data">{{ noRecordsMessage }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="{{ viewAll|page() }}" style="margin-left: 10px">{{ 'More Announcements'|_ }}</a>
+            </div>
+            <div id="tab-2" style="display: none;" class="tabs-content">
+                {% set events = Events.events %} 
+                {% set noRecordsMessage = Events.noRecordsMessage %}
+                {% set detailsPage = Events.detailsPage %}
+                {% set viewAll = Events.viewAll %}
+                {% set detailsKeyColumn = Events.detailsKeyColumn %}
+                {% set detailsUrlParameter = Events.detailsUrlParameter %}
+
+                <ul class="tab-events-listing">
+                	{% for event in events %}
+                	<li>
+                        <div class="event-date">
+                            <span>{{ event.start_date|date("d") }} <br> <small>{{ event.start_date|date("M") }}</small> </span>
+                        </div>
+                        <!-- /.event-date -->
+                        <div class="event-content">
+                            <h4>{{ event.title }}</h4>
+                            <span>@{{ event.location }}</span>
+                            
+                            {% spaceless %}
+                        	{% if detailsPage %}
+                            <a class="read-more" href="{{ detailsPage|page({ (detailsUrlParameter): attribute(event, detailsKeyColumn) }) }}">
+                            {% endif %}
+                	        {{ 'read more'|_ }}
+                	        </a>
+                		    {% endspaceless %}
+                        </div>
+                    </li>
+                    {% else %}
+                        <li class="no-data">{{ noRecordsMessage }}</li>
+                    {% endfor %}
+                </ul>
+                 <a href="{{ viewAll|page() }}" style="margin-left: 10px">{{ 'More Events'|_ }}</a>
+            </div>
+        </div>
+    </div>
+    <!-- /.news-events-publications-tab-wrapper -->
+    <div class="right-sidebar-container">
+        <!-- GOOGLE MAP -->
+        <div class="map">
+            <a href="https://goo.gl/maps/hSNGiWsA2iM2" target="_blank"> <img src="{{ 'assets/images/map.jpg' | theme }}" alt="Manyara Google Map"> </a>
+        </div>
+        
+        {% set dashboardLinks = Dashboard.dashboardLinks %}
+
+        <ul class="statistics-listing">
+            <h4>{{ 'Dashboards'|_ }}</h4>
+            {% for dashboardlink in dashboardLinks %}
+            <li><i class="icon-arrow-triangle-right"></i><a href="{{ dashboardlink.url }}">{{ dashboardlink.name }}</a></li>
+            {% endfor %}
+        </ul>
+        
+        <ul class="statistics-listing">
+            <h4>{{ 'Statistics'|_ }}</h4>
+            {% set statistics = statistics.statistics %}
+            {% set noRecordsMessage = statistics.noRecordsMessage %}
+            {% set detailsPage = statistics.detailsPage %}
+            {% set viewAll = statistics.viewAll %}
+            {% set detailsKeyColumn = statistics.detailsKeyColumn %}
+            {% set detailsUrlParameter = statistics.detailsUrlParameter %}
+            {% for statistic in statistics %}
+             <li><i class="icon-arrow-triangle-right"></i> {{ statistic.title }} = {{ statistic.value }}</li>
+            {% endfor %}
+            <a href="{{ viewAll|page() }}" class="view-all" style="margin-left: 20px">{{ 'More Statistics'|_ }}</a>
+        </ul>
+    </div>
+    <!-- /.map -->
+    <!--/END OF GOOGLE MAP-->
+
+</div>
+<!-- /.right-sidebar-container -->
+<!-- </dsiv> -->
+<!-- /.left-sidebar-wrapper -->

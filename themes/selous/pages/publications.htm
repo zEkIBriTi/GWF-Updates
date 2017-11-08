@@ -1,0 +1,60 @@
+title = "Publications"
+url = "/publications/:slug/:?page?"
+layout = "right-sidebar-with-news"
+description = "A page to display publications"
+is_hidden = 0
+
+[PublicationDetails]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+==
+{% set publication = PublicationDetails.publication %}
+{% set notFoundMessage = PublicationDetails.notFoundMessage %}
+{% set publicationcat_title = PublicationDetails.publicationcat_title %}
+{% set noRecordsMessage = PublicationDetails.noRecordsMessage %}
+{% set detailsPage = PublicationDetails.detailsPage %}
+{% set detailsKeyColumn = PublicationDetails.detailsKeyColumn %}
+{% set detailsUrlParameter = PublicationDetails.detailsUrlParameter %}
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+        <h1 class="home-content-title">{{ publicationcat_title }}</h1>
+        <hr class="home-content-hr">
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+            <!--      ul.announcements-listing>li*6>.calender-date>span.calender-month{Jan}+.calender-day{01}^.meta-content>h4>lorem15^+a[href="#"]{read more}|c -->
+            
+            
+            {% if publication %}
+            	<ul class="announcements-listing">
+                {% for pub in publication %}
+                    <li>
+                         <div class="calender-date">
+                            <span class="calender-month">{{ pub.created_at|date("M") }}</span>
+                            <span class="calender-day">{{ pub.created_at|date("d") }}</span>
+                            <!-- /.calender-day -->
+                        </div>
+                        <!-- /.calender-date -->
+                        <div class="meta-content">
+                            <h4>{{ pub.title }}</h4>
+                            {% spaceless %}
+                            <a target="_blank" href="{{ pub.document_link.path }}">{{ 'download'|_ }}</a>
+                            {% endspaceless %}
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="no-data">{{ noRecordsMessage }}</li>
+                {% endfor %}
+            	</ul>
+            
+                {{ publication.render|raw }}
+            {% endif %}
+            
+        </div>
+        <!-- /.right-sidebar-main-content -->
+        <!--/END MAIN CONTENT-->
+    </div>
+    <!-- /.middle-content-wrapper -->
+    <!--/MIDDLE CONTENT-->

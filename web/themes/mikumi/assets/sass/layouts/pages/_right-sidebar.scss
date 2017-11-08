@@ -1,0 +1,186 @@
+/**
+     * ------------------------------------------------------------
+     * Right Sidebar
+     * ------------------------------------------------------------
+*/
+
+.right-sidebar-wrapper {
+    border-right: 0px;
+    background: #f7f7f7;
+    // margin-top: 24px;
+}
+
+.right-sidebar-container {
+    margin-bottom: em(20);
+    /* background-color: #f7f7f7;
+    border: 1px solid #e6e6e6; */
+    border-top: 4px solid $brand-secondary;
+    padding: em(20);
+    height: auto;
+    h2 {
+        margin: 0px;
+        font-size: em(26);
+        padding: 0;
+        color: $brand-secondary;
+        // border-top: 2px solid #025eab;
+        // border-bottom: 4px solid #0aaf4b;
+    }
+    margin-bottom: 20px;
+    .nice-select {
+        width: 100%;
+        line-height: 15px;
+        .list {
+            width: 100%;
+        }
+    }
+}
+
+ul.ads-listing {
+    //    border: 1px solid #ddd;
+    border-top: 0px;
+    padding: 0px;
+    padding: em(10) 0 0 0px;
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: em(18);
+        padding-bottom: em(15);
+        margin-bottom: em(15);
+        border-bottom: 1px solid #eee;
+        a {
+            color: $gray-base;
+            &:hover {
+                color: $link-color;
+            }
+            i {
+                position: absolute;
+                left: 0px;
+                top: 1px;
+            }
+        }
+        span {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+
+ul.sidebar-news-lists {
+    padding: 0px;
+    padding: 10px 0;
+    li {
+        list-style-type: none;
+        margin-bottom: em(15);
+        padding-bottom: em(20);
+        border-bottom: 1px solid #eee;
+        display: inline-block;
+        width: 100%;
+        a {
+            img {
+                float: left;
+                margin-right: em(10);
+            }
+        }
+    }
+    h4 {
+        margin: 0px;
+        color: $gray-base;
+        @extend .title-spacing;
+        margin-bottom: 0px;
+        line-height: 18px;
+        font-size: 14px;
+        font-family: $font-family-base;
+        font-weight: 400;
+        &:hover {
+            color: $link-color;
+            text-decoration: none;
+        }
+    }
+    span {
+        // font-family: Georgia;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+
+ul.home-howdo-i-lists-sidebar {
+    padding: 10px;
+    font-size: 14px;
+    li {
+        position: relative;
+        list-style-type: none;
+        padding-left: 16px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0.0625em solid #ececec;
+        a {
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 2px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+/**
+     * ------------------------------------------------------------
+     * Right Sidebar Content
+     * ------------------------------------------------------------
+*/
+
+.right-sidebar-content {
+    margin: 0px 0 0 0px;
+    // padding: em(20);
+    min-height: em(950);
+    background-color: #fff;
+    /* border: 1px solid #e6e6e6; */
+    img, p>img, .fr-dib img,  .fr-draggable img,  .fr-fil img{
+        max-width: 100% !important;
+    }
+    .page-title {
+        border-bottom: 0px solid #08b04a;
+        color: $brand-secondary;
+        margin: 0.5em 0;
+    }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+
+@media(max-width: 767) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 768) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 992) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 1200px) {}

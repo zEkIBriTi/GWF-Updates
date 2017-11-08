@@ -1,0 +1,15 @@
+description = "Top Bar Menu"
+
+[viewBag]
+==
+<ul id="top-navs">
+    {% for item in items %}
+        <li>
+            <a  href="{{ item.url }}">
+                {{ item.title|_ }}
+
+            </a>
+
+        </li>
+    {% endfor %}
+</ul>

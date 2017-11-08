@@ -1,0 +1,4 @@
+title: ComplainsController
+modelClass: gwf\Complains\Models\Complain
+toolbar:
+    buttons: reorder_toolbar

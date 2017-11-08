@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.advertisements::lang.plugin.name'
+    description: 'gwf.advertisements::lang.plugin.description'
+    author: Gwf
+    icon: oc-icon-bell-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Advertisements
+        url: gwf/advertisements/advertisements
+        icon: icon-bell-o

@@ -1,0 +1,11 @@
+plugin:
+    name: 'Quick Link'
+    description: 'Handles links which are to be accessed on the home page'
+    author: Gwf
+    icon: oc-icon-external-link-square
+    homepage: ''
+navigation:
+    quick-link:
+        label: 'Quick Link'
+        url: gwf/quicklink/quicklinks
+        icon: icon-external-link-square

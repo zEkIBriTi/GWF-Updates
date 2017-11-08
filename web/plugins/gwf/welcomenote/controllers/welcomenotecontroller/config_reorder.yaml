@@ -1,0 +1,4 @@
+title: WelcomeNoteController
+modelClass: Gwf\Welcomenote\Models\WelcomeNote
+toolbar:
+    buttons: reorder_toolbar

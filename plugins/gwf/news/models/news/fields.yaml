@@ -1,0 +1,40 @@
+fields:
+    title:
+        label: 'New Title'
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Enter New Title'
+        required: 1
+        type: text
+    activation_status:
+        label: Publish
+        span: right
+        type: switch
+    url:
+        label: 'New Image'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        required: 0
+        type: fileupload
+    published_date:
+        label: 'Pubished Date'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    content:
+        label: 'News Content'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        placeholder: 'Enter News Content'
+        required: 1
+        type: richeditor

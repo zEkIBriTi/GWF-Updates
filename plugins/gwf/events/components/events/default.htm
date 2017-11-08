@@ -1,0 +1,34 @@
+{% set events = __SELF__.events %} 
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set viewAll = __SELF__.viewAll %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+<a href="{{ viewAll|page() }}" class="view-more">{{ 'More'|_ }}   <i class="icon-arrow-triangle-right"></i></a>
+<ul class="home-events-listing">
+	{% for event in events %}
+    <li>
+        <div class="event-date col-md-2 col-sm-2 col-xs-2 nopadding">
+          <span class="event-month">{{ event.start_date|date("M") }}</span> <span class="event-day">{{ event.start_date|date("d") }}</span>
+        </div>                               
+    	{# Use spaceless tag to remove spaces inside the A tag. #}
+        {% spaceless %}
+        	{% if detailsPage %}
+            <div class="event-text col-md-10 col-sm-10 col-xs-10 nopadding""> 
+            <h3><a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(event, detailsKeyColumn) }) }}">
+            {% endif %}
+	        {{ event.title }}
+	        </a>
+            </h3>
+
+	        
+            <p>{{ event.start_time|date("h:i:a") }} - {{ event.start_time|date("h:i:a") }}</p>
+            </div>
+
+		{% endspaceless %}
+    </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>

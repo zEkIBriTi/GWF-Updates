@@ -1,0 +1,41 @@
+title = "Single News"
+url = "/new/:slug"
+layout = "right-sidebar"
+description = "A page template to display single news"
+is_hidden = 0
+
+[SingleNews]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-12">
+                        <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+                        <div class="right-sidebar-content div-match-height">
+                        
+                        {% set newsingle = SingleNews.newsingle %}
+{% set notFoundMessage = SingleNews.notFoundMessage %}
+
+
+
+{% if newsingle %}
+       <h1 class="page-title">{{  newsingle.title }}</h1>
+<div class="article-head"> <img src="{{ newsingle.url.thumb(800,420) }}" alt=""> 
+            <span class="date">{{ 'Posted on'|_ }}: {{  newsingle.published_date|date("F jS, Y") }}</span>
+</div>
+
+
+  {{ newsingle.content|raw }}
+
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+
+                        
+                       
+                        </div>
+                        <!-- /.right-sidebar-content -->
+                        <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+                    </div>

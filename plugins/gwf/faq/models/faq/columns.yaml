@@ -1,0 +1,16 @@
+columns:
+    questions:
+        label: Questions
+        type: text
+    answers:
+        label: Answers
+        type: text
+    created_at:
+        label: 'Created at'
+        type: datetime
+    updated_at:
+        label: 'Updated at'
+        type: datetime
+    activation_status:
+        label: 'Activation Status'
+        type: number

@@ -1,0 +1,15 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        required: 1
+        type: text
+    url:
+        label: URL
+        span: auto
+        required: 1
+        type: text
+    activation_status:
+        label: Published
+        span: auto
+        type: switch

@@ -1,0 +1,225 @@
+/**
+     * ----------------------------------------------------------------
+     * Icon Fonts
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: "chief-sec";
+    src: url("../fonts/chief-sec.eot");
+    src: url("../fonts/chief-sec.eot?#iefix") format("embedded-opentype"), url("../fonts/chief-sec.woff") format("woff"), url("../fonts/chief-sec.ttf") format("truetype"), url("../fonts/chief-sec.svg#chief-sec") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: "chief-sec" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "chief-sec" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+    content: "\61";
+}
+
+.icon-calendar:before {
+    content: "\62";
+}
+
+.icon-home:before {
+    content: "\63";
+}
+
+.icon-play-circle:before {
+    content: "\64";
+}
+
+.icon-camera:before {
+    content: "\65";
+}
+
+.icon-arrow-circle-left:before {
+    content: "\66";
+}
+
+.icon-arrow-circle-right:before {
+    content: "\67";
+}
+
+.icon-document:before {
+    content: "\68";
+}
+
+.icon-external-link:before {
+    content: "\69";
+}
+
+.icon-bell-o:before {
+    content: "\6a";
+}
+
+.icon-briefcase:before {
+    content: "\6b";
+}
+
+.icon-play:before {
+    content: "\6c";
+}
+
+.icon-download:before {
+    content: "\6d";
+}
+
+.icon-clip:before {
+    content: "\6e";
+}
+
+.icon-facebook-square:before {
+    content: "\71";
+}
+
+.icon-twitter-square:before {
+    content: "\72";
+}
+
+.icon-google-plus-square:before {
+    content: "\73";
+}
+
+.icon-youtube-square:before {
+    content: "\74";
+}
+
+.icon-linkedin-square:before {
+    content: "\75";
+}
+
+.icon-chevron-left:before {
+    content: "\6f";
+}
+
+.icon-chevron-right:before {
+    content: "\70";
+}
+
+.icon-playback-play:before {
+    content: "\76";
+}
+
+.icon-arrow-carrot-right:before {
+    content: "\77";
+}
+
+.icon-arrow-triangle-right:before {
+    content: "\78";
+}
+
+.icon-icon-check:before {
+    content: "\79";
+}
+
+.icon-arrow-carrot-2right:before {
+    content: "\7a";
+}
+
+.icon-arrow-right:before {
+    content: "\41";
+}
+
+.icon-icon-box-empty:before {
+    content: "\42";
+}
+
+.icon-icon-box-selected:before {
+    content: "\43";
+}
+
+.icon-icon-calendar:before {
+    content: "\44";
+}
+
+.icon-icon-briefcase-alt:before {
+    content: "\45";
+}
+
+.icon-icon-documents-alt:before {
+    content: "\46";
+}
+
+.icon-icon-documents:before {
+    content: "\47";
+}
+
+.icon-arrow-down:before {
+    content: "\48";
+}
+
+.icon-icon-link:before {
+    content: "\49";
+}
+
+.icon-icon-paperclip:before {
+    content: "\4a";
+}
+
+.icon-icon-toolbox:before {
+    content: "\4b";
+}
+
+.icon-social-facebook-circle:before {
+    content: "\4c";
+}
+
+.icon-social-twitter-circle:before {
+    content: "\4d";
+}
+
+.icon-social-googleplus-circle:before {
+    content: "\50";
+}
+
+.icon-social-instagram-circle:before {
+    content: "\51";
+}
+
+.icon-social-linkedin-circle:before {
+    content: "\4e";
+}
+
+.icon-social-flickr-circle:before {
+    content: "\4f";
+}
+
+.icon-social-youtube:before {
+    content: "\52";
+}
+
+.icon-social-youtube-circle:before {
+    content: "\53";
+}
+
+.icon-phone:before {
+    content: "\54";
+}

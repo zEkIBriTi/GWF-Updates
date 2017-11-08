@@ -1,0 +1,14 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    expire_date:
+        label: 'Expire Date'
+        type: date
+        searchable: true
+        sortable: true
+    activation_status:
+        label: Published
+        type: switch

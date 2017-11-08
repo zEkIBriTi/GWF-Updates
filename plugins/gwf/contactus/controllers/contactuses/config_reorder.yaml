@@ -1,0 +1,4 @@
+title: Contactuses
+modelClass: Gwf\Contactus\Models\Contactus
+toolbar:
+    buttons: reorder_toolbar

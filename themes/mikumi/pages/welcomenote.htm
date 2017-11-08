@@ -1,0 +1,27 @@
+title = "welcomenote"
+url = "/welcomenote"
+layout = "right-sidebar"
+is_hidden = 0
+
+[welcome]
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-12">
+    <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+		{% set welcomenote = welcome.welcomenote %}
+{% set notFoundMessage = welcome.notFoundMessage %}
+
+
+
+{% if welcomenote %}
+    <h1 class="page-title">{{ welcomenote.title }}</h1>
+  	{{ welcomenote.content|raw }}
+  	
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+
+	</div>
+</div>

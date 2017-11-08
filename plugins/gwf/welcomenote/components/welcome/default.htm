@@ -1,0 +1,13 @@
+{% set welcomenote = __SELF__.welcomenote %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+
+
+{% if welcomenote %}
+    <h1 class="page-title">{{  'Welcome Note'|_ }}</h1>
+  	{{ welcomenote.content|raw }}
+  	
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+

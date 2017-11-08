@@ -1,0 +1,10 @@
+name: News
+form: $/gwf/news/models/news/fields.yaml
+modelClass: Gwf\News\Models\News
+defaultRedirect: gwf/news/newscontroller
+create:
+    redirect: 'gwf/news/newscontroller/update/:id'
+    redirectClose: gwf/news/newscontroller
+update:
+    redirect: gwf/news/newscontroller
+    redirectClose: gwf/news/newscontroller

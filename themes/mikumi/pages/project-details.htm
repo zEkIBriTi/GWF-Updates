@@ -1,0 +1,16 @@
+title = "Project Details"
+url = "/project-details/:slug?"
+layout = "right-sidebar"
+is_hidden = 0
+
+[Singleproject]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-12">
+    <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+	{% component 'Singleproject' %}
+	</div>
+</div>

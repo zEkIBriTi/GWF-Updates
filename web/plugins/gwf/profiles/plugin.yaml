@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.profiles::lang.plugin.name'
+    description: 'gwf.profiles::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-users
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Profiles
+        url: gwf/profiles/profilescontroller
+        icon: icon-users

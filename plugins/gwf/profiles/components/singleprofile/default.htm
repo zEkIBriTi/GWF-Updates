@@ -1,0 +1,11 @@
+{% set profile = __SELF__.profile %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if profile %}
+        {{ profile.salutation }} {{ profile.name }}
+		<br> <strong>{{ profile.title }}</strong>
+        {{ profile.bio|raw }}
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

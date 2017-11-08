@@ -1,0 +1,50 @@
+description = "Simple Page"
+
+[localePicker]
+forceUrl = 0
+
+[staticPage]
+==
+{% partial 'header' %}
+{% partial 'nav' %}
+
+<!-- MIDDLE CONTENT -->
+<div class="middle-content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wrapper">
+                
+            
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+                        <div class="right-sidebar-content div-match-height">
+                            <h1 class="page-title">{{ this.page.title|_ }}</h1>
+ 			{% component 'staticPage' %}
+                        </div>
+                        <!-- /.right-sidebar-content -->
+                        <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+                    </div>
+                    <!-- /.middle-content-wrapper -->
+                    <!--/MIDDLE CONTENT-->
+
+                      {% partial 'right-sidebar' %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+   </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% partial 'footer' %}

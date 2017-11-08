@@ -1,0 +1,39 @@
+/*
+     * ----------------------------------------------------------------
+     * CSS SASS file for  Manyara Region website
+     * There is SASS Inside, be careful !
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+ */
+// Import custom grid, codename SUSY ;)
+@import "../../bower_components/susy/sass/susy";
+// Import custom Bootstrap variables
+@import "bootstrap-variables.scss";
+// Import Bootstrap for Sass
+@import "bootstrap";
+@import "layouts/base";
+@import "icon-fonts";
+@import "layouts/main/header";
+@import "layouts/main/menu";
+@import "layouts/main/slider-bio";
+@import "layouts/pages/home";
+@import "layouts/main/footer";
+@import "layouts/pages/full-width";
+// @import "layouts/pages/left-sidebar";
+@import "layouts/main/left-sidebar";
+@import "layouts/pages/right-sidebar";
+@import "layouts/pages/bio";
+@import "layouts/pages/announcements";
+@import "layouts/pages/publications";
+@import "layouts/pages/news";
+@import "layouts/pages/videos";
+@import "layouts/pages/contact";
+@import "layouts/pages/faq";
+ @import "layouts/pages/gallery";
+// @import "layouts/pages/press-release";
+// @import "layouts/pages/sitemap";
+// @import "layouts/pages/search";
+// @import "layouts/pages/events";
+// @import "layouts/pages/board-members";
+// @import "layouts/pages/collections"

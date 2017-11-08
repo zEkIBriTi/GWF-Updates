@@ -1,0 +1,16 @@
+fields:
+    questions:
+        label: Questions
+        span: full
+        type: text
+    answers:
+        label: Answer
+        size: large
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        type: richeditor
+    activation_status:
+        label: Publish
+        span: left
+        type: switch

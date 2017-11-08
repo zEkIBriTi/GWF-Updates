@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_gallery_galleries'
+    - builder_table_create_gwf_gallery_galleries.php
+1.0.9:
+    - 'Created table gwf_gallery_videos'
+    - builder_table_create_gwf_gallery_videos_2.php

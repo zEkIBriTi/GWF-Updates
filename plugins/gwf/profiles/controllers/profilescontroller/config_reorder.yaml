@@ -1,0 +1,4 @@
+title: ProfilesController
+modelClass: Gwf\Profiles\Models\Profiles
+toolbar:
+    buttons: reorder_toolbar

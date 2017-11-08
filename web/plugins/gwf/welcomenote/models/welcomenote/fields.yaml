@@ -1,0 +1,22 @@
+fields:
+    person:
+        label: 'Person Name'
+        oc.commentPosition: above
+        span: auto
+        placeholder: 'Dr. Donald Samwel (CEO)'
+        required: 0
+        type: text
+    title:
+        label: 'Welcome note title'
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'We welcome you to our website'
+        type: text
+    content:
+        label: 'Welcome Message'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        stretch: 0
+        type: richeditor

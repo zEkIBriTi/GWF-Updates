@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.faq::lang.plugin.name'
+    description: 'gwf.faq::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: FAQ
+        url: gwf/faq/frequentaskedquestions
+        icon: icon-question

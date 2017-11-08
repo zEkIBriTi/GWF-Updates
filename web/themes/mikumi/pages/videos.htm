@@ -1,0 +1,92 @@
+title = "Videos"
+url = "/videos/:page?"
+layout = "right-sidebar"
+description = "A page to display videos"
+is_hidden = 0
+
+[VideoList]
+noRecordsMessage = "No records found"
+pageNumber = "{{ :page }}"
+==
+<!--START RIGHT SIDEBAR CONTENTEn SECTION-->
+                    <div class="col-md-9 col-sm-12">
+                        <div class="right-sidebar-content div-match-height">
+                            <h1 class="page-title">{{'Videos'|_ }}</h1>
+                            
+                            
+                            {% set videos = VideoList.videos %}
+                            {% set noRecordsMessage = VideoList.noRecordsMessage %}
+                            {% set detailsKeyColumn = VideoList.detailsKeyColumn %}
+                            {% set detailsUrlParameter = VideoList.detailsUrlParameter %}
+                            
+                            
+                            
+                            <ul class="videos-listing">
+                            
+                                {% for video in videos %}
+                                {% set code = video.url|split('=') %}
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v={{ code[1] }}" class="video-content" title=""> <img src="http://img.youtube.com/vi/{{ code[1] }}/0.jpg" alt=""> <span><i class="icon-playback-play"></i></span> </a>
+                                    <h4>{{ video.title }}</h4> 
+                                    <span class="date-time"> {{ video.created_at|date("F  jS, Y") }}</span>
+                                    {{ video.description|raw }}
+                                </li>
+                                {% endfor %} 
+                            </ul>    
+
+
+     <nav class="text-center">
+                        {% if videos.lastPage > 1 %}
+                        <ul class="pagination">
+                            {% if videos.currentPage > 1 %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (videos.currentPage-1) }) }}">&larr; Prev</a></li>
+                            {% endif %}
+                    
+                            {% for page in 1..videos.lastPage %}
+                                <li class="{{ videos.currentPage == page ? 'active' : null }}">
+                                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+                    
+                            {% if videos.lastPage > videos.currentPage %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (videos.currentPage+1) }) }}">Next &rarr;</a></li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                    </nav>
+
+                            
+                    
+                        </div>
+                    </div>
+                    <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+                    
+                    
+                    
+                    
+                    
+    {% put footer %}
+        <script>
+        jQuery(document).ready(function() {
+            jQuery('.video-content').magnificPopup({
+                type: 'iframe',
+        
+        
+                iframe: {
+                    markup: '<div class="mfp-iframe-scaler">' +
+                        '<div class="mfp-close"></div>' +
+                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                        '<div class="mfp-title">Some caption</div>' +
+                        '</div>'
+                },
+                callbacks: {
+                    markupParse: function(template, values, item) {
+                        values.title = item.el.attr('title');
+                    }
+                }
+        
+        
+            });
+        });
+        </script>
+    {% endput %}

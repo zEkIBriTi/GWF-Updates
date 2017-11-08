@@ -1,0 +1,11 @@
+{% set project = __SELF__.project %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if project %}
+        <h1 class="page-title">{{ project.title }}</h1>
+        <h5 class="">Start Date: {{ project.start_date }}</h5>
+        <h5 class="">End Date: {{ project.start_date }}</h5>
+        {{ project.summary|raw }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

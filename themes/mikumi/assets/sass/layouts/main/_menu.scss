@@ -1,0 +1,339 @@
+/**
+     * ----------------------------------------------------------------
+     * There is SASS Inside, be careful !
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+ */
+
+#main-menu {
+    // background-color:  $brand-primary;
+    // border-left: 1px solid  $brand-primary;
+    // border-top: solid 1px darken($brand-primary, 10%);
+    // @include borderRadius(3px);
+    width: 100%;
+    // border-top: em(1) solid #eee;
+    position: relative;
+    -webkit-box-shadow: 0 1px 30px #ddd;
+    box-shadow: 0 1px 30px #ddd;
+    bottom: 0px;
+    z-index: 9;
+    display: inline-block;
+    // margin-top: em(10);
+    background-color: #005FAF;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 1px 2px 4px 2px #999;
+    -webkit-box-shadow: 1px 2px 4px 2px #999;
+    box-shadow: 1px 2px 4px 2px #999;
+    // &:after {
+    //     content: "";
+    //     background: url('../images/menu-bg.png') no-repeat;
+    //     opacity: 0.5;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     position: absolute;
+    //     z-index: -1;
+    // }
+    .icon.icon-home {
+        // color: #fff;
+        font-size: em(18);
+        position: relative;
+        top: 0px;
+    }
+}
+
+nav.navbar {
+    margin-top: 0px;
+}
+
+.navbar {
+    margin-top: 0px;
+    min-height: 40px;
+    ul {
+        li {
+            // border-right: 1px solid #fff;
+            // margin-top: 1px;
+            border-right: em(1) solid #eee;
+            ul {
+                li {
+                    border-right: 0px;
+                }
+            }
+        }
+        a {
+            //                    text-shadow: 1px 1px 1px #000;
+            color: #fff !important;
+            //                  text-shadow: 1px 1px 1px #000;
+            font-size: em(18);
+            font-weight: 300;
+            &:hover {
+                color: #f1c40f !important;
+                background: #efefef;
+                border-color: #eee;
+            }
+            &:focus {
+                border-color: #eee;
+            }
+        }
+    }
+}
+
+.navbar-default {
+    border: 0px;
+    // background-image: url("../images/menu-bg.png");
+    // background-repeat: repeat;
+    ul {
+        li {
+            a {
+                // text-transform: uppercase;
+                // border-right: 1px solid #d6d6d6;
+            }
+        }
+    }
+    // .form-control {
+    //     border: 0px solid #ececec;
+    //     height: 30px;
+    //     background-color: #ffffff;
+    //     &:focus {
+    //         -webkit-box-shadow: none;
+    //         box-shadow: none;
+    //         border: 0px;
+    //         outline: 0;
+    //     }
+    //     input {
+    //         -webkit-box-shadow: none;
+    //         box-shadow: none;
+    //         &:focus {
+    //             -webkit-box-shadow: none;
+    //             box-shadow: none;
+    //             border: 0px;
+    //             outline: 0;
+    //         }
+    //     }
+    // }
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $link-color;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: $link-hover-color;
+    background-color: transparent !important;
+}
+
+li.active {
+    a{
+        color: $alert-color;
+    }
+}
+
+.nav .open>a {
+    background-color: transparent !important;
+    &:hover {
+        // color: #fff !important;
+        // background-color: $link-color !important;
+    }
+    &:focus {
+        // color: #fff !important;
+        // background-color: $link-color !important;
+    }
+}
+
+// .navbar-form {
+//     // margin-left: -15px;
+//     // margin-right: -15px;
+//     // padding: 1px 15px;
+//     border-top: 0px solid transparent;
+//     border-bottom: 0px solid transparent;
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+//     margin-top: 0px;
+//     margin-bottom: 0px;
+//     padding: 5px 0;
+//     position: absolute;
+//     right: 5px;
+//     .form-group {
+//         position: relative;
+//         input {
+//             padding-right: 25px;
+//         }
+//         .icon {
+//             position: absolute;
+//             top: 6px;
+//             right: 15px;
+//         }
+//     }
+// }
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999999;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    margin: 0px 0 0;
+    list-style: none;
+    font-size: 15px;
+    text-align: left;
+    background-color: $brand-primary;
+    border: 0px solid #ccc;
+    border: 0px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border-top: 1px solid #eee;
+    // @include borderBottom(6px);
+    li {
+        background: none !important;
+        border-right: 0px;
+        a {
+            color: $link-color;
+            @include transition(0s);
+            border-right: 0px solid #111 !important;
+            &:hover {
+                color: $link-color;
+                background-color: transparent;
+            }
+            ul {
+                background-color: #fff;
+                li {
+                    background-color: transparent !important;
+                    a {
+                        background-color: transparent !important;
+                    }
+                }
+                li.open {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+
+/**
+     * ------------------------------------------------------------
+     * Menu Break Point
+     * ------------------------------------------------------------
+*/
+
+@media (max-width: 991px) {
+    #main-menu {
+        margin-bottom: em(20);
+        .icon.icon-home {
+            font-size: 1.5em;
+            position: relative;
+            top: 0px;
+        }
+        .navbar ul li {
+            border-right: 0 solid #eee;
+        }
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+        clear: both;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+    .dropdown-menu {
+        position: initial;
+        top: 100%;
+        left: 0;
+        z-index: 9999999;
+        display: none;
+        float: left;
+        width: 100% !important;
+        padding: 0;
+        margin: 0px 0 0;
+        list-style: none;
+        font-size: 15px;
+        text-align: left;
+        background-color: #f2f2f2;
+        border: 0px solid #ccc;
+        border: 0px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-top: 0px solid #eee;
+    }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+
+@media(max-width: 767) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 768) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 992) {
+    // .navbar-header {
+    //     display: none;
+    // }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 1200px) {}

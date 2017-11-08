@@ -1,0 +1,18 @@
+.logout-counter {
+    margin: 0 0 0 21px !important;
+}
+
+.logout-counter span {
+    font-size: 13px;
+    line-height: 60px;
+}
+
+.navbar-mode-collapse .logout-counter span {
+    line-height: 45px;
+}
+
+@media (max-width: 769px) {
+    .logout-counter span {
+        line-height: 45px;
+    }
+}

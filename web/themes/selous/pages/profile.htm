@@ -1,0 +1,13 @@
+title = "Profile"
+url = "/profile/:slug"
+is_hidden = 0
+
+[singleprofile]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+
+[viewBag]
+localeUrl[sw] = "/profile"
+==
+{% component 'singleprofile' %}

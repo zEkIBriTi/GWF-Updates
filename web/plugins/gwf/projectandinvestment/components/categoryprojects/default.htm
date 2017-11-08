@@ -1,0 +1,32 @@
+{% set categoryprojects = __SELF__.categoryprojects %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+{% set pi_category_title = __SELF__.pi_category_title %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set modelKeyColumn = __SELF__.modelKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+
+{% if categoryprojects %}
+	<h1 class="page-title"> {{ pi_category_title }} </h1>
+	<ul class="publications-listing press-release">
+
+    {% for projectsinvest in categoryprojects %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(projectsinvest, modelKeyColumn) }) }}">
+                {% endif %}
+                    <p>{{ projectsinvest.title }}</p>
+                </a>            
+            {% endspaceless %}
+            <span>{{ projectsinvest.created_at|date("F d, Y") }}</span>
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+	</ul>
+
+    {{ categoryprojects.render|raw }}
+{% endif %}

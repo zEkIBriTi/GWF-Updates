@@ -1,0 +1,150 @@
+/**
+    * ------------------------------------------------------------
+    * Videos Page
+    * ------------------------------------------------------------
+*/
+
+ul.gallery-listing {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    li {
+        list-style-type: none;
+        width: em(290);
+        float: left;
+        margin-right: em(15);
+        margin-left: em(15);
+        margin-bottom: em(20);
+        padding-bottom: em(20);
+        border-bottom: 0px dashed #ddd;
+        a {
+            position: relative;
+            color: $gray-base;
+            &:active,
+            &:visited,
+            &:focus {
+                outline: 0;
+                border: none;
+                text-decoration: none !important;
+            }
+            &:hover {
+                color: $link-color;
+            }
+            img {
+                width: 100%;
+                height: em(200);
+                padding: 4px;
+                margin-bottom: 6px;
+                float: none;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                -moz-border-radius: 2px;
+            }
+            img.lazy {
+                width: 100%;
+                height: em(200);
+            }
+            span {
+                .icon-play-circle {
+                    font-size: 40px;
+                    position: absolute;
+                    bottom: 30%;
+                    left: 42%;
+                    color: red;
+                }
+            }
+        }
+        h4 {
+            margin-bottom: em(6);
+            line-height: 22px;
+            font-size: em(16);
+            display: initial;
+            font-family: $font-family-base;
+        }
+        p {
+            display: initial;
+        }
+        span {
+            display: block;
+        }
+        hr {
+            border-color: #eee;
+            margin-top: em(5);
+            margin-bottom: em(5);
+        }
+    }
+}
+
+
+/**
+    * ------------------------------------------------------------
+    * Video Plugin Cuustomization
+    * ------------------------------------------------------------
+*/
+
+.mfp-title {
+    position: absolute;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    font-size: 18px;
+    //  padding: 10px 15px;
+}
+
+
+/**
+    * ------------------------------------------------------------
+    * Single Gallery
+    * ------------------------------------------------------------
+*/
+
+.popup-gallery {
+    //    padding-left: span(1);
+    a {
+        img {
+            margin-bottom: 4px;
+            width: 260px;
+            height: 180px;
+        }
+    }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+
+@media(max-width: 767) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 768) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 992) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 1200px) {}

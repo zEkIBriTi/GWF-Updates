@@ -1,0 +1,10 @@
+name: WelcomeNoteController
+form: $/gwf/welcomenote/models/welcomenote/fields.yaml
+modelClass: Gwf\Welcomenote\Models\WelcomeNote
+defaultRedirect: gwf/welcomenote/welcomenotecontroller
+create:
+    redirect: 'gwf/welcomenote/welcomenotecontroller/update/:id'
+    redirectClose: gwf/welcomenote/welcomenotecontroller
+update:
+    redirect: gwf/welcomenote/welcomenotecontroller
+    redirectClose: gwf/welcomenote/welcomenotecontroller

@@ -1,0 +1,26 @@
+columns:
+    salutation:
+        label: Salutation
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    bio:
+        label: Biography
+        type: text
+        searchable: true
+        sortable: true
+    activation_status:
+        label: Active
+        type: switch
+        searchable: true
+        sortable: true

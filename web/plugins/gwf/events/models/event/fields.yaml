@@ -1,0 +1,74 @@
+fields:
+    activation_status:
+        label: 'Publish Event'
+        span: right
+        type: switch
+    title:
+        label: 'Event Title'
+        oc.commentPosition: ''
+        span: left
+        placeholder: 'Enter Event Title'
+        required: 1
+        type: text
+    start_date:
+        label: 'Start Date'
+        oc.commentPosition: ''
+        mode: date
+        span: left
+        required: 1
+        type: datepicker
+    start_time:
+        label: 'Start Time'
+        oc.commentPosition: ''
+        mode: time
+        span: right
+        required: 1
+        type: datepicker
+    end_date:
+        label: 'End Date'
+        oc.commentPosition: ''
+        mode: date
+        span: left
+        required: 1
+        type: datepicker
+    end_time:
+        label: 'End Time'
+        oc.commentPosition: ''
+        mode: time
+        span: right
+        type: datepicker
+    content:
+        label: 'Event Details'
+        size: huge
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        stretch: 0
+        type: richeditor
+    location:
+        label: 'Event Location'
+        oc.commentPosition: ''
+        span: left
+        required: 1
+        type: text
+    audience:
+        label: Audience
+        oc.commentPosition: ''
+        span: right
+        required: 1
+        type: text
+    guest_of_honor:
+        label: 'Guest Of Honor'
+        span: full
+        oc.commentPosition: ''
+        required: 0
+        type: text
+    event_photo:
+        label: 'Event Photo'
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

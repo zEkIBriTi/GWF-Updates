@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.welcomenote::lang.plugin.name'
+    description: 'gwf.welcomenote::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-bank
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Welcome Note'
+        url: gwf/welcomenote/welcomenotecontroller
+        icon: icon-bank

@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: 'Publication Title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    publicationcategory_id:
+        label: 'Publication Category'
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown
+    document_link:
+        label: 'Document Upload'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    activation_status:
+        label: Publish
+        span: left
+        type: switch

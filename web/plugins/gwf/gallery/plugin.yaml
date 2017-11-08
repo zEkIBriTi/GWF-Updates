@@ -1,0 +1,20 @@
+plugin:
+    name: 'gwf.gallery::lang.plugin.name'
+    description: 'gwf.gallery::lang.plugin.description'
+    author: Gwf
+    icon: oc-icon-camera-retro
+    homepage: ''
+navigation:
+    main-gallery-menu:
+        label: Gallery
+        url: gwf/gallery/galleriescontroller
+        icon: icon-camera-retro
+        sideMenu:
+            menu-gallery:
+                label: Photo
+                url: gwf/gallery/galleriescontroller
+                icon: icon-camera
+            menu-video:
+                label: Video
+                url: gwf/gallery/videoscontroller
+                icon: icon-video-camera

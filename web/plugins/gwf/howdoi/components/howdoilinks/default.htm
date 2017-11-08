@@ -1,0 +1,22 @@
+{% set howdoilinks = __SELF__.howdoilinks %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set viewAll = __SELF__.viewAll %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+<ul class="">
+    {% for howdoilink in howdoilinks %}
+    <li>
+    {# Use spaceless tag to remove spaces inside the A tag. #}
+    {% spaceless %}
+    {% if detailsPage %}
+    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(howdoilink, detailsKeyColumn) }) }}">
+	{% endif %}
+	<i class="icon icon-arrow-carrot-right"></i>
+	{{ howdoilink.title }}
+    </a>
+	{% endspaceless %}
+    </li>
+    {% endfor %}
+</ul>
+<a class="view-all" href="{{ viewAll|page() }}"><i class="icon icon-search"></i>{{ 'View All'|_ }}</a>

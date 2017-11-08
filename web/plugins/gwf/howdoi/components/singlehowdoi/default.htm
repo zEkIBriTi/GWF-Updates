@@ -1,0 +1,9 @@
+{% set howdoi = __SELF__.howdoi %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if howdoi %}
+        <h1 class="page-title">{{ howdoi.title }}</h1>
+        {{ howdoi.description|raw }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

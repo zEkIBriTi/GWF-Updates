@@ -1,0 +1,29 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        placeholder: 'Enter title'
+        type: text
+    description:
+        label: Description
+        size: tiny
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    activation_status:
+        label: Published
+        span: left
+        type: switch
+    gallery_images:
+        label: 'Gallery Images'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload

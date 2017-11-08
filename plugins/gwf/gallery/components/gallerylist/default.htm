@@ -1,0 +1,45 @@
+{% set galleries = __SELF__.galleries %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+<ul class="gallery-listing">
+                                
+<ul class="gallery-listing">
+    {% for gallery in galleries %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(gallery, detailsKeyColumn) }) }}">
+                {% endif %}
+                 <img src="{{ gallery.gallery_images[0].thumb(200,200,'crop') }}" alt="">
+                        <h4>{{ gallery.title }}</h4> </a>
+                    <hr> <span class="date-time"> {{ gallery.created_at|date("M d, Y") }} <span class="pull-right">{{ gallery.gallery_images|length }} Pics</span></span>
+                {% if detailsPage %}
+                    </a>
+                {% endif %}
+            {% endspaceless %}
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if galleries.lastPage > 1 %}
+    <ul class="pagination">
+        {% if galleries.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (galleries.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..galleries.lastPage %}
+            <li class="{{ galleries.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if galleries.lastPage > galleries.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (galleries.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

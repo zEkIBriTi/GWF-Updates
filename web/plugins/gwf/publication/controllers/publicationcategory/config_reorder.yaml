@@ -1,0 +1,4 @@
+title: Publicationcategory
+modelClass: gwf\Publication\Models\Publicationcategory
+toolbar:
+    buttons: reorder_toolbar

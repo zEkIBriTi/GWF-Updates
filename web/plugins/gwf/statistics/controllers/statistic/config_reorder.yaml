@@ -1,0 +1,4 @@
+title: Statistic
+modelClass: gwf\Statistics\Models\Statistic
+toolbar:
+    buttons: reorder_toolbar

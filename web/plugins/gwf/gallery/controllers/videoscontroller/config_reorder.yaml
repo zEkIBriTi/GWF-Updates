@@ -1,0 +1,4 @@
+title: VideosController
+modelClass: Gwf\Gallery\Models\Video
+toolbar:
+    buttons: reorder_toolbar

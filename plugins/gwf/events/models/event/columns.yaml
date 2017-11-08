@@ -1,0 +1,36 @@
+columns:
+    id:
+        label: 'No'
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: 'EVENT TITLE'
+        type: text
+        searchable: true
+        sortable: true
+    sart_date:
+        label: 'EVENT START DATE'
+        type: date
+        searchable: true
+        sortable: true
+    start_time:
+        label: 'EVENT START TIME'
+        type: time
+        searchable: true
+        sortable: true
+    end_date:
+        label: 'EVENT END DART'
+        type: date
+        searchable: true
+        sortable: true
+    end_time:
+        label: 'EVENT END TIME'
+        type: time
+        searchable: true
+        sortable: true
+    activation_status:
+        label: PUBLISHED
+        type: switch
+        searchable: true
+        sortable: true

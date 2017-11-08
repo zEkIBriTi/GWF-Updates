@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.statistics::lang.plugin.name'
+    description: 'gwf.statistics::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-pie-chart
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Statistic
+        url: gwf/statistics/statistic
+        icon: icon-pie-chart

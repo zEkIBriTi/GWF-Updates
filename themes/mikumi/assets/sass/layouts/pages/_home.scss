@@ -1,0 +1,535 @@
+            /**
+     * ------------------------------------------------------------
+     * Home Page
+     * ------------------------------------------------------------
+*/
+            
+            .second-content-wrapper {
+                /* background-color: #eee; */
+                padding: em(5) 0;
+                height: auto;
+                position: relative;
+                margin-top: em(-7);
+                // overflow: hidden;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center center;
+            }
+            
+            .flights-small-container-wrapper {
+                margin-top: em(20);
+                padding: 0 em(10);
+                .cycle-prev {
+                    position: absolute;
+                    right: em(60);
+                    top: 0
+                }
+                .cycle-next {
+                    position: absolute;
+                    right: em(6);
+                    top: 0
+                }
+                .cycle-slideshow {
+                    padding-top: 30px;
+                }
+                .cycle-carousel-wrap {
+                    padding-top: em(50) !important;
+                }
+            }
+            
+            .small-container {
+                background-color: #fff;
+                position: relative;
+                // height: 300px;
+                margin: em(10) em(10);
+                padding: 5px 10px;
+                ul {
+                    list-style: none;
+                    padding: 0px 0px 0px 0px;
+                    li {
+                        position: relative;
+                        padding-bottom: em(10);
+                        padding-top: em(8);
+                        padding-left: em(26);
+                        a {
+                            // color: #111212;
+                            color: $gray-base;
+                            i {
+                                position: absolute;
+                                left: 0px;
+                                // color: #s034d31;
+                                top: 6px;
+                            }
+                            &:hover {
+                                color: $link-color;
+                            }
+                        }
+                    }
+                }
+                @include borderRadius(2px);
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                    @include borderTop(2px);
+                }
+                p {
+                    padding-left: em(10);
+                    span {
+                        color: $brand-secondary;
+                    }
+                }
+                .view-all {
+                    position: absolute;
+                    bottom: 0px;
+                    border-radius: 10px 0px 0px 0px;
+                    right: 0px;
+                    padding: em(8) em(10);
+                    background-color: $link-color;
+                    color: #fff;
+                    @include borderRightBottom(2px);
+                }
+                padding-bottom: em(30);
+            }
+            /**
+     * ------------------------------------------------------------
+     * Flights less Than 6
+     * ------------------------------------------------------------
+*/
+            
+            ul.flights-less-than-6 {
+                padding: 0px;
+                li {
+                    list-style-type: none;
+                }
+            }
+            /**
+     * ------------------------------------------------------------
+     * Book Flight Carousel Bootstrap
+     * ------------------------------------------------------------
+*/
+            
+            .carousel {
+                position: relative;
+                padding-top: 2.5em;
+                margin-top: 1.2em;
+                .btn {
+                    padding-bottom: 4px;
+                }
+            }
+            
+            .carousel-controls {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+            
+            .carousel-indicators {
+                display: none;
+            }
+            /**
+     * ------------------------------------------------------------
+     * Travel Guide, Fleet, News, Announcements 
+     * ------------------------------------------------------------
+*/
+            
+            .first-content-wrapper {
+                padding: em(10) 0;
+                h2 {
+                    font-size: em(28);
+                    margin: 0px 0 em(10) 0;
+                    // color: $brand-secondary;
+                }
+            }
+            /**w
+     * ------------------------------------------------------------
+     * Home News
+     * ------------------------------------------------------------
+*/
+            
+            .home-page-title {
+                margin: 0px;
+                font-size: em(26);
+                padding-bottom: 5px;
+                margin-bottom: 6px;
+                border-bottom: 3px solid #eee;
+                color: $brand-primary;
+            }
+            
+            .home-news-wrapper {
+                position: relative;
+                padding-top: em(15);
+            }
+            
+            a.view-more {
+                position: absolute;
+                right: 0;
+                top: em(25);
+                padding-right: em(15);
+                i {
+                    position: absolute;
+                    top: 3px;
+                    right: 0;
+                }
+            }
+            
+            ul.home-news-listing {
+                padding: 0px;
+                li {
+                    list-style-type: none;
+                    // margin-left: -15px;
+                    border-bottom: 1px solid #eee;
+                    display: inline-block;
+                    padding-bottom: em(10);
+                    padding-top: em(6);
+                    width: 100%;
+                    &:first-child {
+                        margin-left: 0px;
+                        a {
+                            img {
+                                width: 100%;
+                                height: 210px;
+                                margin-bottom: em(8);
+                            }
+                            h4 {
+                                padding-left: 0px;
+                                font-size: em(20);
+                                margin-bottom: em(6);
+                                height: auto;
+                            }
+                        }
+                        .date {
+                            padding-left: em(0);
+                        }
+                    }
+                    a {
+                        img {
+                            width: 100%;
+                            height: 70px;
+                        }
+                    }
+                    h4 {
+                        padding-left: em(10);
+                        font-size: $font-size-base;
+                        margin-bottom: em(8);
+                        margin: 0px;
+                        font-weight: 300;
+                        // margin-bottom: em(10);
+                        font-family: $font-family-base;
+                        color: $gray-base;
+                        font-size: em(18);
+                        &:hover {
+                            color: $link-color;
+                        }
+                    }
+                    .date {
+                        padding-left: em(12);
+                    }
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+            /**
+     * ------------------------------------------------------------
+     * Announcements
+     * ------------------------------------------------------------
+*/
+            
+            .home-announcement-wrapper {
+                position: relative;
+                a.view-more {
+                    top: em(10);
+                }
+                h2 {
+                    font-size: 18px;
+                    text-align: center;
+                    margin: 0px;
+                    margin-bottom: 5px;
+                    color: darken($brand-primary, 10%);
+                }
+                ol {
+                    padding: 0px;
+                    margin: 0px;
+                    counter-reset: my-badass-counter;
+                    li {
+                        padding-left: 35px;
+                        &:before {
+                            content: counter(step-counter);
+                            font-size: 80%;
+                            background-color: $alert-color;
+                            color: white;
+                            font-weight: bold;
+                            padding: 3px 8px;
+                            @include borderRadius(100px);
+                            position: absolute;
+                            top: 1px;
+                            left: 0px;
+                        }
+                        a {
+                            color: #000;
+                            display: block;
+                            @extend .text-spacing;
+                            &:hover {
+                                color: $link-color;
+                            }
+                        }
+                        span {
+                            font-size: 13px;
+                            font-weight: 600;
+                            font-family: Georgia;
+                        }
+                    }
+                }
+                .custom-counter {
+                    margin-left: 0;
+                    padding-right: 0;
+                    list-style-type: none;
+                    margin-bottom: 20px;
+                    li {
+                        counter-increment: step-counter;
+                        position: relative;
+                        margin-bottom: em(15);
+                        padding-bottom: em(15);
+                        border-bottom: 1px solid #eee;
+                    }
+                }
+            }
+            
+            ul.announcements-listing {
+                padding: 0px;
+                margin: 0;
+                li {
+                    list-style-type: none;
+                    margin-bottom: em(10);
+                    padding-bottom: em(10);
+                    border-bottom: 1px solid #eee;
+                    a {
+                        color: $gray-base;
+                        &:hover {
+                            color: $link-color;
+                        }
+                    }
+                }
+            }
+            /**
+         * ------------------------------------------------------------
+         * Events
+         * ------------------------------------------------------------
+    */
+            
+            .events-wrapper {
+                position: relative;
+                padding-top: em(15);
+            }
+            
+            ul.home-events-listing {
+                padding: 0px;
+                li {
+                    list-style-type: none;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #ececec;
+                    display: inline-block;
+                    width: 100%;
+                    &:last-child {
+                        border-bottom: 0px;
+                        margin-bottom: 0px;
+                    }
+                    .event-date {
+                        text-align: center;
+                        color: $alert-color;
+                        font-family: Georgia;
+                        .event-month {
+                            display: block;
+                        }
+                    }
+                    .event-text {
+                        h3 {
+                            font-family: $font-family-base;
+                            font-size: 13px;
+                            margin: 0px;
+                            display: inline-block;
+                            line-height: 20px;
+                            margin-bottom: 5px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $link-color;
+                                }
+                            }
+                        }
+                        p {
+                            margin: 0px;
+                            font-family: Georgia;
+                        }
+                    }
+                }
+            }
+            /**
+     * ------------------------------------------------------------
+     * Map
+     * ------------------------------------------------------------
+*/
+            
+            .map-wrapper {
+                a {
+                    img {
+                        width: 100%;
+                        margin-bottom: em(10);
+                        height: 300px;
+                    }
+                }
+                h2 {
+                    margin: 0px;
+                    font-size: em(26);
+                    color: $brand-primary;
+                }
+                ul.quick-stats {
+                    padding: 0px;
+                    padding-top: em(15);
+                    padding-right: em(15);
+                    li {
+                        list-style-type: none;
+                        padding-bottom: em(15);
+                        position: relative;
+                        padding-left: em(24);
+                        i {
+                            position: absolute;
+                            left: 0px;
+                            top: 2px;
+                        }
+                    }
+                }
+                a.more-stats {}
+            }
+            /**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+            
+            @media(max-width: 767px) {
+          
+                .first-content-wrapper {
+                    padding: em(20) 0;
+                    a.read-more {
+                        margin-bottom: em(20);
+                        display: block;
+                        padding-bottom: em(20);
+                        border-bottom: 4px solid #ccc;
+                    }
+                }
+
+
+            ul.home-news-listing {
+                padding: 0px;
+                li {
+                    list-style-type: none;
+                    // margin-left: -15px;
+                    border-bottom: 1px solid #eee;
+                    display: inline-block;
+                    padding-bottom: em(10);
+                    padding-top: em(6);
+                    width: 100%;
+                    &:first-child {
+                        margin-left: 0px;
+                        a {
+                            img {
+                                width: 100%;
+                                height: auto;
+                                margin-bottom: em(8);
+                                display: block;
+                            }
+                            h4 {
+                                padding-left: 0px;
+                                font-size: em(20);
+                                margin-bottom: em(6);
+                                height: auto;
+                            }
+                        }
+                        .date {
+                            padding-left: em(0);
+                        }
+                    }
+                    a {
+                        img {
+                            display: none;
+                        }
+                    }
+                    h4 {
+                        padding-left: em(0);
+                        font-size: $font-size-base;
+                        margin-bottom: em(10);
+                        margin: 0px;
+                        font-weight: 300;
+                        margin-top: em(10);
+                        font-family: $font-family-base;
+                        color: $gray-base;
+                        font-size: em(18);
+                        &:hover {
+                            color: $link-color;
+                        }
+                    }
+                    .date {
+                        padding-left: em(0);
+                        margin-top: em(10);
+                    }
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+            }
+            /**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+            
+            @media(min-width: 768px) {
+                .first-content-wrapper {
+                    // padding: em(40) 0;
+                    a.read-more {
+                        margin-bottom: em(20);
+                        display: block;
+                        padding-bottom: em(20);
+                        border-bottom: 4px solid #ccc;
+                    }
+                }
+            }
+            /**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+            
+            @media(max-width: 991px) {
+                .flight-small-container {
+                    margin-bottom: 2em;
+                }
+            }
+            
+            @media(min-width: 992px) {
+                .first-content-wrapper {
+                    // padding: em(40) 0;
+                    a.read-more {
+                        margin-bottom: em(0);
+                        display: initial;
+                        padding-bottom: em(0);
+                        border-bottom: 0px solid #ccc;
+                    }
+                }
+                ul.flights-less-than-6 {
+                    li {
+                        margin-bottom: em(0);
+                    }
+                }
+            }
+            /**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+            
+            // @media(min-width: 1200px) {}

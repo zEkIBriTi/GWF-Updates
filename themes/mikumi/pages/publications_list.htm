@@ -1,0 +1,65 @@
+title = "publications_list"
+url = "/publications_list/:page?"
+layout = "right-sidebar"
+is_hidden = 0
+
+[publicationList]
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "publications_list"
+detailsKeyColumn = "document_link"
+detailsUrlParameter = "document_link"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+sortColumn = "title"
+==
+<div class="col-md-9 col-sm-12">
+    <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+        <h1 class="page-title">All Publications</h1>
+        {% set publications = publicationList.publications %}
+        {% set displayColumn = publicationList.displayColumn %}
+        {% set noRecordsMessage = publicationList.noRecordsMessage %}
+        {% set detailsPage = publicationList.detailsPage %}
+        {% set detailsKeyColumn = publicationList.detailsKeyColumn %}
+        {% set detailsUrlParameter = publicationList.detailsUrlParameter %}
+
+<ul class="publications-listing press-release">
+    {% for record in publications %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                <a target="_blank" href="{{ record.document_link.path }}">
+                    <i class="icon-document"></i>
+                    <p>{{ attribute(record, displayColumn) }}</p>
+                </a>            
+            {% endspaceless %}
+            <span>{{ record.created_at|date("F d, Y") }}</span>
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+
+
+        <nav class="text-center">
+            {% if publications.lastPage > 1 %}
+            <ul class="pagination">
+                {% if publications.currentPage > 1 %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (publications.currentPage-1) }) }}">&larr; Prev</a></li>
+                {% endif %}
+        
+                {% for page in 1..publications.lastPage %}
+                    <li class="{{ publications.currentPage == page ? 'active' : null }}">
+                        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+        
+                {% if publications.lastPage > publications.currentPage %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (publications.currentPage+1) }) }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </nav> 
+	</div>
+</div>

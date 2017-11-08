@@ -1,0 +1,23 @@
+/**
+     * ------------------------------------------------------------
+     * Biography
+     * ------------------------------------------------------------
+*/
+
+.bio-top {
+    padding: 10px;
+    border: 1px solid #ddd;
+    @include borderRadius(3px);
+    background-color: #f2f2f2;
+    background-color: #f2f2f2;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    img {
+        float: left;
+        margin-right: 20px;
+    }
+    p {
+        margin: 50px;
+    }
+}

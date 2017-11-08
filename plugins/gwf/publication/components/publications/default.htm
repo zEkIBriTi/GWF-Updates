@@ -1,0 +1,22 @@
+{% set publications = __SELF__.publications %}
+{% set displayColumn = __SELF__.displayColumn %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+<ul>
+    {% for record in publications %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                <a target="_blank" href="{{ record.document_link.path }}">
+                    <i class="icon-document"></i>
+                    <p>{{ record.title }}</p>
+                </a>            
+            {% endspaceless %}
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+<a class="view-all" href="{{ viewAll|page() }}"><i class="icon icon-search"></i>{{ 'View All'|_ }}</a>

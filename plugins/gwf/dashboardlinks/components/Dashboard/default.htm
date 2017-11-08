@@ -1,0 +1,7 @@
+{% set dashboardLinks = __SELF__.dashboardLinks %}
+
+<ul class="quick-stats">
+    {% for dashboardlink in dashboardLinks %}
+    <li><i class="icon-arrow-carrot-2right"></i><a href="{{ dashboardlink.url }}">{{ dashboardlink.name }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+list: $/gwf/quicklink/models/quicklink/columns.yaml
+modelClass: Gwf\Quicklink\Models\QuickLink
+title: QuickLinks
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gwf/quicklink/quicklinks/update/:id'

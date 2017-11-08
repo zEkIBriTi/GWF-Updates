@@ -1,0 +1,59 @@
+{% set profilelist = __SELF__.profilelist %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+{% if profilelist|length > 1 %}
+<div class="col-md-4 col-sm-12 hidden-xs hidden-sm">
+	<ul class="profiles-many">
+	    {% for profile in profilelist %}
+	    <li>
+			<div class="profile">
+                <div class="row">
+                    <div class="col-md-5 nopadding-right">
+                        <img src="{{ profile.image_url.thumb(230,255,'crop') }}" alt="">
+                    </div>
+                        <!-- /.col-md-5 nopadding-right -->
+                        <div class="col-md-7 nopadding-left">
+                            <p>{{ profile.salutation }}. {{ profile.name }}
+                                <br> <strong>{{ profile.title }}</strong>
+                                <br> 
+                                {# Use spaceless tag to remove spaces inside the A tag. #}
+                                {% spaceless %}
+                                    {% if detailsPage %}
+                                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(profile, detailsKeyColumn) }) }}">
+                                    {% endif %}
+                                {{ 'Biography'|_ }}
+                                </a>
+                                {% endspaceless %}
+                                <br> <a href="{{ welcomeNote|page() }}">{{ 'Welcome Note'|_ }}</a></p>
+                        </div>
+                        <!-- /.col-md-7 -->
+                </div>
+                <!-- /.row -->
+            </div><!--/profile-->
+	    </li>
+	    {% endfor %}
+	</ul>
+</div>
+{% elseif  profilelist|length == 1  %}
+<div class="col-md-3 col-sm-12  hidden-sm hidden-xs">
+    {% for profile in profilelist %}
+        <div class="profile">
+            <img src="{{ profile.image_url.thumb(230,255,'crop') }}" alt="">
+            <p>{{ profile.salutation }} {{ profile.name }}
+                <br> <strong>{{ profile.title }}</strong>
+                <br>
+                {# Use spaceless tag to remove spaces inside the A tag. #}
+                {% spaceless %}
+                    {% if detailsPage %}
+                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(profile, detailsKeyColumn) }) }}">
+                    {% endif %}
+                {{ 'Biography'|_ }}
+                </a>
+                {% endspaceless %}
+                <br> <a href="{{ welcomeNote|page() }}">{{ 'Welcome Note'|_ }}</a></p>
+        </div><!--/profile-->
+    {% endfor %}
+</div><!--/col-md-3-->
+{% endif %}

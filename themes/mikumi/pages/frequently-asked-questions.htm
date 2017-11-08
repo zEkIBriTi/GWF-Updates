@@ -1,0 +1,42 @@
+title = "Frequently Asked Questions"
+url = "/frequently-asked-questions"
+layout = "right-sidebar"
+description = "A page to display frequently asked questions"
+is_hidden = 0
+
+[Faqlist]
+==
+<div class="col-md-9 col-sm-12">
+    <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+       
+        {% set faqs = Faqlist.faqs %}
+
+                <h1 class="page-title">{{ 'FAQ'|_ }} </h1>
+                <div class="accordion">
+                     <dl> 
+                    	{% for faq in faqs %}
+                    	    {% if(loop.first) %}
+                            	<dt class="active"><a href="#"><span class="arrow"></span>{{ faq.questions }}</a></dt>
+                                <dd class="active">
+                                    {{ faq.answers | raw }}
+                                </dd>
+                            {% else %}
+                                <dt><a href="#"><span class="arrow"></span>{{ faq.questions }}</a></dt>
+                                <dd>
+                                   {{ faq.answers | raw }}
+                                </dd> 
+                            {% endif %}
+                        {% endfor %}
+                    </dl>
+                
+                </div>
+                                
+                
+                
+            </dl>
+           
+    </div>
+    <!-- /.right-sidebar-content -->
+    <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+</div>

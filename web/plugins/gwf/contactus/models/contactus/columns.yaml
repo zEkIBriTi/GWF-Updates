@@ -1,0 +1,26 @@
+columns:
+    physical_address:
+        label: 'Physical Address'
+        type: text
+        searchable: true
+        sortable: true
+    post_address:
+        label: 'Post Address'
+        type: text
+        searchable: true
+        sortable: true
+    phone:
+        label: Phone
+        type: text
+        searchable: true
+        sortable: true
+    mobile:
+        label: Mobile
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true

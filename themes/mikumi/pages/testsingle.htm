@@ -1,0 +1,10 @@
+title = "testsingle"
+url = "/testsingle/:slug"
+is_hidden = 0
+
+[singleannouncement]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+{% component 'singleannouncement' %}

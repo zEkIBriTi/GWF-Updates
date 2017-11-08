@@ -1,0 +1,4 @@
+title: CategoriesController
+modelClass: gwf\projectandinvestment\Models\Category
+toolbar:
+    buttons: reorder_toolbar

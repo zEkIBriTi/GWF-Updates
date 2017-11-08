@@ -1,0 +1,50 @@
+/**
+    * ------------------------------------------------------------
+    * News Page
+    * ------------------------------------------------------------
+*/
+
+ul.news-listing {
+    li {
+        img {
+            height: 450px;
+            width: 793px;
+            margin-bottom: 8px;
+        }
+        .meta-content {
+            h4 {
+                font-weight: 600;
+                color: #000;
+            }
+            p {
+                margin: 0px;
+            }
+        }
+    }
+}
+
+.news-image {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Single News
+	* ------------------------------------------------------------
+*/
+
+.article-head {
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    margin-bottom: 15px;
+}
+
+h1.inner-page-title {
+    margin-bottom: 15px;
+    text-transform: none;
+}

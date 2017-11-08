@@ -1,0 +1,15 @@
+columns:
+    name:
+        label: 'Dashboard Name'
+        type: text
+        searchable: true
+        sortable: true
+    url:
+        label: URL
+        type: text
+        searchable: true
+        sortable: true
+    activation_status:
+        label: Published
+        type: switch
+        sortable: true

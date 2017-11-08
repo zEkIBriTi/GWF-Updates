@@ -1,0 +1,11 @@
+{% set video = __SELF__.video %}
+{% set viewAll = __SELF__.viewAll %}
+
+
+    	{% set code = video.url|split('=') %}
+        <a href="https://www.youtube.com/watch?v={{ code[1] }}" class="video-content" title=""> <img src="http://img.youtube.com/vi/{{ code[1] }}/0.jpg" alt=""> <span><i class="icon-playback-play"></i></span> </a>
+
+
+     <a href="{{ viewAll|page() }}" class="read-more">{{ 'More Videos'|_ }}</a>
+   
+

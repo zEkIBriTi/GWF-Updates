@@ -1,0 +1,11 @@
+list: $/gwf/tender/models/tender/columns.yaml
+modelClass: Gwf\Tender\Models\Tender
+title: TenderController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gwf/tender/tendercontroller/update/:id'

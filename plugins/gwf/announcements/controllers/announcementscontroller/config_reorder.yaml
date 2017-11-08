@@ -1,0 +1,4 @@
+title: AnnouncementsController
+modelClass: Gwf\Announcements\Models\Announcements
+toolbar:
+    buttons: reorder_toolbar

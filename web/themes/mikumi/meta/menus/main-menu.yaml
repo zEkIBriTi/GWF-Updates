@@ -1,0 +1,831 @@
+name: 'main menu'
+items:
+    -
+        title: Home
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: home
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'About Us'
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Vision and Mission'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: mission
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Historical Background'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: history
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Regional Leaders'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: regional-leaders
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Administration
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Regional Secretariat Structure'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: organization-structure
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Sections
+                nesting: ''
+                type: url
+                url: '#'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                items:
+                    -
+                        title: 'Human Resources'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: human-resources
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Planning and Cordination'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: planning-and-cordination
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Economy and Production'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: economy-and-production
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: Infrastructure
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: infrastructure
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Local Government'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: local-government
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: Health
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: health
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: Education
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: education
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: Water
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: water
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+            -
+                title: Units
+                nesting: ''
+                type: url
+                url: '#'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                items:
+                    -
+                        title: 'Finance and Accounts'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: finance-and-accounts
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Internal Audit'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: internal-audit
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Procurement and Supply'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: procurement-and-supply
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Information and Communication Technologies'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: ict
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Legal Services'
+                        nesting: '0'
+                        type: static-page
+                        url: ''
+                        code: ''
+                        reference: legal
+                        cmsPage: ''
+                        replace: '0'
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+    -
+        title: Districts
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: districts
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Ilemela
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: ilemela-2
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Nyamagana
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: nyamagana
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Magu
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: magu
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Misungwi
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: misungwi
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Kwimba
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: kwimba
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Sengerema
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: sengerema
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Ukerewa
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: ukerewe
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Councils
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Buchosa DC'
+                nesting: ''
+                type: url
+                url: 'http://www.buchosadc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '1'
+            -
+                title: 'Ilemela MC'
+                nesting: ''
+                type: url
+                url: 'http://www.ilemelamc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Kwimba DC'
+                nesting: ''
+                type: url
+                url: 'http://www.kwimbadc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Magu DC'
+                nesting: ''
+                type: url
+                url: 'http://www.magudc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Misungwi DC'
+                nesting: ''
+                type: url
+                url: 'http://www.misungwidc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Mwanza CC'
+                nesting: ''
+                type: url
+                url: 'http://www.mwanzacc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Sengerema DC'
+                nesting: ''
+                type: url
+                url: 'http://www.sengeremadc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Ukerewe DC'
+                nesting: ''
+                type: url
+                url: 'http://www.ukerewedc.go.tz/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Investiment Opportunity'
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: investiment-opportunity
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Agriculture
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: agriculture
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Livestock
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: livestock
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Services
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: services
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Industries and Trade'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: industries-and-trade
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Mining
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: mining
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Fishing
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: fishing
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Tourism Centers'
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Saanane National Park'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: saa-nane-national-park
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Bujora
+                nesting: ''
+                type: url
+                url: 'http://sukumamuseum.org/'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Bismarck Rocks'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: bismark-rock
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Nyakuberega
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: nyakuberega
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Nyamadoke
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: nyamadoke
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Media Center'
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: News
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: news
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Announcements
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: announcements
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Gallery
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: gallery
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: speeches
+                nesting: ''
+                type: url
+                url: /publications/speech
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Press-Releases
+                nesting: ''
+                type: url
+                url: /Publications/Press-Releases
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Videos
+                nesting: ''
+                type: cms-page
+                url: ''
+                code: ''
+                reference: videos
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Publications
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Forms
+                nesting: ''
+                type: url
+                url: /Publications/Forms
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Guidelines
+                nesting: ''
+                type: url
+                url: /publications/guidelines
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Reports
+                nesting: ''
+                type: url
+                url: /publications/Reports
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'

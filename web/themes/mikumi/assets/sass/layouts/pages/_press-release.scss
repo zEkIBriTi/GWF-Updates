@@ -1,0 +1,95 @@
+/**
+    * ------------------------------------------------------------
+    * The Press Release
+    * ------------------------------------------------------------
+*/
+
+.press-release {
+    span {
+        font-size: em(15);
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+
+ul.publications-listing {
+    padding: 0px;
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: em(50);
+        margin-bottom: em(15);
+        padding-bottom: em(15);
+        border-bottom: 1px solid #eee;
+        a {
+            color: $gray-base;
+            &:hover {
+                color: $link-color;
+            }
+            i {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                font-size: em(40);
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+ul.announcements {
+    li {
+        padding-left: 0 !important;
+    }
+}
+
+
+/**
+    * ----------------------------------------------------------------
+    * How do I
+    * ----------------------------------------------------------------
+*/
+
+ul.howdoi {
+    li {
+        padding-left: 0px;
+    }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+
+@media(max-width: 767) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 768) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 992) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 1200px) {}

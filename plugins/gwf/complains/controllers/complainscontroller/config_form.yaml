@@ -1,0 +1,10 @@
+name: ComplainsController
+form: $/gwf/complains/models/complain/fields.yaml
+modelClass: gwf\Complains\Models\Complain
+defaultRedirect: gwf/complains/complainscontroller
+create:
+    redirect: 'gwf/complains/complainscontroller/update/:id'
+    redirectClose: gwf/complains/complainscontroller
+update:
+    redirect: gwf/complains/complainscontroller
+    redirectClose: gwf/complains/complainscontroller

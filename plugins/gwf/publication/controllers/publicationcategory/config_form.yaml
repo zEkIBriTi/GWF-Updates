@@ -1,0 +1,11 @@
+name: Publicationcategory
+modelClass: gwf\Publication\Models\Publicationcategory
+form: $/gwf/publication/models/publicationcategory/fields.yaml
+defaultRedirect: gwf/publication/publicationcategory
+create:
+    redirect: 'gwf/publication/publicationcategory/update/:id'
+    redirectClose: gwf/publication/publicationcategory
+update:
+    redirect: gwf/publication/publicationcategory
+    redirectClose: gwf/publication/publicationcategory
+preview: {  }

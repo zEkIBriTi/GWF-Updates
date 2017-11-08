@@ -1,0 +1,50 @@
+name: 'Top Bar Menu'
+items:
+    -
+        title: 'Contact Us'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: contact-us
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: FAQ
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: frequently-asked-questions
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Complaint
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: complaint
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Staff Mail'
+        type: url
+        url: 'http://webmail.mwanza.go.tz'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

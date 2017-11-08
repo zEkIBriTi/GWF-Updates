@@ -1,0 +1,33 @@
+title = "Single Announcement"
+url = "/single-announcement/:slug"
+layout = "right-sidebar-with-news"
+description = "A page to display single announcement"
+is_hidden = 0
+
+[singleannouncement]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+            <!--      ul.announcements-listing>li*6>.calender-date>span.calender-month{Jan}+.calender-day{01}^.meta-content>h4>lorem15^+a[href="single-announcement.html"]{read more}|c -->
+            {% set announcement = singleannouncement.announcement %}
+            {% set notFoundMessage = singleannouncement.notFoundMessage %}
+            
+            {% if announcement %}
+                    <h1 class="single-page-title">{{ announcement.title }}</h1>
+                    <span>Posted on {{ announcement.published_date|date("d F Y") }}</span>
+                    {{ announcement.content|raw }}
+            {% else %}
+                {{ notFoundMessage }}
+            {% endif %}
+        </div>
+        <!-- /.right-sidebar-main-content -->
+        <!--/END MAIN CONTENT-->
+    </div>
+    <!-- /.middle-content-wrapper -->
+    <!--/MIDDLE CONTENT-->

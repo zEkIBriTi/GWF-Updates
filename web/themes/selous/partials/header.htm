@@ -1,0 +1,91 @@
+[viewBag]
+
+[staticMenu]
+code = "top-bar-menu"
+
+[localePicker]
+forceUrl = 0
+==
+<!DOCTYPE html>
+<html lang="{{ this.theme.site_locale }}">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="description" content="{{ this.page.description }}">
+    <title>{% if this.page.title %}{{ this.page.title}} &#124; {% endif %}{{ this.theme.site_title }}</title>
+    <link href='https://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{'assets/css/smartmenus.min.css' | theme }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{'assets/css/jquery.smartmenus.bootstrap.min.css' | theme }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'assets/css/magnific-popup.min.css' | theme }}"  rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'assets/css/master.css' | theme }}"  rel="stylesheet">
+    <link rel="shortcut icon" href="{{  this.theme.site_favicon.getThumb(16,16, 'crop')  }}" type="image/x-icon" />
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">{% partial 'styles' %}</style>
+    <style>      
+        #topbg #lang-picker {
+		    width: 14em;
+		    float: left;
+		    margin-right: 20px;
+		    margin-right: 0px;
+		}
+		.form-control {
+		    display: block;
+		    width: 50%;
+		    margin: 0px 5px;
+		    height: 27px;
+		    border-radius: 5px;
+		    padding: 2px 5px 0px 5px;
+		}
+    </style>
+</head>
+
+
+
+
+
+<div class="container">
+    <div class="top-bar-wrapper">
+        <div id="topbg">
+        
+              {% partial 'top-menu' items=staticMenu.menuItems %}
+              
+            <div id="lang-picker"> 
+            	{% component 'localePicker' %}
+            </div>
+            <!-- /lang-pikcer-->
+            <form class="navbar-form navbar-right" role="search" action="{{ 'search' | page }}">
+             	<div class="form-group">
+                	<input class="form-control" name="q" type="text" placeholder="Search" autocomplete="off">
+                 <i class="icon icon-search"></i>
+                 </div>
+            </form>
+        </div>
+        <!--/topbg-->
+    </div>
+    <!-- /.top-bar-wrapper -->
+    <div id="header">
+        <div id="logo">
+            <a href=".">
+                {% if this.theme.site_coat %}
+                <img src="{{ this.theme.site_coat.getThumb(102, 110, 'crop') }}"  alt="{{ this.theme.site_title }}" />
+                {% else %}
+                <img src="{{ 'assets/images/coat.png' | theme }}" alt="{{ this.theme.site_title }}" />
+                {% endif %}
+            </a>
+        </div>
+        <!--/logo-->
+        <h1><span>{{ this.theme.site_tagline_country|_ }} <br>{{ this.theme.site_tagline_ministry|_ }}</span>{{ this.theme.site_title|_ }} </h1>
+        <!--        <div id="board-logo">-->
+        <!--            <a href="."> <img src="images/coat.png" alt=""> </a>-->
+        <!--        </div>-->
+        <!--/logo-->
+    </div>
+    <!--/header-->
+{% partial 'nav' %}
+</div>
+<!-- /.container -->

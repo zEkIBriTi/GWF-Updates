@@ -1,0 +1,15 @@
+columns:
+    id:
+        label: SN
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: Description
+        type: text
+        searchable: true

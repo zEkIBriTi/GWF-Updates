@@ -1,0 +1,6 @@
+name: Selous
+description: 'The GWF theme for LGAs'
+author: 'Daniel Chikaka'
+homepage: 'http://ega.go.tz'
+code: selous
+form: fields.yaml

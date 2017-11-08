@@ -1,0 +1,11 @@
+title: ComplainsController
+modelClass: gwf\Complains\Models\Complain
+list: $/gwf/complains/models/complain/columns.yaml
+recordUrl: 'gwf/complains/complainscontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

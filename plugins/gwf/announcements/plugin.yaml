@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.announcements::lang.plugin.name'
+    description: 'gwf.announcements::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-bullhorn
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Announcements
+        url: gwf/announcements/announcementscontroller
+        icon: icon-bell

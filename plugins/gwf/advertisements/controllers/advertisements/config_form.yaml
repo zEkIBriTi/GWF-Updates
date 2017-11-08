@@ -1,0 +1,10 @@
+name: Advertisements
+modelClass: Gwf\Advertisements\Models\Advertisement
+form: $/gwf/advertisements/models/advertisement/fields.yaml
+defaultRedirect: gwf/advertisements/advertisements
+create:
+    redirect: 'gwf/advertisements/advertisements/update/:id'
+    redirectClose: gwf/advertisements/advertisements
+update:
+    redirect: gwf/advertisements/advertisements
+    redirectClose: gwf/advertisements/advertisements

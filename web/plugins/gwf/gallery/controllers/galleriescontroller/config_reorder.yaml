@@ -1,0 +1,4 @@
+title: GalleriesController
+modelClass: Gwf\Gallery\Models\Gallery
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,29 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_create_gwf_projectandinvestment_projectsandinvestments.php
+1.0.3:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments.php
+1.0.4:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments_2.php
+1.0.5:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments_3.php
+1.0.6:
+    - 'Created table gwf_projectandinvestment_categories'
+    - builder_table_create_gwf_projectandinvestment_categories.php
+1.0.7:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments_4.php
+1.0.8:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments_5.php
+1.0.9:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments_6.php
+1.0.10:
+    - 'Updated table gwf_projectandinvestment_projectsandinvestments'
+    - builder_table_update_gwf_projectandinvestment_projectsandinvestments_7.php

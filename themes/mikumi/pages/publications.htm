@@ -1,0 +1,22 @@
+title = "Category publications"
+url = "/publications/:slug/:?page?"
+layout = "right-sidebar"
+is_hidden = 0
+
+[PublicationDetails]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "There is no publications yet!"
+recordsPerPage = 2
+pageNumber = "{{ :page }}"
+==
+{% set publication = PublicationDetails.publication %}
+{% set notFoundMessage = PublicationDetails.notFoundMessage %}
+{% set publicationcat_title = PublicationDetails.publicationcat_title %}
+
+<div class="col-md-9 col-sm-12">
+    <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+		{% component 'PublicationDetails' %}
+	</div>
+</div>

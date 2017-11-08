@@ -1,0 +1,7 @@
+{% set contactinfo = __SELF__.contactinfo %}
+
+<ul class="ads-listing">
+    {% for contact in contactinfo %}
+    	{{ contact.physical_address }}
+    {% endfor %}
+</ul>

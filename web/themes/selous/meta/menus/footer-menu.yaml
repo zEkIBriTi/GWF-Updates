@@ -1,0 +1,38 @@
+name: 'Footer Menu'
+items:
+    -
+        title: Disclamer
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Privacy Policy'
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: FAQ
+        type: cms-page
+        code: ''
+        reference: frequently-asked-questions
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Sitemap
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

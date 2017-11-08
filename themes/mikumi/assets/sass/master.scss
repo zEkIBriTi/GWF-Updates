@@ -1,0 +1,36 @@
+/*
+     * ----------------------------------------------------------------
+     * CSS SASS file for  Government Framework Website
+     * There is SASS Inside, be careful !
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+ */
+
+// Import custom grid, codename SUSY ;)
+// @import "../../bower_components/susy/sass/susy";
+// Import custom Bootstrap variables
+@import "bootstrap-variables.scss";
+// Import Bootstrap for Sass
+@import "bootstrap";
+@import "layouts/base";
+@import "icon-fonts";
+@import "layouts/main/header";
+@import "layouts/main/menu";
+@import "layouts/pages/home";
+@import "layouts/main/slider-bio";
+@import "layouts/main/footer";
+@import "layouts/pages/right-sidebar";
+@import "layouts/pages/contact";
+@import "layouts/pages/faq";
+@import "layouts/pages/news";
+@import "layouts/pages/our-fleet";
+@import "layouts/pages/gallery";
+@import "layouts/pages/videos";
+@import "layouts/pages/press-release";
+@import "layouts/pages/full-width";
+@import "layouts/pages/left-sidebar";
+@import "layouts/pages/single-page";
+@import "layouts/pages/flights-schedule";
+@import "layouts/main/custom-styles";
+

@@ -1,0 +1,6 @@
+name: Mikumi
+description: 'An GWF theme for LGAs.'
+author: 'Daniel Chikaka & Donald Assey '
+homepage: 'http://ega.go.tz'
+code: mikumi
+form: fields.yaml

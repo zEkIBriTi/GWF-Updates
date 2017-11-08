@@ -1,0 +1,31 @@
+title = "Project Details"
+url = "/project-details/:slug"
+layout = "right-sidebar-with-news"
+is_hidden = 0
+
+[viewBag]
+localeUrl[sw] = "/project-details"
+
+[Singleproject]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="middle-content-wrapper  right-sidebar-aligner">
+{% set project = Singleproject.project %}
+{% set notFoundMessage = Singleproject.notFoundMessage %}
+
+{% if project %}
+        <h1 class="home-content-title">{{ project.title }}</h1>
+       <hr class="home-content-hr">
+       <div class="right-sidebar-main-content">
+       	<h5 class="">Start Date: {{ project.start_date }}</h5>
+        <h5 class="">End Date: {{ project.start_date }}</h5>
+        {{ project.summary|raw }}
+        </div>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+
+</div>

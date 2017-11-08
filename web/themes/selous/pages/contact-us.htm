@@ -1,0 +1,34 @@
+title = "Contact Us"
+url = "/contact-us"
+layout = "right-sidebar"
+description = "A page to display contact"
+is_hidden = 0
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+        <h1 class="home-content-title">{% if this.page.title %}{{ this.page.title}}{% endif %}</h1>
+        <hr class="home-content-hr">
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+            <div class="contact">
+                <form action="#">
+                    <p>
+                        <input type="text" name="names" placeholder="Enter Your Name" autofocus> </p>
+                    <p>
+                        <input type="email" name="email" placeholder="Enter Your Email"> </p>
+                    <p>
+                        <input type="text" name="subject" placeholder="Enter the Subject"> </p>
+                    <p>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                    </p>
+            </div>
+            <!-- /.contact form -->
+        </div>
+        <!-- /.right-sidebar-main-content -->
+        <!--/END MAIN CONTENT-->
+    </div>
+    <!-- /.middle-content-wrapper -->
+    <!--/MIDDLE CONTENT-->

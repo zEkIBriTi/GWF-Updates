@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.contactus::lang.plugin.name'
+    description: 'Handles contact and address details'
+    author: gwf
+    icon: oc-icon-phone-square
+    homepage: ''
+navigation:
+    main-contactinfo:
+        label: Contact
+        url: gwf/contactus/contactuses
+        icon: icon-phone-square

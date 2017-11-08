@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.dashboardlinks::lang.plugin.name'
+    description: 'gwf.dashboardlinks::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-dashboard
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Dashboard Links'
+        url: gwf/dashboardlinks/dashboardslinkscontroller
+        icon: icon-dashboard

@@ -1,0 +1,10 @@
+name: FrequentAskedQuestions
+form: $/gwf/faq/models/faq/fields.yaml
+modelClass: Gwf\Faq\Models\Faq
+defaultRedirect: gwf/faq/frequentaskedquestions
+create:
+    redirect: 'gwf/faq/frequentaskedquestions/update/:id'
+    redirectClose: gwf/faq/frequentaskedquestions
+update:
+    redirect: gwf/faq/frequentaskedquestions
+    redirectClose: gwf/faq/frequentaskedquestions

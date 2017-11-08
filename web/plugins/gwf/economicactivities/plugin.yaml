@@ -1,0 +1,11 @@
+plugin:
+    name: 'Economic Activities'
+    description: 'gwf.economicactivities::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-bar-chart
+    homepage: ''
+navigation:
+    activity-menu-item:
+        label: 'Economic Activities'
+        url: gwf/economicactivities/economicactivitiescontroller
+        icon: icon-bar-chart-o

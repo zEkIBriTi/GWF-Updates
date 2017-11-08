@@ -1,0 +1,21 @@
+title = "Projects"
+url = "/projects/:slug/:?page?"
+layout = "right-sidebar"
+is_hidden = 0
+
+[Categoryprojects]
+detailsPage = "project-details"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
+==
+<div class="middle-content-wrapper">
+    <div class="single-page-wrapper">
+            
+        {% component 'Categoryprojects' %}
+      
+    </div>
+    <!-- /.home-news-wrapper-->
+</div>

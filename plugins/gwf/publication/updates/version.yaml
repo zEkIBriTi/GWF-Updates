@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_publication_publications'
+    - builder_table_create_gwf_publication_publications.php
+1.0.3:
+    - 'Created table gwf_publication_publicationcategories'
+    - builder_table_create_gwf_publication_publicationcategories.php
+1.0.4:
+    - 'Updated table gwf_publication_publications'
+    - builder_table_update_gwf_publication_publications.php
+1.0.5:
+    - 'Updated table gwf_publication_publications'
+    - builder_table_update_gwf_publication_publications_2.php

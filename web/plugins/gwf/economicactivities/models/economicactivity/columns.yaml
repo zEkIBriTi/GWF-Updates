@@ -1,0 +1,18 @@
+columns:
+    activityname:
+        label: 'Economic Activity'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        type: text
+        searchable: true
+    activation_status:
+        label: Published
+        type: number
+        sortable: true
+    recorder:
+        label: 'Recorded by'
+        type: text
+        sortable: true

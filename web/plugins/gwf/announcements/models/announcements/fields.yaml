@@ -1,0 +1,22 @@
+fields:
+    title:
+        label: Title
+        span: full
+        placeholder: 'Write the  title'
+        type: text
+    content:
+        label: Content
+        size: large
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+    published_date:
+        label: 'Published Date'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        type: datepicker
+    activation_status:
+        label: Publish
+        span: left
+        type: switch

@@ -1,0 +1,23 @@
+{% set publications = __SELF__.publications %}
+{% set displayColumn = __SELF__.displayColumn %}
+{% set noRecordsMessage = __SELF__.noRecordsMessage %}
+{% set detailsPage = __SELF__.detailsPage %}
+{% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
+{% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
+
+<ul class="publications-listing press-release">
+    {% for record in publications %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                <a target="_blank" href="{{ record.document_link.path }}">
+                    <i class="icon-document"></i>
+                    <p>{{ attribute(record, displayColumn) }}</p>
+                </a>            
+            {% endspaceless %}
+            <span>{{ record.created_at|date("F d, Y") }}</span>
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: 'Category Title'
+        type: text
+    status:
+        label: Published
+        type: switch
+    created_at:
+        label: 'Created at'
+        type: date

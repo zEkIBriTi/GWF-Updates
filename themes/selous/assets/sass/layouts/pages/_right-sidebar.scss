@@ -1,0 +1,238 @@
+/**
+     * ------------------------------------------------------------
+     * Right Sidebar
+     * ------------------------------------------------------------
+*/
+
+.right-sidebar-wrapper {
+    @include span(3 of 12 last);
+    padding-right: 0px;
+    border-left: 1px solid #ddd;
+    h2 {
+        margin: 0px;
+        font-size: 18px;
+        padding: 10px;
+        background-color: $brand-primary;
+        border-left: 1px solid darken($brand-primary, 20%);
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        margin-left: -1px;
+    }
+}
+
+.right-sidebar-container {
+    border: 0px;
+    margin-bottom: 20px;
+}
+
+ul.sports-listing {
+    //    border: 1px solid #ddd;
+    border-top: 0px;
+    padding: 0px;
+    padding: 10px 0 15px;
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #ddd;
+        a {
+            //            color: $gray-base;
+            &:hover {
+                //                color: $link-color;
+            }
+            i {
+                position: absolute;
+                left: 5px;
+                top: 2px;
+            }
+        }
+    }
+}
+
+.map {
+    margin-left: -1px;
+    img {
+        width: 100%;
+    }
+}
+
+.visitors-counter {
+    text-align: center;
+    background-color: $brand-primary;
+    padding: 1px 0;
+    color: #fff;
+    h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+ul.statistics-listing {
+    padding: 10px;
+    h4 {
+        margin: 0px;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 5px;
+        ;
+        font-size: 16px;
+    }
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-bottom: 10px;
+        padding-left: 0px;
+        a {
+            color: $link-color;
+            font-size: 14px;
+            &:hover {
+                color: $link-hover-color;
+            }
+            i {
+                font-size: 13px;
+                position: absolute;
+                left: 0px;
+                top: 5px;
+            }
+        }
+    }
+}
+
+ul.michezo-listing {
+    padding: 10px 15px 0 15px;
+    li {
+        list-style-type: none;
+        border-bottom: 1px dashed #ddd;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        &:last-child {
+            border-bottom: 0px;
+            margin-bottom: 10px;
+            padding-bottom: 0px;
+        }
+        h4 {
+            margin: 0px;
+            color: #000;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    }
+}
+
+ul.uwekezaji {
+    padding-top: 10px;
+    li {
+        margin-right: 0px;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        &:last-child {
+            border-bottom: 0px;
+        }
+        a {
+            i {
+                top: 3px;
+                left: 8px;
+            }
+        }
+    }
+}
+
+ul.tourism-listing {
+    border-top: 0px;
+    padding: 0px;
+    padding: 10px 0 15px;
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #ddd;
+        a {
+            img {
+                float: left;
+                width: 100px;
+                height: 80px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+ul.sidebar-news-lists {
+    padding: 0px;
+    padding: 15px;
+    li {
+        list-style-type: none;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0.0625em solid #ececec;
+        a {
+            img {
+                float: left;
+                margin-right: 15px;
+            }
+        }
+    }
+    h4 {
+        margin: 0px;
+        color: $link-color;
+        @extend .title-spacing;
+        margin-bottom: 5px;
+        line-height: 18px;
+        font-size: 14px;
+        font-family: $font-family-base;
+        font-weight: 400;
+        &:hover {
+            color: $addon-color;
+            text-decoration: none;
+        }
+    }
+    span {
+        // font-family: Georgia;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+ul.home-howdo-i-lists-sidebar {
+    padding: 10px;
+    font-size: 14px;
+    li {
+        position: relative;
+        list-style-type: none;
+        padding-left: 16px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0.0625em solid #ececec;
+        a {
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 2px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+/**
+     * ------------------------------------------------------------
+     * Right Sidebar Page Middle Content
+     * ------------------------------------------------------------
+*/
+
+.right-sidebar-main-content {
+    padding: 0 0 0 15px;
+}

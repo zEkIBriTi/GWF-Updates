@@ -1,0 +1,34 @@
+title = "Singel event"
+url = "/singel-event/:slug"
+layout = "right-sidebar-with-news"
+is_hidden = 0
+
+[viewBag]
+localeUrl[sw] = "/singel-event"
+
+[Singleevent]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+        {% set event = Singleevent.event %}
+        {% set notFoundMessage = Singleevent.notFoundMessage %}
+
+        {% if event %}
+            <h1 class="single-page-title">{{ event.title }}</h1>
+            <span>Posted on {{ event.published_date|date("d F Y") }}</span>
+            {{ event.content|raw }}
+        {% else %}
+            {{ notFoundMessage }}
+        {% endif %}
+        </div>
+    <!-- /.right-sidebar-main-content -->
+    <!--/END MAIN CONTENT-->
+</div>
+<!-- /.middle-content-wrapper -->
+<!--/MIDDLE CONTENT-->

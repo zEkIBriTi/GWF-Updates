@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_events_'
+    - builder_table_create_gwf_events_.php
+1.0.3:
+    - 'Updated table gwf_events_'
+    - builder_table_update_gwf_events_events.php
+1.0.4:
+    - 'Updated table gwf_events_events'
+    - builder_table_update_gwf_events_events_2.php
+1.0.5:
+    - 'Updated table gwf_events_events'
+    - builder_table_update_gwf_events_events_3.php
+1.0.6:
+    - 'Updated table gwf_events_events'
+    - builder_table_update_gwf_events_events_4.php
+1.0.7:
+    - 'Updated table gwf_events_events'
+    - builder_table_update_gwf_events_events_5.php
+1.0.8:
+    - 'Updated table gwf_events_events'
+    - builder_table_update_gwf_events_events_6.php
+1.0.9:
+    - 'Updated table gwf_events_events'
+    - builder_table_update_gwf_events_events_7.php

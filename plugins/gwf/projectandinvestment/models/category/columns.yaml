@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: 'Category Name'
+        type: text
+        searchable: true
+        sortable: true
+    activation_status:
+        label: Publushed
+        type: switch
+        searchable: true
+        sortable: true

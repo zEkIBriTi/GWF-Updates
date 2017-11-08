@@ -1,0 +1,10 @@
+name: TenderController
+form: $/gwf/tender/models/tender/fields.yaml
+modelClass: Gwf\Tender\Models\Tender
+defaultRedirect: gwf/tender/tendercontroller
+create:
+    redirect: 'gwf/tender/tendercontroller/update/:id'
+    redirectClose: gwf/tender/tendercontroller
+update:
+    redirect: gwf/tender/tendercontroller
+    redirectClose: gwf/tender/tendercontroller

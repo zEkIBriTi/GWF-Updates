@@ -1,0 +1,83 @@
+title = "Events"
+url = "/events/:page?"
+layout = "right-sidebar-with-news"
+is_hidden = 0
+
+[viewBag]
+localeUrl[sw] = "/events"
+
+[Events]
+noRecordsMessage = "No records found"
+detailsPage = "singel-event"
+viewAll = "events"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 10
+pageNumber = "{{ :page }}"
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+        <h1 class="home-content-title">{% if this.page.title %}{{ this.page.title}}{% endif %}</h1>
+        <hr class="home-content-hr">
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+
+        {% set events = Events.events %} 
+        {% set noRecordsMessage = Events.noRecordsMessage %}
+        {% set detailsPage = Events.detailsPage %}
+        {% set viewAll = Events.viewAll %}
+        {% set detailsKeyColumn = Events.detailsKeyColumn %}
+        {% set detailsUrlParameter = Events.detailsUrlParameter %}
+
+        <ul class="announcements-listing">
+        	{% for event in events %}
+        	<li>
+                <div class="calender-date">
+                    <span class="calender-month">{{ event.published_date|date("M") }}</span>
+                    <span class="calender-day">{{ event.published_date|date("d") }}</span>
+                    <!-- /.calender-day -->
+                </div>
+                <!-- /.calender-date -->
+                <div class="meta-content">
+                    <p>{{ event.title }}</p>
+                    {% spaceless %}
+                	{% if detailsPage %}
+                        <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(event, detailsKeyColumn) }) }}">{{ 'read more'|_ }}
+                    {% endif %}
+        	        </a>
+        		    {% endspaceless %}
+                </div>
+                <!-- /.meta-content -->
+            </li>
+            
+            {% else %}
+                <li class="no-data">{{ noRecordsMessage }}</li>
+            {% endfor %}
+        </ul>
+    
+        <!-- /.announcements-listing -->
+        <nav class="text-center">
+        {% if events.lastPage > 1 %}
+        <ul class="pagination">
+            {% if events.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (events.currentPage-1) }) }}">&larr; Prev</a></li>
+            {% endif %}
+    
+            {% for page in 1..events.lastPage %}
+                <li class="{{ events.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                </li>
+            {% endfor %}
+    
+            {% if events.lastPage > events.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (events.currentPage+1) }) }}">Next &rarr;</a></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </nav>
+    </div>
+    <!-- /.right-sidebar-main-content -->
+    <!--/END MAIN CONTENT-->
+</div>
+<!-- /.middle-content-wrapper -->
+<!--/MIDDLE CONTENT-->

@@ -1,0 +1,10 @@
+columns:
+    title:
+        label: Title
+        type: text
+    description:
+        label: Descreption
+        type: text
+    activation_status:
+        label: Active
+        type: switch

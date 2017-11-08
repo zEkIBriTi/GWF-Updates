@@ -1,0 +1,11 @@
+list: $/gwf/publication/models/publicationcategory/columns.yaml
+modelClass: gwf\Publication\Models\Publicationcategory
+title: Publicationcategory
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gwf/publication/publicationcategory/update/:id'

@@ -1,0 +1,5 @@
+title: Advertisements
+modelClass: Gwf\Advertisements\Models\Advertisement
+nameFrom: t
+toolbar:
+    buttons: reorder_toolbar

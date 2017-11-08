@@ -1,0 +1,353 @@
+/**
+    * ------------------------------------------------------------
+    * General Styling
+    * ------------------------------------------------------------
+*/
+
+.home-main-content-wrapper {
+    @include span(6 of 9);
+}
+
+.home-content-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 5px;
+    background-color: $link-color;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 15px;
+}
+
+hr.home-content-hr {
+    border-width: 1px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: -6px;
+    margin-bottom: 10px;
+    border-color: $link-color;
+    border-color: $link-color;
+}
+
+
+/**
+    * ------------------------------------------------------------
+    * Welcome Note
+    * ------------------------------------------------------------
+*/
+
+.welcome-note {
+    position: relative;
+    margin: 15px 0 15px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/**
+    * ------------------------------------------------------------
+    * Home News
+    * ------------------------------------------------------------
+*/
+
+.home-news-wrapper {
+    position: relative;
+    padding: 0 0 0 15px;
+    .view-all {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+    }
+}
+
+ul.home-news-lists {
+    margin-top: 10px;
+    padding: 0px;
+    li {
+        list-style-type: none;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 0.0625em dashed #ececec;
+        a {
+            padding-left: 0px;
+            display: initial;
+            img {
+                width: 200px;
+                height: 140px;
+                float: left;
+                margin-right: 10px;
+                &:hover {
+                    opacity: 0.9;
+                    // @include transition(0.6s);
+                    // border: 1px solid $link-color;
+                    ;
+                }
+            }
+            img.lazy {
+                width: 200px;
+                height: 140px;
+            }
+            h4 {
+                margin: 0px;
+                @extend .title-spacing;
+                margin-bottom: 0px;
+                line-height: 20px;
+                font-size: 16px;
+                font-family: $font-family-base;
+                font-weight: 300;
+                color: $link-color;
+                &:hover {
+                    color: $link-hover-color;
+                    text-decoration: none;
+                }
+            }
+        }
+        span {
+            // font-family: Georgia;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: arial;
+            color: 600;
+        }
+        p {
+            margin: 0px;
+        }
+        &:last-child {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Home Latest Projects
+	* ------------------------------------------------------------
+*/
+
+.home-projects {
+    position: relative;
+    padding: 0 0 0 15px;
+    @include span(3 of 6);
+}
+
+ul.home-projects-listing {
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    li {
+        list-style: none;
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Home Video
+	* ------------------------------------------------------------
+*/
+
+.home-videos {
+    position: relative;
+    a {
+        img {
+            width: 100%;
+        }
+        i {
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            font-size: 50px;
+        }
+    }
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Home How do I
+	* ------------------------------------------------------------
+*/
+
+.home-howdo-i {
+    position: relative;
+    padding: 0 0 0 15px;
+    @include span(3 of 6 last);
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Home Main Content Sidebar
+	* ------------------------------------------------------------
+*/
+
+.home-main-content-sidebar-wrapper {
+    border-left: 1px solid #ddd;
+    @include span(3 of 9 last);
+    h1 {
+        text-align: center;
+        display: block;
+        margin-right: -20px;
+        margin-left: 0px;
+        border-left: 1px solid darken($link-color, 20%);
+        border-right: 1px solid darken($link-color, 20%);
+    }
+}
+
+ul.ads-listing {
+    border-top: 0px;
+    padding: 0px;
+    li {
+        list-style-type: none;
+        position: relative;
+        margin-bottom: 6px;
+        border-bottom: 1px dashed #ddd;
+        padding: 0px 10px 6px 10px;
+        margin-right: -20px;
+        p {
+            margin: 0px;
+        }
+        a {
+            //            color: $gray-base;
+            //            &:hover {
+            //                color: $link-color;
+            //            }
+            i {
+                position: absolute;
+                left: 5px;
+                top: 1px;
+            }
+        }
+    }
+}
+
+ul.document-listing {
+    li {
+        padding-left: 30px;
+        a {
+            .icon-document {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+ul.home-games-sports-listing {
+    padding: 2px 0 15px !important;
+    li {
+        padding-left: 8px !important;
+        margin-right: -20px;
+        margin-bottom: 10px;
+        a {
+            img {
+                margin-right: 8px;
+                float: left;
+            }
+            h4 {
+                margin: 0px;
+                font-weight: 300;
+                font-family: $font-family-base;
+                font-size: $font-size-base;
+            }
+        }
+    }
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Home Projects
+	* ------------------------------------------------------------
+*/
+
+.home-events-wrapper {
+    @extend .home-news-wrapper;
+}
+
+ul.home-events-lists {
+    @extend ul.home-news-lists;
+    li {
+        display: inline-block;
+        width: 100%;
+        span {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 0.3125em;
+            color: #000;
+            display: block;
+            font-family: Georgia;
+            text-transform: none;
+        }
+        .event-date {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 12.5%;
+            float: left;
+            text-align: center;
+            color: #148d37;
+            font-family: Georgia;
+        }
+        .event-text {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 80%;
+            float: right;
+            h4 {
+                margin: 0px;
+                color: $link-color;
+                @extend .title-spacing;
+                margin-bottom: 5px;
+                line-height: 22px;
+                font-size: 18px;
+                font-family: $font-family-base;
+                font-weight: 400;
+                &:hover {
+                    color: $addon-color;
+                    text-decoration: none;
+                }
+            }
+            p {
+                margin: 0px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+/**
+	* ------------------------------------------------------------
+	* Home How Do I
+	* ------------------------------------------------------------
+*/
+
+.home-howdo-i-wrapper {
+    @extend .home-events-wrapper;
+    @include span(4 of 12 last);
+}
+
+ul.home-howdo-i-lists {
+    @extend ul.home-events-lists;
+    li {
+        position: relative;
+        padding-left: 16px;
+        a {
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 6px;
+                font-size: 13px;
+            }
+        }
+    }
+}

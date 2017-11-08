@@ -1,0 +1,95 @@
+/**
+     * ------------------------------------------------------------
+     * Announcements Page
+     * ------------------------------------------------------------
+*/
+
+ul.announcements-listing {
+    padding: 0px;
+    li {
+        list-style-type: none;
+        clear: both;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #ddd;
+        display: inline-block;
+        width: 100%;
+        .calender-date {
+            @include span(0.6 fluid inside-static);
+            // display: inline-block;
+            text-align: center;
+            font-family: Georgia;
+            line-height: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            position: relative;
+            .calender-month {
+                // background-color: $link-color;
+                //   background-color: $link-color;
+                //   color: #fff;
+                // padding: 0 10px;
+                // position: absolute;
+                // top: 0px;
+                // left: 0px;
+                width: 100%;
+            }
+            .calender-day {
+                // position: absolute;
+                // bottom: 0px;
+                // left: 0px;
+                width: 100%;
+            }
+        }
+        .meta-content {
+            @include span(11.4 fluid inside-static last);
+            h4 {
+                display: inline-block;
+                margin: 0px;
+                padding-left: 0px;
+                font-weight: 300;
+                font-size: 16px;
+                font-family: $font-family-base;
+            }
+        }
+        a {
+            display: block;
+        }
+    }
+}
+
+
+/**
+    * ------------------------------------------------------------
+    * Announcement Single Page
+    * ------------------------------------------------------------
+*/
+
+/**
+    * ------------------------------------------------------------
+    * Announcements Sidebar
+    * ------------------------------------------------------------
+*/
+
+ul.sidebar-announcements-listing {
+    padding: 0px;
+    li {
+        list-style-type: none;
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 5px;
+        //        margin-bottom: 10px;
+        h4 {
+            margin: 0px;
+            font-weight: 300;
+            font-family: $font-family-base;
+            font-size: $font-size-base;
+            padding: 10px 10px 0px;
+        }
+        &:last-child {
+            border-bottom: 0px;
+        }
+        a {
+            display: block;
+            margin-left: 10px;
+        }
+    }
+}

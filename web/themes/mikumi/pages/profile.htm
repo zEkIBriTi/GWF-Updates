@@ -1,0 +1,19 @@
+title = "Profile"
+url = "/profile/:slug"
+layout = "right-sidebar"
+is_hidden = 0
+
+[singleprofile]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-9">
+                <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+                <div class="right-sidebar-content div-match-height">
+                    <h1 class="page-title">{{ 'Profile'|_ }}</h1>
+                    {% component 'singleprofile' %}
+                </div>
+                <!-- /.right-sidebar-content -->
+                <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+            </div>

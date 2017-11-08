@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.complains::lang.plugin.name'
+    description: 'gwf.complains::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Complains
+        url: gwf/complains/complainscontroller
+        icon: icon-phone

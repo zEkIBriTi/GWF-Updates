@@ -1,0 +1,10 @@
+name: EventsController
+form: $/gwf/events/models/event/fields.yaml
+modelClass: Gwf\Events\Models\Event
+defaultRedirect: gwf/events/eventscontroller
+create:
+    redirect: 'gwf/events/eventscontroller/update/:id'
+    redirectClose: gwf/events/eventscontroller
+update:
+    redirect: gwf/events/eventscontroller
+    redirectClose: gwf/events/eventscontroller

@@ -1,0 +1,20 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_profiles_profiles'
+    - builder_table_create_gwf_profiles_profiles.php
+1.0.3:
+    - 'Updated table gwf_profiles_profiles'
+    - builder_table_update_gwf_profiles_profiles.php
+1.0.4:
+    - 'Updated table gwf_profiles_profiles'
+    - builder_table_update_gwf_profiles_profiles_2.php
+1.0.5:
+    - 'Updated table gwf_profiles_profiles'
+    - builder_table_update_gwf_profiles_profiles_3.php
+1.0.6:
+    - 'Updated table gwf_profiles_profiles'
+    - builder_table_update_gwf_profiles_profiles_4.php
+1.0.7:
+    - 'Updated table gwf_profiles_profiles'
+    - builder_table_update_gwf_profiles_profiles_5.php

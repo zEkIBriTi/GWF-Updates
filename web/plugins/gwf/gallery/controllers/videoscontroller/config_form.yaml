@@ -1,0 +1,10 @@
+name: VideosController
+form: $/gwf/gallery/models/video/fields.yaml
+modelClass: Gwf\Gallery\Models\Video
+defaultRedirect: gwf/gallery/videoscontroller
+create:
+    redirect: 'gwf/gallery/videoscontroller/update/:id'
+    redirectClose: gwf/gallery/videoscontroller
+update:
+    redirect: gwf/gallery/videoscontroller
+    redirectClose: gwf/gallery/videoscontroller

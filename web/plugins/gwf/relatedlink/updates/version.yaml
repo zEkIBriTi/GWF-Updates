@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_relatedlink_related_links'
+    - builder_table_create_gwf_relatedlink_related_links.php
+1.0.3:
+    - 'Updated table gwf_relatedlink_related_links'
+    - builder_table_update_gwf_relatedlink_related_links.php

@@ -1,0 +1,11 @@
+list: $/gwf/announcements/models/announcements/columns.yaml
+modelClass: Gwf\Announcements\Models\Announcements
+title: AnnouncementsController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gwf/announcements/announcementscontroller/update/:id'

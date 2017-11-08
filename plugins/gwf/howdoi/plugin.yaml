@@ -1,0 +1,11 @@
+plugin:
+    name: 'How Do I'
+    description: 'gwf.howdoi::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-question
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'How Do I'
+        url: gwf/howdoi/howdoicontroller
+        icon: icon-question

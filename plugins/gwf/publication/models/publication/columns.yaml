@@ -1,0 +1,19 @@
+columns:
+    title:
+        label: 'Publication Title'
+        type: text
+        searchable: true
+        sortable: true
+    my_relation:
+        label: 'Publication Category'
+        type: text
+        searchable: true
+        sortable: true
+        select: title
+        relation: my_relation
+    activation_status:
+        label: Published
+        type: switch
+    created_at:
+        label: 'Created Date'
+        type: date

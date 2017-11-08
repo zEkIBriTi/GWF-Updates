@@ -1,0 +1,103 @@
+/*
+     * ------------------------------------------------------------
+     *  Flights Schedule Page
+     * ------------------------------------------------------------
+ */
+
+.flights-schedule-content {
+    margin: 0px 0 0 0px;
+    background-color: #fff;
+    min-height: em(950);
+    border: 1px solid #e6e6e6;
+    .page-title {
+        border-bottom: 0px solid #08b04a;
+        padding: em(10);
+        color: $brand-secondary;
+    }
+}
+
+.flights-search-wrapper {
+    padding: 0 0 em(10) em(10);
+    background-color: #EDECEC;
+    padding: em(20);
+    h4 {
+        margin-top: 0px;
+        color: $brand-primary;
+        font-size: em(24);
+        // padding: em(6) em(10) em(8);
+        // text-align: center;
+    }
+    form {
+        .form-control {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        label {
+            font-weight: normal;
+        }
+        input,
+        select {
+            outline: 0;
+            box-shadow: none;
+        }
+        .checkbox {
+            margin-left: 20px;
+        }
+    }
+    .nice-select {
+        width: 100%;
+        margin-bottom: em(15);
+    }
+}
+
+.flights-content-wrapper {
+    padding: 0 em(10) em(10) 0;
+    table {
+        th {
+            color: $brand-primary;
+            font-size: 300;
+        }
+    }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+
+@media(max-width: 767) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 768) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 992) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 1200px) {
+    .full-page-wrap {
+        padding: 20px;
+        min-height: 900px;
+    }
+}

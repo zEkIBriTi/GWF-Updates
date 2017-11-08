@@ -1,0 +1,4 @@
+title: Relatedlinks
+modelClass: gwf\Relatedlink\Models\Relatedlink
+toolbar:
+    buttons: reorder_toolbar

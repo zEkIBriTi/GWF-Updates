@@ -1,0 +1,10 @@
+name: EconomicActivitiesController
+form: $/gwf/economicactivities/models/economicactivity/fields.yaml
+modelClass: Gwf\EconomicActivities\Models\EconomicActivity
+defaultRedirect: gwf/economicactivities/economicactivitiescontroller
+create:
+    redirect: 'gwf/economicactivities/economicactivitiescontroller/update/:id'
+    redirectClose: gwf/economicactivities/economicactivitiescontroller
+update:
+    redirect: gwf/economicactivities/economicactivitiescontroller
+    redirectClose: gwf/economicactivities/economicactivitiescontroller

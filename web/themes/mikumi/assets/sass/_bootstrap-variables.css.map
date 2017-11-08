@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "_bootstrap-variables.css",
+  "sources": [
+    "_bootstrap-variables.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAyDA",
+  "names": []
+}

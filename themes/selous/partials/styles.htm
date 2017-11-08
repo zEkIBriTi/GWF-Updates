@@ -1,0 +1,37 @@
+{% if this.theme.site_style_banner %}
+          #header .banner {
+                  background-image: url("{{ this.theme.site_style_banner.getThumb(1180, 132, 'crop')  }}");
+    }          
+    {% endif %}      
+{% if this.theme.site_style_font_size %}
+    body{
+        font-size : {{  this.theme.site_style_font_size }};
+    }
+{% endif %}
+{% if this.theme.site_style_body_color %}
+    body{
+        background-color : {{  this.theme.site_style_body_color }};
+    }
+{% endif %}
+{% if this.theme.site_style_top_bar_color %}
+    .top-bar-menu{
+        background-color : {{  this.theme.site_style_top_bar_color }};
+    }
+{% endif %}
+{% if this.theme.site_style_menu_background_color %}
+    #main-menu{
+        background-color : {{  this.theme.site_style_menu_background_color }};
+    }
+{% endif %}
+{% if this.theme.site_style_title_color %}
+    .right-sidebar-content .page-title, .home-page-title{
+        background-color : {{  this.theme.site_style_title_color }};
+    }
+{% endif %}
+
+
+
+
+ 
+ 
+   

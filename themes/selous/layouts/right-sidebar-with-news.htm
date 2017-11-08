@@ -1,0 +1,21 @@
+description = "A right sidebar layout template with news and announcements"
+
+[localePicker]
+forceUrl = 0
+==
+{% partial 'header' %}
+
+
+
+
+    <!--  MAIN CONTENT-->
+    <div class="container white">
+      
+           
+               {% page %}
+     
+        {% partial 'right-sidebar-news' %} 
+
+
+
+{% partial 'footer' %}

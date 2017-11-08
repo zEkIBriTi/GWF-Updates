@@ -1,0 +1,4 @@
+title: EconomicActivitiesController
+modelClass: Gwf\EconomicActivities\Models\EconomicActivity
+toolbar:
+    buttons: reorder_toolbar

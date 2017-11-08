@@ -1,0 +1,28 @@
+{% set contactinfoinfo = __SELF__.contactinfo %}
+{% set notFoundMessage = __SELF__.notFoundMessage %} 
+
+{% if contactinfoinfo %}
+	<h1 class="page-main-title">{{ contactinfoinfo.physical_address }}</h1>
+
+    <div class="location">
+		 <a href="{{ contactinfoinfo.url }}" target="_blank">
+             <img src="{{ contactinfoinfo.location_map.getThumb(400, 260, 'crop')}}" alt="">
+         </a>
+	</div>
+	<div class="address">
+		<p><strong>{{ 'Physical Address'|_ }}: </strong>{{ contactinfoinfo.physical_address }}</p>
+		<p><strong>{{ 'Postal Address'|_ }}: </strong>{{ contactinfoinfo.post_address }}</p>
+		<p><strong>{{ 'Fax'|_ }}: </strong>{{ contactinfoinfo.fax }} </p>
+		<p><strong>{{ 'Phone'|_ }}: </strong>{{ contactinfoinfo.phone }}</p>
+		<p><strong>{{ 'Email'|_ }}: </strong>{{ contactinfoinfo.email }}</p>
+		<p><strong></strong></p>
+				</div>
+
+{% else %}
+
+    {{ notFoundMessage }}
+
+{% endif %}
+
+
+

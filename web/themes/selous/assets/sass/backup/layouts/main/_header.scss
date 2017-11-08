@@ -1,0 +1,160 @@
+/**
+     * ----------------------------------------------------------------
+     * Header CSS
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+  */
+
+.top-bar-wrapper {
+    background-color: #fff;
+    height: auto;
+    padding: 4px 4px 0px;
+}
+
+#topbg {
+    // border-bottom: solid 1px darken($brand-primary, 10%);
+    /* margin-bottom: -21px; */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0px;
+    width: 100%;
+    #lang-picker {
+        @include span(1.5 of 12);
+        a {
+            text-align: right;
+            text-transform: uppercase;
+            color: $link-color;
+            margin-right: 0px;
+            //            font-size: 14px;
+            margin-top: 4px;
+            &:hover {
+                text-decoration: underline;
+                color: darken($gray-base, 60%);
+            }
+        }
+        margin-right: 0px;
+    }
+    ul#top-navs {
+        padding: 0px;
+        margin-bottom: 0px;
+        padding-top: 4px;
+        text-align: right;
+        margin-top: 0px;
+        @include span(7.5 of 12);
+        margin-right: 0px;
+        li {
+            display: inline-block;
+            padding-left: 15px;
+            list-style-type: none;
+            a {
+                color: $gray-base;
+                &:hover {
+                    color: darken($gray-base, 60%);
+                }
+            }
+        }
+    }
+    form {
+        text-align: right;
+        @include span(3 of 12 last);
+        input {
+            @include borderRadius(3px);
+            margin-right: 0px;
+            height: 28px;
+            margin-top: 0px;
+            width: 100%;
+            border: 2px solid #ccc;
+        }
+        .icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+
+#header {
+    // border-top: 4px solid $brand-primary;
+    position: relative;
+    background-image: url("../images/banner.jpg");
+    height: 130px;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    @include span(12);
+    // border-left: 1px solid #ddddcc;
+    // position: fixed;
+    // z-index: 999999999999999999999999999;
+    // width: 100%;
+    // border-bottom: 4px solid $brand-primary;
+    .header-modifier {
+        position: relative;
+    }
+    h1 {
+        text-align: center;
+        color: #fff;
+        text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+        line-height: 1.4;
+        font-size: 34px;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 5;
+        margin-top: 25px;
+        font-weight: 600;
+        @include span(9 of 12);
+        span {
+            font-size: 18px;
+            word-spacing: 3px;
+            display: block;
+            font-weight: 600;
+        }
+        //		background-image: url("../images/title-banner.png");
+        //		background-repeat: no-repeat;
+        margin-bottom: 15px;
+        //		background-position: 0px 0px;
+    }
+    #logo {
+        // padding: 10px 0;
+        @include span(1.5 of 12);
+        margin: 15px 0 0px 15px;
+        position: relative;
+        a {
+            img {
+                z-index: 100000000;
+                position: absolute;
+            }
+        }
+    }
+    #board-logo {
+        @include span(1.5 of 12 last);
+        padding-right: 15px;
+        position: relative;
+        margin: 15px 0 0px;
+        img {
+            float: right;
+        }
+        ul {
+            position: absolute;
+            left: 0px;
+            top: 10px;
+            li {
+                list-style-type: none;
+                display: inline-block;
+                border-right: 1px solid #ddd;
+                padding: 0 5px;
+                &:last-child {
+                    border-right: 0px;
+                }
+                &:first-child {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-form {
+    padding: 0px 0 !important;
+}

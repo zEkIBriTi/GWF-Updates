@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_advertisements_advertisements'
+    - builder_table_create_gwf_advertisements_advertisements.php
+1.0.3:
+    - 'Updated table gwf_advertisements_advertisements'
+    - builder_table_update_gwf_advertisements_advertisements.php
+1.0.4:
+    - 'Updated table gwf_advertisements_advertisements'
+    - builder_table_update_gwf_advertisements_advertisements_2.php
+1.0.5:
+    - 'Updated table gwf_advertisements_advertisements'
+    - builder_table_update_gwf_advertisements_advertisements_3.php

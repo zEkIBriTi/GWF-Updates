@@ -1,0 +1,10 @@
+name: HowDoIController
+form: $/gwf/howdoi/models/howdoi/fields.yaml
+modelClass: gwf\Howdoi\Models\HowDoI
+defaultRedirect: gwf/howdoi/howdoicontroller
+create:
+    redirect: 'gwf/howdoi/howdoicontroller/update/:id'
+    redirectClose: gwf/howdoi/howdoicontroller
+update:
+    redirect: gwf/howdoi/howdoicontroller
+    redirectClose: gwf/howdoi/howdoicontroller

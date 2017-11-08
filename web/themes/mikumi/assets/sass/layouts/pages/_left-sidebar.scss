@@ -1,0 +1,97 @@
+/*
+     * ------------------------------------------------------------
+     * Left Sidebar
+     * ------------------------------------------------------------
+ */
+
+.left-sidebar-wrapper {
+    padding: 15px;
+}
+
+.left-sidebar-container {
+    // border-top: 0px;
+    @include borderRadius(3px);
+    @include borderTop(0px);
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    h3 {
+        margin: 0px;
+        font-size: 18px;
+        padding: 0;
+        margin-top: -2px;
+        color: #fff;
+        >span {
+            background-image: url(../images/heading-flourish.png);
+            background-repeat: no-repeat;
+            background-position: 0 100%;
+            padding-bottom: 14px;
+            margin-left: -10px;
+            >span {
+                padding: 4px 10px;
+                display: inline-block;
+                background-color: $link-color;
+                color: #fff;
+                line-height: 125%;
+            }
+        }
+    }
+}
+
+ul.download-listing {
+    padding: 8px 0px;
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 30px;
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        a {
+            color: $gray-base;
+            &:hover {
+                color: $link-color;
+            }
+            i {
+                position: absolute;
+                left: 10px;
+                top: 2px;
+            }
+        }
+    }
+}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Max Width 767
+         * ------------------------------------------------------------
+    */
+
+@media(max-width: 767) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 768
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 768) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 992
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 992) {}
+
+
+/**
+         * ------------------------------------------------------------
+         * Media Query Min Width 1200px
+         * ------------------------------------------------------------
+    */
+
+@media(min-width: 1200px) {}

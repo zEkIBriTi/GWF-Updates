@@ -1,0 +1,41 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    my_relation:
+        label: 'Project Category'
+        type: text
+        searchable: true
+        sortable: true
+        select: title
+        relation: my_relation
+    title:
+        label: 'Project Title'
+        type: text
+    summary:
+        label: 'Project Summary'
+        type: text
+    start_date:
+        label: 'Project Start Date'
+        type: date
+    end_date:
+        label: 'Project Finished Date'
+        type: date
+    created_at:
+        label: 'Created At'
+        type: datetime
+        invisible: true
+    updated_at:
+        label: 'Updated At'
+        type: datetime
+        invisible: true
+    slug:
+        label: Slug
+        type: text
+        invisible: true
+    user_id:
+        label: 'User ID'
+        type: number
+        invisible: true

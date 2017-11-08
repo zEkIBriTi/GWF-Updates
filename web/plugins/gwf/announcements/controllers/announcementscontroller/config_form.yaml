@@ -1,0 +1,10 @@
+name: AnnouncementsController
+form: $/gwf/announcements/models/announcements/fields.yaml
+modelClass: Gwf\Announcements\Models\Announcements
+defaultRedirect: gwf/announcements/announcementscontroller
+create:
+    redirect: 'gwf/announcements/announcementscontroller/update/:id'
+    redirectClose: gwf/announcements/announcementscontroller
+update:
+    redirect: gwf/announcements/announcementscontroller
+    redirectClose: gwf/announcements/announcementscontroller

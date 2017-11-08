@@ -1,0 +1,36 @@
+description = "A layout to display simple pages"
+
+[localePicker]
+forceUrl = 0
+[staticPage]
+==
+{% partial 'header' %}
+
+
+
+
+    <!--  MAIN CONTENT-->
+    <div class="container white">
+    
+            <!-- MIDDLE CONTENT -->
+        <div class="middle-content-wrapper  right-sidebar-aligner">
+            <h1 class="home-content-title">{% if this.page.title %}{{ this.page.title}}{% endif %}</h1>
+            <hr class="home-content-hr">
+            <!--START MAIN CONTENT-->
+            <div class="right-sidebar-main-content">
+                   {% component 'staticPage' %}
+            </div>
+            <!-- /.right-sidebar-main-content -->
+            <!--/END MAIN CONTENT-->
+        </div>
+        <!-- /.middle-content-wrapper -->
+        <!--/MIDDLE CONTENT-->
+      
+           
+          
+     
+        {% partial 'right-sidebar' %} 
+
+
+
+{% partial 'footer' %}

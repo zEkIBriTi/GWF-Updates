@@ -1,0 +1,80 @@
+title = "Announcements"
+url = "/announcements"
+layout = "right-sidebar"
+description = "A page to display announcements"
+is_hidden = 0
+
+[Announcement]
+noRecordsMessage = "No records found"
+detailsPage = "single-announcement"
+viewAll = "-"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 12
+pageNumber = "{{ :page }}"
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+        <h1 class="home-content-title">{% if this.page.title %}{{ this.page.title}}{% endif %}</h1>
+        <hr class="home-content-hr">
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+            <!--      ul.announcements-listing>li*6>.calender-date>span.calender-month{Jan}+.calender-day{01}^.meta-content>h4>lorem15^+a[href="single-announcement.html"]{read more}|c -->
+            {% set announcements = Announcement.announcements %} 
+            {% set noRecordsMessage = Announcement.noRecordsMessage %}
+            {% set detailsPage = Announcement.detailsPage %}
+            {% set viewAll = Announcement.viewAll %}
+            {% set detailsKeyColumn = Announcement.detailsKeyColumn %}
+            {% set detailsUrlParameter = Announcement.detailsUrlParameter %}
+
+            <ul class="announcements-listing">
+            	{% for announcement in announcements %}
+            	 <li>
+                    <div class="calender-date">
+                        <span class="calender-month">{{ announcement.published_date|date("M") }}</span>
+                        <span class="calender-day">{{ announcement.published_date|date("d") }}</span>
+                        <!-- /.calender-day -->
+                    </div>
+                    <!-- /.calender-date -->
+                    <div class="meta-content">
+                        <p>{{ announcement.title }}</p>
+                        {% spaceless %}
+                    	{% if detailsPage %}
+                            <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(announcement, detailsKeyColumn) }) }}">{{ 'read more'|_ }}
+                        {% endif %}
+            	        </a>
+            		    {% endspaceless %}
+                    </div>
+                    <!-- /.meta-content -->
+                </li>
+                {% else %}
+                    <li class="no-data">{{ noRecordsMessage }}</li>
+                {% endfor %}
+            </ul>
+
+            <!-- /.announcements-listing -->
+            <nav class="text-center">
+            {% if announcements.lastPage > 1 %}
+            <ul class="pagination">
+                {% if announcements.currentPage > 1 %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (announcements.currentPage-1) }) }}">&larr; Prev</a></li>
+                {% endif %}
+        
+                {% for page in 1..announcements.lastPage %}
+                    <li class="{{ announcements.currentPage == page ? 'active' : null }}">
+                        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+        
+                {% if announcements.lastPage > announcements.currentPage %}
+                    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (announcements.currentPage+1) }) }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </nav>
+        </div>
+        <!-- /.right-sidebar-main-content -->
+        <!--/END MAIN CONTENT-->
+    </div>
+    <!-- /.middle-content-wrapper -->
+    <!--/MIDDLE CONTENT-->

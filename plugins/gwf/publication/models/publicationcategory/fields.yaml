@@ -1,0 +1,10 @@
+fields:
+    title:
+        label: 'Publication Category Title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    status:
+        label: Publish
+        span: left
+        type: switch

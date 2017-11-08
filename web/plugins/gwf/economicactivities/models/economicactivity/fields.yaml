@@ -1,0 +1,17 @@
+fields:
+    activityname:
+        label: 'Economic Activity'
+        span: full
+        required: 1
+        type: text
+    description:
+        label: Description
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    activation_status:
+        label: Published
+        span: auto
+        required: 0
+        type: switch

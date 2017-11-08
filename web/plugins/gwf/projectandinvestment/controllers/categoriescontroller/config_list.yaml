@@ -1,0 +1,11 @@
+list: $/gwf/projectandinvestment/models/category/columns.yaml
+modelClass: gwf\projectandinvestment\Models\Category
+title: CategoriesController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gwf/projectandinvestment/categoriescontroller/update/:id'

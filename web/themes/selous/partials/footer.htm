@@ -1,0 +1,104 @@
+[viewBag]
+
+[staticMenu]
+code = "footer-menu"
+
+[ContactusDetails]
+
+[relatedlink]
+
+[quicklinks]
+==
+<div class="mini-footer">
+        <div class="footer-div-section footer-address-wrapper">
+            <h4>{{ 'Contact Us'|_ }}</h4>
+            {% set contactinfo = ContactusDetails.contactinfo %}
+
+            <p>
+                {{ this.theme.site_tagline_ministry|_ }}
+                {{ this.theme.site_title|_ }}
+                {% for contact in contactinfo %}
+                  <br>{{ contact.physical_address }} 
+                  <br><strong>{{ 'Postal Address'|_ }}: </strong>	{{ contact.post_address }} 
+                  <br><strong>{{ 'Telephone'|_ }}: </strong>	{{ contact.phone }} 
+                  <br><strong>{{ 'Email'|_ }}: </strong>	{{ contact.email }}
+                  <br><strong>{{ 'Mobile'|_ }}: </strong>	{{ contact.mobile }} 
+                {% endfor %}
+            </p>
+        </div>
+        <div class="footer-div-section footer-related-links-wrapper">
+            <h4>{{ 'Quick Links'|_ }}</h4>
+            {% set quicklinks = quicklinks.quicklinks %}
+            <ul class="footer-related-links">
+                {% for quicklink in quicklinks %}
+                <li><a href="{{ quicklink.url }}">{{ quicklink.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-div-section footer-related-links-wrapper">
+            <h4>{{ 'Related Links'|_ }}</h4>
+            {% set relatedlinks = relatedlink.relatedlinks %}
+            <ul class="footer-related-links">
+                {% for relatedlink in relatedlinks %}
+                <li><a href="{{ relatedlink.url }}">{{ relatedlink.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-div-section  footer-visitors-counter-wrapper">
+            <h4>{{ 'Social Media'|_ }}</h4>
+            <ul class="social-media-lists">
+                <li>
+                    <a href="#" target="_blank"> <i class="icon-social-facebook-circle"></i> Like us on Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"> <i class="icon-social-twitter-circle"></i> Follow us on Twitter </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"> <i class="icon-social-youtube-circle"></i> Find us on Youtube</a>
+                </li>
+                <!--    <li>
+                    <a href="#" target="_blank"> <i class="icon-social-linkedin-circle"></i> </a>
+                </li> -->
+                <li>
+                    <a href="#" target="_blank"> <i class="icon-social-instagram-circle"></i> Follow us on Instagram
+        </div>
+    </div>
+    <div class="footer">
+        <p class="text-center">{{ this.theme.site_footer_copyright|_ }}</p>
+        {% partial 'footer-menu' items=staticMenu.menuItems %}
+    </div>
+    <!-- /.footer -->
+</div>
+<!-- /.container -->
+
+    <!--CORE JS-->
+
+       <script src="{{ 'assets/js/jquery.min.js' | theme }}"></script>
+
+
+    <script src="{{ 'assets/js/bootstrap.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/matchHeight.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/placeholder.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/easing.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/smartmenu.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/smartmenu.bootstrap.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/jquery.lazyload.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/magnific-popup.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/jquery.tabslet.min.js' | theme }}"></script>
+
+    <script src="{{ ['~/modules/system/assets/js/framework.js'] | theme }}"></script>
+    <script src="{{ ['~/modules/system/assets/js/framework.extras.js'] | theme }}"></script>
+    <link rel="stylesheet" href="{{ ['~/modules/system/assets/css/framework.extras.css'] | theme }}">
+
+    <!--END CORE JS-->
+ 
+    <!--CUSTOM JS-->
+       {% placeholder footer %}
+ <script src="{{ 'assets/js/custom.min.js' | theme }}"></script>
+ 
+
+    <!--END OF CUSTOM JS-->
+</body>
+
+</html>

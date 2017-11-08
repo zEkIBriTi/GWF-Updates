@@ -1,0 +1,199 @@
+/**
+     * ----------------------------------------------------------------
+     * There is SASS Inside, be careful !
+     * Author: Daniel Chikaka
+     * Email: daniel.chikaka@ega.go.tz
+     * ----------------------------------------------------------------
+ */
+
+#main-menu {
+    // background-color:  $brand-primary;
+    // border-left: 1px solid  $brand-primary;
+    // border-top: solid 1px darken($brand-primary, 10%);
+    // @include borderRadius(3px);
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    position: relative;
+    bottom: 0px;
+    display: inline-block;
+    background-color: #fff;
+    .navbar-right {
+        margin-right: 5px;
+        margin-top: 2px;
+    }
+    .icon.icon-home {
+        // color: #fff;
+        font-size: 18px;
+        position: relative;
+        top: 0px;
+    }
+}
+
+nav.navbar {
+    @include span(12);
+    margin-top: 0px;
+}
+
+.navbar {
+    margin-top: 0px;
+    min-height: 40px;
+    ul {
+        li {
+            // border-right: 1px solid #fff;
+            margin-top: 1px;
+            &:last-child {
+                background: none;
+            }
+            a {
+                //                border-right: 1px solid #111;
+                //                    text-shadow: 1px 1px 1px #000;
+                color: #000 !important;
+                text-transform: uppercase;
+                font-family: $headings-font-family;
+                font-weight: 600;
+                //                  text-shadow: 1px 1px 1px #000;
+                font-size: $font-size-base;
+                &:hover {
+                    color: $link-color !important;
+                }
+            }
+        }
+    }
+}
+
+.navbar-default {
+    border: 0px;
+    // background-image: url("../images/menu-bg.png");
+    // background-repeat: repeat;
+    .form-control {
+        border: 0px solid #ececec;
+        height: 30px;
+        background-color: #ffffff;
+        &:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0px;
+            outline: 0;
+        }
+        input {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            &:focus {
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border: 0px;
+                outline: 0;
+            }
+        }
+    }
+}
+
+.navbar-form {
+    // margin-left: -15px;
+    // margin-right: -15px;
+    // padding: 1px 15px;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 5px 0;
+    position: absolute;
+    right: 5px;
+    .form-group {
+        position: relative;
+        input {
+            padding-right: 25px;
+        }
+        .icon {
+            position: absolute;
+            top: 6px;
+            right: 15px;
+        }
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    margin: 0px 0 0;
+    list-style: none;
+    font-size: 12px;
+    text-transform: none;
+    text-align: left;
+    background-color: #fff;
+    border: 0px solid #ececec;
+    border: 0px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    // @include borderBottom(6px);
+    li {
+        background: none;
+        a {
+            color: $link-color;
+            text-transform: none !important;
+            &:hover {
+                color: $link-color;
+                background-color: transparent;
+            }
+            ul {
+                background-color: transparent;
+                li {
+                    background-color: transparent;
+                    a {
+                        background-color: transparent;
+                    }
+                }
+                li.open {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $link-color;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: $link-color;
+    background-color: transparent;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: 0;
+}
+
+.nav .open>a {
+    color: #000;
+    background-color: transparent;
+    &:hover {
+        color: $link-color;
+        background-color: transparent;
+    }
+    &:focus {
+        color: $link-color;
+        background-color: transparent;
+    }
+}
+
+.navbar-nav > li > a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}

@@ -1,0 +1,10 @@
+## Default .htaccess file
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+php_value memory_limit 256M
+php_flag opcache.enable Off

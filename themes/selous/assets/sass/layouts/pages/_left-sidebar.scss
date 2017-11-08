@@ -1,0 +1,88 @@
+/*
+     * ------------------------------------------------------------
+     * Left Sidebar
+     * ------------------------------------------------------------
+ */
+
+.left-sidebar-wrapper {
+    @include span(2.8 of 12 fluid inside-static);
+    padding: 15px;
+    .cycle-slideshow {
+        height: auto !important;
+        width: 220px;
+        margin-top: 0px;
+        img {
+            height: 250px;
+            width: 100%;
+        }
+    }
+    .cycle-overlay {
+        position: initial;
+        bottom: 0px;
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        left: 0px;
+        z-index: 1 !important;
+        background: #000;
+        background-color: transparent;
+        color: $gray-base;
+        padding: 0px;
+        font-size: $font-size-base;
+    }
+    .cycle-overlay div:first-child {
+        font-size: 15px;
+    }
+}
+
+.left-sidebar-container {
+    // border-top: 0px;
+    @include borderRadius(3px);
+    @include borderTop(0px);
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    h3 {
+        margin: 0px;
+        font-size: 18px;
+        padding: 0;
+        margin-top: -2px;
+        color: #fff;
+        >span {
+            background-image: url(../images/heading-flourish.png);
+            background-repeat: no-repeat;
+            background-position: 0 100%;
+            padding-bottom: 14px;
+            margin-left: -10px;
+            >span {
+                padding: 4px 10px;
+                display: inline-block;
+                background-color: $link-color;
+                color: #fff;
+                line-height: 125%;
+            }
+        }
+    }
+}
+
+ul.download-listing {
+    padding: 8px 0px;
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 30px;
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        a {
+            color: $gray-base;
+            &:hover {
+                color: $link-color;
+            }
+            i {
+                position: absolute;
+                left: 10px;
+                top: 2px;
+            }
+        }
+    }
+}

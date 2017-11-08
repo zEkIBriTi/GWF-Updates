@@ -1,0 +1,11 @@
+plugin:
+    name: 'gwf.tender::lang.plugin.name'
+    description: 'gwf.tender::lang.plugin.description'
+    author: gwf
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-tender:
+        label: Tender
+        url: gwf/tender/tendercontroller
+        icon: icon-align-justify

@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gwf_welcomenote_welcome_notes'
+    - builder_table_create_gwf_welcomenote_welcome_notes.php
+1.0.3:
+    - 'Updated table gwf_welcomenote_welcome_notes'
+    - builder_table_update_gwf_welcomenote_welcome_notes.php

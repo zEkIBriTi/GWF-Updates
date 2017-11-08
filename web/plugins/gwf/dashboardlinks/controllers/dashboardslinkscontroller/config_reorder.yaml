@@ -1,0 +1,4 @@
+title: DashboardsLinksController
+modelClass: gwf\Dashboardlinks\Models\Dashboardlink
+toolbar:
+    buttons: reorder_toolbar

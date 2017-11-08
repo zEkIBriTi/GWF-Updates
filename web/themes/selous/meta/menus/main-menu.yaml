@@ -1,0 +1,460 @@
+name: 'Main Menu'
+items:
+    -
+        title: Home
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: home
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'About Us'
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Mission and Vision'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: mission-and-vision
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: History
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: history
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Structure
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: structure
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Districts
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Babati
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: babati
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Mbulu
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: mbulu
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Hanang
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: hanang
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Kiteto
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: kiteto
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Simanjiro
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: simanjiro
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Departments
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Human Resources'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: human-resources
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Planning and Management'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: planning-and-management
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Finance and Accounts'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: finance-and-accounts
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Internal Audit'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: internal-audit
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Procurement and Supply'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: procurement-and-supply
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Economy and Production'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: economy-and-production
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Infrastructure
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: infrastructure
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Local Government'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: local-government
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Social Welfare'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: social-welfare
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: ICT
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: ict
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Health
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: health
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Education
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: education
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Water
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: water
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Publications
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Forms
+                type: cms-page
+                code: ''
+                reference: publications
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Guidelines
+                type: cms-page
+                code: ''
+                reference: publications
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Procedures
+                type: cms-page
+                code: ''
+                reference: publications
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Reports
+                type: cms-page
+                code: ''
+                reference: publications
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Investments
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Investment One'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: investment-test-1
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Investment Two'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: investment-test-2
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Investment Three'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: investment-test-3
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Investment Four'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: investment-test-4
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Investment Five'
+                nesting: '0'
+                type: static-page
+                code: ''
+                reference: investment-test-5
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Media Center'
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: News
+                type: cms-page
+                code: ''
+                reference: news
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Announcements
+                type: cms-page
+                code: ''
+                reference: announcements
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Gallery
+                type: cms-page
+                code: ''
+                reference: gallery
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Sports and Games'
+                type: cms-page
+                code: ''
+                reference: games
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Speeches
+                type: cms-page
+                code: ''
+                reference: speeches
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Press Releases'
+                type: cms-page
+                code: ''
+                reference: press-releases
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Videos
+                type: cms-page
+                code: ''
+                reference: videos
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'

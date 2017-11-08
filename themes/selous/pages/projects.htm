@@ -1,0 +1,80 @@
+title = "Project and Investiment"
+url = "/projects/:page?"
+layout = "right-sidebar"
+description = "A page to display projects"
+is_hidden = 0
+
+[Projectandinvestmentlist]
+noRecordsMessage = "No records found"
+detailsPage = "project-details"
+viewAll = "-"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 2
+pageNumber = "{{ :page }}"
+
+[viewBag]
+localeUrl[sw] = "/project-and-investiment"
+==
+<!-- MIDDLE CONTENT -->
+    <div class="middle-content-wrapper  right-sidebar-aligner">
+        <h1 class="home-content-title">{% if this.page.title %}{{ this.page.title}}{% endif %}</h1>
+        <hr class="home-content-hr">
+        <!--START MAIN CONTENT-->
+        <div class="right-sidebar-main-content">
+            <!--      ul.announcements-listing>li*6>.calender-date>span.calender-month{Jan}+.calender-day{01}^.meta-content>h4>lorem15^+a[href="single-announcement.html"]{read more}|c -->
+            {% set projectandinvestments = Projectandinvestmentlist.projectandinvestments %}
+            {% set noRecordsMessage = Projectandinvestmentlist.noRecordsMessage %}
+            {% set detailsPage = Projectandinvestmentlist.detailsPage %}
+            {% set viewAll = Projectandinvestmentlist.viewAll %}
+            {% set detailsKeyColumn = Projectandinvestmentlist.detailsKeyColumn %}
+            {% set detailsUrlParameter = Projectandinvestmentlist.detailsUrlParameter %}
+            
+            <ul class="announcements-listing">
+                {% for projectandinvestment in projectandinvestments %}
+                <li>
+                <div class="meta-content">
+                {# Use spaceless tag to remove spaces inside the A tag. #}
+                {% spaceless %}
+                {% if detailsPage %}
+                <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(projectandinvestment, detailsKeyColumn) }) }}">
+                {% endif %}
+                <i class="icon icon-document"></i>
+                {{ projectandinvestment.title }}
+                </a>
+                {% endspaceless %}
+                </div>
+                </li>
+                {% endfor %}
+            </ul>
+            
+            <nav class="text-center">
+                        {% if projectandinvestments.lastPage > 1 %}
+                        <ul class="pagination">
+                            {% if projectandinvestments.currentPage > 1 %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (projectandinvestments.currentPage-1) }) }}">&larr; Prev</a></li>
+                            {% endif %}
+                    
+                            {% for page in 1..projectandinvestments.lastPage %}
+                                <li class="{{ projectandinvestments.currentPage == page ? 'active' : null }}">
+                                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+                    
+                            {% if projectandinvestments.lastPage > projectandinvestments.currentPage %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (projectandinvestments.currentPage+1) }) }}">Next &rarr;</a></li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                    </nav>
+
+
+
+            
+           
+        </div>
+        <!-- /.right-sidebar-main-content -->
+        <!--/END MAIN CONTENT-->
+    </div>
+    <!-- /.middle-content-wrapper -->
+    <!--/MIDDLE CONTENT-->

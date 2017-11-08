@@ -1,0 +1,10 @@
+name: ProjectAndInvestmentController
+form: $/gwf/projectandinvestment/models/projectandinvestment/fields.yaml
+modelClass: gwf\projectandinvestment\Models\Projectandinvestment
+defaultRedirect: gwf/projectandinvestment/projectandinvestmentcontroller
+create:
+    redirect: 'gwf/projectandinvestment/projectandinvestmentcontroller/update/:id'
+    redirectClose: gwf/projectandinvestment/projectandinvestmentcontroller
+update:
+    redirect: gwf/projectandinvestment/projectandinvestmentcontroller
+    redirectClose: gwf/projectandinvestment/projectandinvestmentcontroller

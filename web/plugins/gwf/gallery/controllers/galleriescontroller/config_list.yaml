@@ -1,0 +1,11 @@
+list: $/gwf/gallery/models/gallery/columns.yaml
+modelClass: Gwf\Gallery\Models\Gallery
+title: GalleriesController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gwf/gallery/galleriescontroller/update/:id'

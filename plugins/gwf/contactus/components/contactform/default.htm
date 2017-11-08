@@ -1,0 +1,63 @@
+{% set contactinfo = __SELF__.contactinfo %}
+<!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+        <h1 class="page-title">Contact Us</h1>
+        <!-- copy -->
+        <div class="confirm-container">
+            {% flash success %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endflash %}
+            {% flash error %}
+                <div class="alert alert-error">{{ message }}</div>
+            {% endflash %}
+        </div>
+
+        <div id="loading">
+           <!--  submiting feedback ........ -->
+        <img width="300px" height="300px" src="{{ 'plugins/gwf/contactus/assets/image/animation.gif'}}" />
+        </div>
+
+        <!-- end copy -->
+        <div class="contact" id="contact">
+            <form  data-request="onSend" data-request-redirect="contactus-success" method="post">  `
+           <!--  <form action="" method="post"> data-request-redirect="contactus-success"-->
+                <p>
+                    <input type="text" name="name" placeholder="Enter Your Name" autofocus> </p>
+                    <span style="color:red">{{ errors.first('name') }}</span>
+                <p> 
+                    <input type="text" name="email" placeholder="Enter Your Email"> </p>
+                    <span style="color:red">{{ errors.first('email') }}</span>
+                <p>
+                    <input type="text" name="subject" placeholder="Enter the Subject"> </p>
+                    <span style="color:red">{{ errors.first('subject') }}</span>
+                <p>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <span style="color:red">{{ errors.first('message') }}</span>
+                </p>
+                <p>
+                    <button type="submit" name="send" id="sendfeedback" class="btn btn-primary">SEND MESSAGE</button>
+                </p>
+            </form>
+
+        </div>
+        <!-- /.contact form -->
+        <div class="contact-details">
+            <h4>Contact Details</h4>
+            <ul>
+               {% for contact in contactinfo %}
+                <li>{{ contact.post_address }},
+                    <br> {{ contact.physical_address }}
+                <li><strong>Telephone: </strong>{{ contact.phone }}</li>
+                <li><strong>Mobile: </strong>{{ contact.mobile }}</li>
+                <li><strong>Fax: </strong>{{ contact.fax }}</li>
+                <li><strong>Email: </strong>{{ contact.email }}</li>
+                </br>
+			    {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    
+  
+
+

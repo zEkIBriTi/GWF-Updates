@@ -1,0 +1,26 @@
+title = "Search"
+url = "/search"
+layout = "default"
+description = "Page for search results"
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 10
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<div class="middle-content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="col-md-12 col-sm-12">
+                    <h2>Search results for {{ searchResults.query }}</h2>
+                    {% component 'searchResults' %}
+                    </div
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+title: TenderController
+modelClass: Gwf\Tender\Models\Tender
+toolbar:
+    buttons: reorder_toolbar

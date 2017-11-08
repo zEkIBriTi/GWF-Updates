@@ -1,0 +1,10 @@
+name: CategoriesController
+form: $/gwf/projectandinvestment/models/category/fields.yaml
+modelClass: gwf\projectandinvestment\Models\Category
+defaultRedirect: gwf/projectandinvestment/categoriescontroller
+create:
+    redirect: 'gwf/projectandinvestment/categoriescontroller/update/:id'
+    redirectClose: gwf/projectandinvestment/categoriescontroller
+update:
+    redirect: gwf/projectandinvestment/categoriescontroller
+    redirectClose: gwf/projectandinvestment/categoriescontroller

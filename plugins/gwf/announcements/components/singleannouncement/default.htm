@@ -1,0 +1,10 @@
+{% set announcement = __SELF__.announcement %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if announcement %}
+        <h1 class="page-title">{{ announcement.title }}</h1>
+        <h4>{{ announcement.published_date|date("d F Y") }}</h4>
+        {{ announcement.content|raw }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

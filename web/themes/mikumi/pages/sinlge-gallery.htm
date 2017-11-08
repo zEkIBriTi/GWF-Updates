@@ -1,0 +1,55 @@
+title = "sinlge gallery"
+url = "/sinlge-gallery/:slug"
+layout = "right-sidebar"
+is_hidden = 0
+
+[GalleryDetails]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-12">
+    <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+    
+    
+        {% set gallery = GalleryDetails.gallery %}
+        {% set notFoundMessage = GalleryDetails.notFoundMessage %}
+        
+        {% if gallery %}
+            	<h1 class="page-title">{{ gallery.title }}</h1>
+                <div class="popup-gallery">
+                {% for image in gallery.gallery_images %}
+                        <a href="{{ image.getPath() }}" class="gallery-item" title="{{ image.description }}">
+                        <img src="{{ image.thumb(200,200,'crop') }}" width="260" height="180"></a>
+                {% endfor %}
+                </div>
+        {% else %}
+            {{ notFoundMessage }}
+        {% endif %}
+
+
+        
+        
+    </div>
+</div>
+
+{% put footer %}
+<script>
+$(document).ready(function() {
+    $('.gallery-item').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true,
+
+            preload: [0, 2], // read about this option in next Lazy-loading section
+
+            navigateByImgClick: true,
+        }
+    });
+});
+</script>
+
+
+<!--END OF CUSTOM JS-->
+{% endput %}

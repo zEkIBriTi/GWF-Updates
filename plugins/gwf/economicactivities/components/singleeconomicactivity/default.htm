@@ -1,0 +1,11 @@
+{% set economicactivity = __SELF__.economicactivity %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if economicactivity %}
+        <h1 class="page-title">{{ economicactivity.activityname }}</h1>
+       
+        {{ economicactivity.description|raw }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+

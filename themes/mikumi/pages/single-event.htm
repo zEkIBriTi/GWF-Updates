@@ -1,0 +1,22 @@
+title = "Single Event"
+url = "/event/:slug"
+layout = "right-sidebar"
+description = "A page to display a single event"
+is_hidden = 0
+
+[Singleevent]
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+notFoundMessage = "Record not found"
+==
+{% set event = Singleevent.event %}
+{% set notFoundMessage = Singleevent.notFoundMessage %}
+
+<div class="col-md-9 col-sm-12">
+                           <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+        {% component 'Singleevent' %}
+    </div>
+    <!-- /.right-sidebar-content -->
+    <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+</div>

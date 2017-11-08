@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.3:
+    - 'Created table gwf_statistics_statistics'
+    - builder_table_create_gwf_statistics_statistics.php
