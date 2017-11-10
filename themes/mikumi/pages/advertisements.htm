@@ -1,0 +1,65 @@
+title = "Advertisements"
+url = "/advertisements"
+layout = "right-sidebar"
+description = "View all advertisements"
+is_hidden = 0
+
+[AdvertisementsList]
+noRecordsMessage = "No records found"
+detailsPage = "-"
+viewAll = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set advertisements = Advertisement.advertisements %} 
+{% set noRecordsMessage = Advertisement.noRecordsMessage %}
+{% set detailsPage = Advertisement.detailsPage %}
+{% set viewAll = Advertisement.viewAll %}
+{% set detailsKeyColumn = Advertisement.detailsKeyColumn %}
+{% set detailsUrlParameter = Advertisement.detailsUrlParameter %}
+
+<div class="col-md-9 col-sm-9">
+                <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+                <div class="right-sidebar-content div-match-height">
+                    <h1 class="page-title">{{ 'Advertisements'|_ }}</h1>
+                    <ul class="publications-listing press-release howdoi">
+                    	{% for advertisement in advertisements %}
+                        <li>
+                        	{# Use spaceless tag to remove spaces inside the A tag. #}
+                            {% spaceless %}
+                            	{% if detailsPage %}
+                                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(advertisement, detailsKeyColumn) }) }}">
+                                {% endif %}
+                    	        <p>{{ advertisement.title }}</p>
+                    	        </a>
+                    	        <span>{{ advertisement.published_date|date("-F d, Y") }}</span>
+                    
+                    		{% endspaceless %}
+                        </li>
+                        {% else %}
+                            <li class="no-data">{{ noRecordsMessage }}</li>
+                        {% endfor %}
+                    </ul>
+                    <nav class="text-center">
+                        {% if advertisements.lastPage > 1 %}
+                        <ul class="pagination">
+                            {% if advertisements.currentPage > 1 %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (advertisements.currentPage-1) }) }}">&larr; Prev</a></li>
+                            {% endif %}
+                    
+                            {% for page in 1..advertisements.lastPage %}
+                                <li class="{{ advertisements.currentPage == page ? 'active' : null }}">
+                                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+                    
+                            {% if advertisements.lastPage > advertisements.currentPage %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (advertisements.currentPage+1) }) }}">Next &rarr;</a></li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+                <!-- /.right-sidebar-content -->
+                <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+            </div>

@@ -1,0 +1,20 @@
+title = "Advertisement"
+url = "/advertisement"
+layout = "right-sidebar"
+description = "View single advertisement"
+is_hidden = 0
+
+[SingleAdvertisement]
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+notFoundMessage = "Record not found"
+==
+<div class="col-md-9 col-sm-12">
+                        <!--START RIGHT SIDEBAR CONTENTE SECTION-->
+    <div class="right-sidebar-content div-match-height">
+        
+     {% component 'SingleAdvertisement' %}
+    </div>
+    <!-- /.right-sidebar-content -->
+    <!--/END RIGHT SIDEBAR CONTENTE SECTION-->
+</div>

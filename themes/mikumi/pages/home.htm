@@ -25,6 +25,15 @@ detailsUrlParameter = "slug"
 recordsPerPage = 5
 pageNumber = "{{ page: }}"
 
+[AdvertisementsList]
+noRecordsMessage = "No records found"
+detailsPage = "advertisement"
+viewAll = "advertisements"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 5
+pageNumber = "{{ page: }}"
+
 [Events]
 noRecordsMessage = "No records found"
 detailsPage = "single-event"
@@ -259,6 +268,11 @@ welcomeNote = "welcomenote"
                         <div class="home-announcement-wrapper">
                             <h1 class="home-page-title">{{ 'Announcements'|_ }}</h1>
                             {% component 'Announcement' %}
+                        </div>
+
+                        <div class="home-AdvertisementsList-wrapper">
+                            <h1 class="home-page-title">{{ 'Advertisements'|_ }}</h1>
+                            {% component 'AdvertisementsList' %}
                         </div>
                     </div>
                     <!-- /.col-md-4 -->
